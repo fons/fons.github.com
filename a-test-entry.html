@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	  "http://www.w3.org/TR/html4/strict.dtd">
+
 <html>
   <head>
-    <title> A test entry - My Blog </title>
+    <title> Notes on Programming A test entry  </title>
     <style type="text/css">
       body{
       margin:0px;
@@ -16,14 +18,14 @@ a{
    margin:1px;
    width:100%;
    border:none;
-   color:darkblue; 
+   color:#0000cc;
    text-decoration:none;
    }
 a:hover{
          color:orange;
          }
 a:visited{
-           color:darkblue;
+           color:#0000cc;
            }
 
 #logo{padding:0px;margin:0px;}
@@ -62,9 +64,8 @@ a:visited{
                padding:13px 50px 10px 5%;
                width:68%;}
   div#sideBar{
-               margin:0px 1em 0px 0px;
-               padding:0px;
-               text-align:right;
+               margin:0px 0px 0px 0px;
+               text-align:left;
                font-family : 'Sans Serif';
                font-size : 12px;
                
@@ -80,23 +81,26 @@ a:visited{
                text-align:left;}
 }
 
-#header{
-         padding:0px 0px 8px 0px;
-         margin:0px 0px 20px 0px;
-         #border-bottom:solid 1px #eeeeee;
-         #border-top:solid 2px #FFEBCD;
-         #background:#FFEBCD;color:#8B4513;
-         }
+div#header{
+            padding:0px 0px 8px 0px;
+            #margin:0px 0px 20px 0px;
+            #border-bottom:solid 1px #eeeeee;
+            #border-top:solid 2px #FFEBCD;
+            #background:#FFEBCD;color:#8B4513;
+            }
+
+
 h1,h2,h3,h4,h5,h6{
                    padding:0px;margin:0px;
                    }
 
 h1{
-    margin:40px 0px 0px 0px;
+    #margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
     color: #0000cc;
     font:bold 200% Verdana,Sans-Serif;
     float:right;
-    width:55%;
+    width:30%;
     }
 
 h2 {
@@ -159,6 +163,14 @@ h2.sidebar-title{
               color:#9E5205
               ;background:transparent;font:bold 85% Verdana,Sans-Serif;
               }
+#sideBar a{
+            margin:20px 20px 20px 20px;
+            width:80%;
+            color:#0000cc;
+            text-decoration:none;
+            font-family : , 'Sans Serif',;
+            font-size : 14px;
+            }
 #sideBar ul a{padding:2px;margin:1px;width:100%;border:none;
                color:#999999;
                text-decoration:none;}
@@ -181,19 +193,23 @@ pre,code{
 strike{color:#999999;}
 .bug{padding:5px;border:0px;}
 .byline{padding:0px;margin:0px;color:#444444;font-size:80%;}
-.byline a{border:none;color:#FF4500;text-decoration:none;}
+
 .byline a:hover{text-decoration:underline;}
+
 
 
     </style>
   </head>  
-  <div id="headerx">
-    <h1><a href="/">My GitHub page </a></h1>
-  </div>
+
   <body>
 
     <div id="mainClm">
-      <div>
+      <a href="/"><h1>Notes On Programming</h1></a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="post">
 	<p>Mon Apr 20 18:57:56 Est 2009 </p>
 	<h2> A test entry  </h2>
 	<div id="intro">
@@ -209,17 +225,12 @@ strike{color:#999999;}
     <!-- start of the sidebar -->
     
     <div id="sideBar">
-      <h4> About</h4>
+      <br>
+      <br>
       <div id="about">
-	Focussing on programming
+	<a href="/about.html"> About </a>
       </div>
       <br>
-      <h6> blog roll</h6>
-      <ul>
-	<li> <a href="http://www.planetlisp.com"> lisp </a></li>
-	<li> <a href="http://www.planethaskel.com"> haskell </a></li>
-      </ul>
     </div> <!--end of sidebar-->
-    
   </body>
 </html>
