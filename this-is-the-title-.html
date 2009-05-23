@@ -3,7 +3,7 @@
 
 <html>
   <head>
-    <title> Notes on Programming file upload test  </title>
+    <title> Notes on Programming This is the title   </title>
     <style type="text/css">
       body{
       margin:0px;
@@ -258,136 +258,16 @@ strike{color:#999999;}
       <br>
       <br>
       <div id="post">
-	<p>Wed May 20 12:2:13 Est 2009 </p>
-	<h2> file upload test  </h2>
+	<p>Sat May 23 10:10:37 Est 2009 </p>
+	<h2> This is the title   </h2>
 	<div id="intro">
-	                     intro of file upload test<br> 
-more file upload intro                #!/usr/bin/env python
-from generator_tools.copygenerators import*
-from generator_tools.picklegenerators import*
-<br>  
-this is an other line
+	     This is the intro to the post
+this is another sentence
+   
 	</div>
 	<div id="body">
-	     <pre> 
-        #!/usr/bin/env python
-from generator_tools.copygenerators import*
-from generator_tools.picklegenerators import*
-
-from UserDict import DictMixin
-
+	     This is the body
     
-class state(DictMixin) :
-    __slots__  = ["__dict__"]
-    __mq__ = {}
-    
-    def __getitem__(self, key) :
-        return self.__getattr__(key)
-
-    def __getattr__(self, key) :
-        if self.__mq__.has_key(key) :
-            val = self.__mq__[key]
-            del self.__mq__[key]
-            return val
-        return self.__dict__[key]
-
-    def __setitem__(self, key, value) :
-        self.__setattr__(key, value)
-
-    def __setattr__(self, key, value) :
-        self.__mq__[key] = value
-        self.__dict__[key] = value
-
-    def __str__(self):
-        return self.__repr__()
-    
-    def __repr__(self) :
-        line = ""
-        for i in self.__dict__ :
-            line = line + " [" + str(i) + " : " + str(self.__dict__[i]) + "]\n"
-        return line
-
-    def keys(self) :
-        return self.__mq__.keys()
-    
-    
-def calculator() :
-	s = state()
-	print "starting the calculator"
-	print "calling yield"
-	print 
-	yield s
-	val1 = s.val1
-	yield s
-	val2 = s.val2
-	s.sum = (val1 + val2)
-	yield s
-	val3 = s.val3
-	s.sum = (val1 + val2 + val3)
-	s.parts = [val1, val2,val3]
-	yield s
-	val4 = s.val4
-	s.sum = (s.sum + val4)
-	s.parts.append(val4)
-	yield s
-
-
-def callcc(g) :
-	c = copy_generator(g)
-	def p() :
-		return copy_generator(c)
-		
-	return p
-
-
-
-def main():
-	c = calculator()	
-	t = c.next()
-	t.val1 = 56
-	thunk = callcc(c)
-	
-	t = c.next()
-	t.val2 = 12
-	thunk2 = callcc(c)
-		
-
-	t = c.next()
-	print t
-	t.val3 = 78
-	t = c.next()
-	print t
-	
-	print "-----------------------"
-	th = thunk()
-	l = th.next()
-	print l
-	l.val2 = 90
-	l = th.next()
-	print l
-
-	print "---===========---------"
-	th = thunk2()
-	k = th.next()
-	k.val3 = 789
-	k = th.next()
-	print k
-	
-	print "------2222222222222--------"
-	th = thunk()
-	l = th.next()
-	print l
-	l.val2 = -89
-	l = th.next()
-	print l
-
-
-if __name__ == "__main__" :
-    main()
-</pre>
-
-
-             
 	</div>
       </div>
 
