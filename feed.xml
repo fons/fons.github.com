@@ -1,55 +1,56 @@
 <?xml version = "1.0"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
+  <atom:link href="http://fons.github.com//feed.xml" ref="self" type="application/rss+xml"> 
   <title> "Notes on Programming" </title>
-  <link> "http://fons.github.com" </link>
+  <link> http://fons.github.com/ </link>
   <description> about programming </description>
-  <pubDate> Sun, 21 Jun 2009 19:34:6 EST </pubDate>
+  <pubDate> Sun, 21 Jun 2009 19:47:30 EST </pubDate>
 
   
   <item>
     <title> Blog Post created to test sandbox </title>
-    <link> http://fons.github.com/blog-post-created-to-test-sandbox.html </link>
+    <link> http://fons.github.com//blog-post-created-to-test-sandbox.html </link>
     <description> <p>I created this post to test whether the sandbox is working </p> </description> 
-    <guid> "http://fons.github.com/blog-post-created-to-test-sandbox.html" </guid>      
+    <guid> "http://fons.github.com//blog-post-created-to-test-sandbox.html" </guid>      
     <pubDate> Sun, 21 Jun 2009 18:42:24 EST </pubDate>
   </item>
   
   <item>
     <title> CL-BLIKY </title>
-    <link> http://fons.github.com/cl-bliky.html </link>
+    <link> http://fons.github.com//cl-bliky.html </link>
     <description> <h2>Description</h2><p>cl-bliky is a very simple blogging engine written in lisp. </p><p>It's based on a <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> </p><p>written by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. </p> </description> 
-    <guid> "http://fons.github.com/cl-bliky.html" </guid>      
+    <guid> "http://fons.github.com//cl-bliky.html" </guid>      
     <pubDate> Tues, 16 Jun 2009 18:58:40 EST </pubDate>
   </item>
   
   <item>
     <title> using markdown </title>
-    <link> http://fons.github.com/using-markdown.html </link>
+    <link> http://fons.github.com//using-markdown.html </link>
     <description> <p>This post uses markdown </p><h1>Header 1</h1><p>So this is header 1 style<br />
 </p><h2>Header 2</h2><p>This is header2 style </p><h3>Header 3</h3><p>This is header3 style  <br />
 </p> </description> 
-    <guid> "http://fons.github.com/using-markdown.html" </guid>      
+    <guid> "http://fons.github.com//using-markdown.html" </guid>      
     <pubDate> Mon, 15 Jun 2009 20:16:53 EST </pubDate>
   </item>
   
   <item>
     <title> Sample Upload Header </title>
-    <link> http://fons.github.com/sample-upload-header.html </link>
+    <link> http://fons.github.com//sample-upload-header.html </link>
     <description> <p> This is the introduction </p> </description> 
-    <guid> "http://fons.github.com/sample-upload-header.html" </guid>      
+    <guid> "http://fons.github.com//sample-upload-header.html" </guid>      
     <pubDate> Thu, 28 May 2009 18:39:42 EST </pubDate>
   </item>
   
   <item>
     <title> blog post with code examples. </title>
-    <link> http://fons.github.com/blog-post-with-code-examples.html </link>
+    <link> http://fons.github.com//blog-post-with-code-examples.html </link>
     <description> <p> intro tbd          <br />
 </p> </description> 
-    <guid> "http://fons.github.com/blog-post-with-code-examples.html" </guid>      
+    <guid> "http://fons.github.com//blog-post-with-code-examples.html" </guid>      
     <pubDate> Mon, 25 May 2009 10:23:58 EST </pubDate>
   </item>
   
 </channel>
 </rss>
-<
+
