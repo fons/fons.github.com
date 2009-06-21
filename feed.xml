@@ -1,0 +1,46 @@
+<?xml version = "1.0">
+<rss version="2.0">
+<channel>
+  <title>Notes on Programming </title>
+  <link> fons.github.com </link>
+  <description> about programming </description>
+  <pubDate> Sun Jun 21 10:15:6 Est 2009 </pubDate>
+
+  
+  <item>
+    <title> CL-BLIKY </title>
+    <link> "<--tmpl_var rss-blog-url-->/cl-bliky.html" </link>
+    <description> <h2>Description</h2><p>cl-bliky is a very simple blogging engine written in lisp. </p><p>It's based on a <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> </p><p>written by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. </p> </description> 
+    <pubDate> Tues Jun 16 18:58:40 Est 2009 </pubDate>
+    <guid> "<--tmpl_var blog-url-->/cl-bliky.html" </guid>      
+  </item>
+  
+  <item>
+    <title> using markdown </title>
+    <link> "<--tmpl_var rss-blog-url-->/using-markdown.html" </link>
+    <description> <p>This post uses markdown </p><h1>Header 1</h1><p>So this is header 1 style<br />
+</p><h2>Header 2</h2><p>This is header2 style </p><h3>Header 3</h3><p>This is header3 style  <br />
+</p> </description> 
+    <pubDate> Mon Jun 15 20:16:53 Est 2009 </pubDate>
+    <guid> "<--tmpl_var blog-url-->/using-markdown.html" </guid>      
+  </item>
+  
+  <item>
+    <title> Sample Upload Header </title>
+    <link> "<--tmpl_var rss-blog-url-->/sample-upload-header.html" </link>
+    <description> <p> This is the introduction </p> </description> 
+    <pubDate> Thu May 28 18:39:42 Est 2009 </pubDate>
+    <guid> "<--tmpl_var blog-url-->/sample-upload-header.html" </guid>      
+  </item>
+  
+  <item>
+    <title> blog post with code examples. </title>
+    <link> "<--tmpl_var rss-blog-url-->/blog-post-with-code-examples.html" </link>
+    <description> <p> intro tbd          <br />
+</p> </description> 
+    <pubDate> Mon May 25 10:23:58 Est 2009 </pubDate>
+    <guid> "<--tmpl_var blog-url-->/blog-post-with-code-examples.html" </guid>      
+  </item>
+  
+</channel>
+</rss>
