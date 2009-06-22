@@ -1,10 +1,10 @@
-<?xml version = "1.0"?>
-<rss version="2.0" >
+<?xml version="1.0"?>
+<rss version='2.0'>
 <channel>
-  156788<title> "Notes on Programming" </title>
+  <title> Notes on Programming </title>
   <link> http://fons.github.com/ </link>
   <description> about programming </description>
-  <pubDate> Sun, 21 Jun 2009 23: 8:29 EST </pubDate>
+  <pubDate> Sun, 21 Jun 2009 23:21:27 EST </pubDate>
 
   
   <item>
