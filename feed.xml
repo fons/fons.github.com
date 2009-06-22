@@ -5,7 +5,7 @@
   <title> "Notes on Programming" </title>
   <link> http://fons.github.com/ </link>
   <description> about programming </description>
-  <pubDate> Sun, 21 Jun 2009 19:47:30 EST </pubDate>
+  <pubDate> Sun, 21 Jun 2009 22:41:11 EST </pubDate>
 
   
   <item>
@@ -21,7 +21,7 @@
     <link> http://fons.github.com//cl-bliky.html </link>
     <description> <h2>Description</h2><p>cl-bliky is a very simple blogging engine written in lisp. </p><p>It's based on a <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> </p><p>written by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. </p> </description> 
     <guid> "http://fons.github.com//cl-bliky.html" </guid>      
-    <pubDate> Tues, 16 Jun 2009 18:58:40 EST </pubDate>
+    <pubDate> Tue, 16 Jun 2009 18:58:40 EST </pubDate>
   </item>
   
   <item>
