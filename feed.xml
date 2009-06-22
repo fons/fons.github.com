@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 <rss version='2.0' xmlns:atom="http://www.w3.org/2005/Atom">
-  <atom:link href="http://fons.github.com/feed.xml" ref="self" type="application/rss+xml" /> 
-  
   <channel>
     <title> Notes on Programming </title>
     <link> http://fons.github.com/ </link>
     <description> about programming </description>
-    <pubDate> Sun, 21 Jun 2009 23:35:05 EST </pubDate>
+    <pubDate> Sun, 21 Jun 2009 23:37:30 EST </pubDate>
     
     
     <item>
