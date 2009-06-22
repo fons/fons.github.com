@@ -1,37 +1,39 @@
 <?xml version="1.0"?>
-<rss version='2.0' >
-<channel>
-  <title> Notes on Programming </title>
-  <link> http://fons.github.com/ </link>
-  <description> about programming </description>
-  <pubDate> Sun, 21 Jun 2009 23:31:28 EST </pubDate>
-
+<rss version='2.0' xmlns:atom="http://www.w3.org/2005/Atom">
+  <atom:link href="http://fons.github.com/feed.xml" ref="self" type="application/rss+xml" /> 
   
-  <item>
-    <title> Test the sandbox </title>
-    <link> http://fons.github.com/test-the-sandbox.html </link>
-    <description> New blog post created to test the sandbox </description> 
-    <guid> http://fons.github.com/test-the-sandbox.html </guid>      
-    <pubDate> Sun, 21 Jun 2009 23:25:13 EST </pubDate>
-  </item>
-  
-  <item>
-    <title> CL-BLIKY </title>
-    <link> http://fons.github.com/cl-bliky.html </link>
-    <description> ## Description
+  <channel>
+    <title> Notes on Programming </title>
+    <link> http://fons.github.com/ </link>
+    <description> about programming </description>
+    <pubDate> Sun, 21 Jun 2009 23:35:05 EST </pubDate>
+    
+    
+    <item>
+      <title> Test the sandbox </title>
+      <link> http://fons.github.com/test-the-sandbox.html </link>
+      <description> New blog post created to test the sandbox </description> 
+      <guid> http://fons.github.com/test-the-sandbox.html </guid>      
+      <pubDate> Sun, 21 Jun 2009 23:25:13 EST </pubDate>
+    </item>
+    
+    <item>
+      <title> CL-BLIKY </title>
+      <link> http://fons.github.com/cl-bliky.html </link>
+      <description> ## Description
 
 cl-bliky is a very simple blogging engine written in lisp.
 
 It's based on a [tutorial](http://roeim.net/vetle/docs/cl-webapp-intro/) 
 written by [Vetle Roeim](http://roeim.net/vetle/).  </description> 
-    <guid> http://fons.github.com/cl-bliky.html </guid>      
-    <pubDate> Tue, 16 Jun 2009 18:58:40 EST </pubDate>
-  </item>
-  
-  <item>
-    <title> using markdown </title>
-    <link> http://fons.github.com/using-markdown.html </link>
-    <description> This post uses markdown
+      <guid> http://fons.github.com/cl-bliky.html </guid>      
+      <pubDate> Tue, 16 Jun 2009 18:58:40 EST </pubDate>
+    </item>
+    
+    <item>
+      <title> using markdown </title>
+      <link> http://fons.github.com/using-markdown.html </link>
+      <description> This post uses markdown
 #Header 1
 So this is header 1 style  
 ##Header 2
@@ -40,26 +42,26 @@ This is header2 style
 ###Header 3
 This is header3 style    
  </description> 
-    <guid> http://fons.github.com/using-markdown.html </guid>      
-    <pubDate> Mon, 15 Jun 2009 20:16:53 EST </pubDate>
-  </item>
-  
-  <item>
-    <title> Sample Upload Header </title>
-    <link> http://fons.github.com/sample-upload-header.html </link>
-    <description>  This is the introduction  </description> 
-    <guid> http://fons.github.com/sample-upload-header.html </guid>      
-    <pubDate> Thu, 28 May 2009 18:39:42 EST </pubDate>
-  </item>
-  
-  <item>
-    <title> blog post with code examples. </title>
-    <link> http://fons.github.com/blog-post-with-code-examples.html </link>
-    <description>  intro tbd             </description> 
-    <guid> http://fons.github.com/blog-post-with-code-examples.html </guid>      
-    <pubDate> Mon, 25 May 2009 10:23:58 EST </pubDate>
-  </item>
-  
-</channel>
+      <guid> http://fons.github.com/using-markdown.html </guid>      
+      <pubDate> Mon, 15 Jun 2009 20:16:53 EST </pubDate>
+    </item>
+    
+    <item>
+      <title> Sample Upload Header </title>
+      <link> http://fons.github.com/sample-upload-header.html </link>
+      <description>  This is the introduction  </description> 
+      <guid> http://fons.github.com/sample-upload-header.html </guid>      
+      <pubDate> Thu, 28 May 2009 18:39:42 EST </pubDate>
+    </item>
+    
+    <item>
+      <title> blog post with code examples. </title>
+      <link> http://fons.github.com/blog-post-with-code-examples.html </link>
+      <description>  intro tbd             </description> 
+      <guid> http://fons.github.com/blog-post-with-code-examples.html </guid>      
+      <pubDate> Mon, 25 May 2009 10:23:58 EST </pubDate>
+    </item>
+    
+  </channel>
 </rss>
 
