@@ -1,18 +1,17 @@
-<?xml version="1.0"?>
-<rss version='2.0'>
+<rss version='2.0' >
 <channel>
   <title> Notes on Programming </title>
   <link> http://fons.github.com/ </link>
   <description> about programming </description>
-  <pubDate> Sun, 21 Jun 2009 23:21:27 EST </pubDate>
+  <pubDate> Sun, 21 Jun 2009 23:25:41 EST </pubDate>
 
   
   <item>
-    <title> Blog Post created to test sandbox </title>
-    <link> http://fons.github.com//blog-post-created-to-test-sandbox.html </link>
-    <description> <p>I created this post to test whether the sandbox is working </p> </description> 
-    <guid> "http://fons.github.com//blog-post-created-to-test-sandbox.html" </guid>      
-    <pubDate> Sun, 21 Jun 2009 18:42:24 EST </pubDate>
+    <title> Test the sandbox </title>
+    <link> http://fons.github.com//test-the-sandbox.html </link>
+    <description> <p>New blog post created to test the sandbox </p> </description> 
+    <guid> "http://fons.github.com//test-the-sandbox.html" </guid>      
+    <pubDate> Sun, 21 Jun 2009 23:25:13 EST </pubDate>
   </item>
   
   <item>
