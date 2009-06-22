@@ -3,13 +3,13 @@
   <title> Notes on Programming </title>
   <link> http://fons.github.com/ </link>
   <description> about programming </description>
-  <pubDate> Sun, 21 Jun 2009 23:25:41 EST </pubDate>
+  <pubDate> Sun, 21 Jun 2009 23:28:50 EST </pubDate>
 
   
   <item>
     <title> Test the sandbox </title>
     <link> http://fons.github.com//test-the-sandbox.html </link>
-    <description> <p>New blog post created to test the sandbox </p> </description> 
+    <description> New blog post created to test the sandbox </description> 
     <guid> "http://fons.github.com//test-the-sandbox.html" </guid>      
     <pubDate> Sun, 21 Jun 2009 23:25:13 EST </pubDate>
   </item>
@@ -17,7 +17,12 @@
   <item>
     <title> CL-BLIKY </title>
     <link> http://fons.github.com//cl-bliky.html </link>
-    <description> <h2>Description</h2><p>cl-bliky is a very simple blogging engine written in lisp. </p><p>It's based on a <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> </p><p>written by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. </p> </description> 
+    <description> ## Description
+
+cl-bliky is a very simple blogging engine written in lisp.
+
+It's based on a [tutorial](http://roeim.net/vetle/docs/cl-webapp-intro/) 
+written by [Vetle Roeim](http://roeim.net/vetle/).  </description> 
     <guid> "http://fons.github.com//cl-bliky.html" </guid>      
     <pubDate> Tue, 16 Jun 2009 18:58:40 EST </pubDate>
   </item>
@@ -25,9 +30,15 @@
   <item>
     <title> using markdown </title>
     <link> http://fons.github.com//using-markdown.html </link>
-    <description> <p>This post uses markdown </p><h1>Header 1</h1><p>So this is header 1 style<br />
-</p><h2>Header 2</h2><p>This is header2 style </p><h3>Header 3</h3><p>This is header3 style  <br />
-</p> </description> 
+    <description> This post uses markdown
+#Header 1
+So this is header 1 style  
+##Header 2
+This is header2 style
+
+###Header 3
+This is header3 style    
+ </description> 
     <guid> "http://fons.github.com//using-markdown.html" </guid>      
     <pubDate> Mon, 15 Jun 2009 20:16:53 EST </pubDate>
   </item>
@@ -35,7 +46,7 @@
   <item>
     <title> Sample Upload Header </title>
     <link> http://fons.github.com//sample-upload-header.html </link>
-    <description> <p> This is the introduction </p> </description> 
+    <description>  This is the introduction  </description> 
     <guid> "http://fons.github.com//sample-upload-header.html" </guid>      
     <pubDate> Thu, 28 May 2009 18:39:42 EST </pubDate>
   </item>
@@ -43,8 +54,7 @@
   <item>
     <title> blog post with code examples. </title>
     <link> http://fons.github.com//blog-post-with-code-examples.html </link>
-    <description> <p> intro tbd          <br />
-</p> </description> 
+    <description>  intro tbd             </description> 
     <guid> "http://fons.github.com//blog-post-with-code-examples.html" </guid>      
     <pubDate> Mon, 25 May 2009 10:23:58 EST </pubDate>
   </item>
