@@ -55,7 +55,8 @@ a:visited{
            }
 
 h1,h2,h3,h4,h5,h6{
-                   color:#595959;
+                   #color:#595959;
+                   color:black;
                    font:bold 100% Sans-Serif;
                    padding:0px 0px 0px 0px;
                    margin:0px 0px 5px 0px;
@@ -107,16 +108,17 @@ Comment : Seperate format for the blog title
        
 ----------------------------------------------------------------*/
 #blog-title {
-              width:68%;
+              width:75%;
               }
 
 
 #blog-title h1{
                 color: #0000cc;
-                font:bold 250% Sans-Serif;
+                font:bold 280% Sans-Serif;
                 float:right;
-                width:35%;
+                width:40%;
                 padding:20px 0px 0px 0px;
+                #border: 0.15em solid #D6D6D6;
                 }
 
 
@@ -157,7 +159,7 @@ Comment : This is the sidebar to the left of the page
 ----------------------------------------------------------------*/
 
 #sideBar{
-          padding:250px 0px 0px 0px;
+          padding:220px 0px 0px 0px;
           text-align:left;
           background:#eee9e9;
           font-size : 12px;
@@ -251,9 +253,10 @@ the 'general' settings.
 /*this is a special format to bring h2 in line with the other formats..*/
 
 #post-intro h2 {
-                 color:#595959;
+                 #color:#595959;
+                 color:black;
                  border-bottom:dotted 0px #cccccc;
-                 font-size:110%;
+                 font-size:140%;
                  }
 
 #post-body h2 {
@@ -413,30 +416,11 @@ strike{color:#999999;}
 
 <body>
   <div id="blog-title">
-    <h1> Notes on Programming </h1>
+    <a href="/"> <h1> Notes on Programming </h1> </a>
   </div>
   <div id="mainClm">
       
 
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sun, 21 Jun 2009 23:25:13 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/test-the-sandbox.html"> Test the sandbox </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>New blog post created to test the sandbox </p> 
-    </div>
-    
-    <a href="/test-the-sandbox.html"> <h6> Continue reading "Test the sandbox" </h6> </a>
-    
-
-    
-  </div>
   
   <div id="post">
     <div id="post-timestamp" >
@@ -448,70 +432,10 @@ strike{color:#999999;}
     
     </h2>
     <div id="post-intro">
-      <h2>Description</h2><p>cl-bliky is a very simple blogging engine written in lisp. </p><p>It's based on a <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> </p><p>written by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. </p> 
+      <p>I 'm writing this using a self rolled blog engine called cl-bliky. I'm indebted to an excellent <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> put together by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. Vetle's goal was obviously to put together a compelling tutorial and he succeeded. I had different goals. </p> 
     </div>
     
     <a href="/cl-bliky.html"> <h6> Continue reading "CL-BLIKY" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Mon, 15 Jun 2009 20:16:53 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/using-markdown.html"> using markdown </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>This post uses markdown </p><h1>Header 1</h1><p>So this is header 1 style<br />
-</p><h2>Header 2</h2><p>This is header2 style </p><h3>Header 3</h3><p>This is header3 style  <br />
-</p> 
-    </div>
-    
-    <a href="/using-markdown.html"> <h6> Continue reading "using markdown" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Thu, 28 May 2009 18:39:42 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/sample-upload-header.html"> Sample Upload Header </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p> This is the introduction </p> 
-    </div>
-    
-    <a href="/sample-upload-header.html"> <h6> Continue reading "Sample Upload Header" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Mon, 25 May 2009 10:23:58 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/blog-post-with-code-examples.html"> blog post with code examples. </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p> intro tbd          <br />
-</p> 
-    </div>
-    
-    <a href="/blog-post-with-code-examples.html"> <h6> Continue reading "blog post with code examples." </h6> </a>
     
 
     
@@ -555,9 +479,9 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
       
 	<a href="/feed.xml"> 
 	  
-	 <img src="http://github.com/fons/cl-bliky/raw/3c0b8599e6da878fb6870c71955a18915f2f1073/rss_pill_blue_32.png" 
-	       border="0"   />
-	  
+	   <img src="http://github.com/fons/cl-bliky/raw/3c0b8599e6da878fb6870c71955a18915f2f1073/rss_pill_blue_32.png" 
+	border="0"   />
+
 	</a>
     </div>
     <div id="side-bars">
@@ -565,27 +489,7 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
       
       <h2> Code </h2>
       <div>
-	<UL> <LI><A HREF="http://github.com/fons/cl-bliky/tree/master/">  cl-bliky</A</LI>  </UL> 
-	</div>
-      <div>
-	 
-	</div>
-      
-      
-      
-      <h2> new sidebar element </h2>
-      <div>
-	<p>This is the intro </p>
-	</div>
-      <div>
-	This is the bodey  
-	</div>
-      
-      
-      
-      <h2> new blog post dd Sat Jun 20 20:4:59 Est 2009 </h2>
-      <div>
-	
+	<UL><LI> <A HREF="http://github.com/fons/cl-bliky/tree/master/">  cl-bliky</A</LI> </UL> <br> <br>  
 	</div>
       <div>
 	 
