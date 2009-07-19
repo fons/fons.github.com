@@ -27,65 +27,19 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Thu, 02 Jul 2009 21:36:44 EST </pubDate>
+    <pubDate> Sun, 19 Jul 2009 14:35:48 EST </pubDate>
     
     <item>
-      <title> Markdown Test </title>
-      <link> http://fons.github.com/markdown-test.html </link>
-      <description> This is a test of the markdown capabilities.
-
-[this 
-is 
-a 
-line] 
-
-
-List :
-
-+     item 1
-
-+     item 2 
-
-This is added to the last item
-
-
-line1. 
-line2. 
-line3. 
-These are four lines, which s/b one paragraph. 
-
-This is a line, after one empty line.
-
-   
-This is the next line , after two new lines.
-
-This is a line, followed by 3 spaces.   
-
-   
-The preceding line has a few spaces. This line I finish with a few spaces.   
-
-
-This is the line after 2 new lines (starts a new paragraph)     
-This is after 3 new lines.
-  
-  
-  
-This is after three "white space" lines 
-   
-This is after one white space line </description> 
-      <guid> http://fons.github.com/markdown-test.html </guid>      
-      <pubDate> Wed, 01 Jul 2009 21:20:49 EST </pubDate>
-    </item>
-    
-    <item>
-      <title> CL-BLIKY </title>
-      <link> http://fons.github.com/cl-bliky.html </link>
+      <title> CL-BLIKY : A simple lisp based blog engine </title>
+      <link> http://fons.github.com/cl-bliky--a-simple-lisp-based-blog-engine.html </link>
       <description> I 'm writing this using a self rolled blog engine called cl-bliky. I'm indebted to an excellent 
-[tutorial](http://roeim.net/vetle/docs/cl-webapp-intro/) put together by [Vetle Roeim](http://roeim.net/vetle/). 
-Vetle's goal was obviously to put together a compelling tutorial and he succeeded. 
-I had different goals. </description> 
-      <guid> http://fons.github.com/cl-bliky.html </guid>      
-      <pubDate> Tue, 16 Jun 2009 18:58:40 EST </pubDate>
+[tutorial](http://roeim.net/vetle/docs/cl-webapp-intro/) 
+put together by [Vetle Roeim](http://roeim.net/vetle/). 
+His goal was obviously to put together a compelling tutorial and he succeeded. 
+My goal was to use lisp in a small programming project, and developing a simple and easily 
+customizable blog engine seemed like a good start. </description> 
+      <guid> http://fons.github.com/cl-bliky--a-simple-lisp-based-blog-engine.html </guid>      
+      <pubDate> Sun, 19 Jul 2009 11:49:05 EST </pubDate>
     </item>
     
   </channel>
