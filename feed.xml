@@ -27,7 +27,40 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Sun, 19 Jul 2009 14:36:43 EST </pubDate>
+    <pubDate> Sun, 09 Aug 2009 20:45:33 EST </pubDate>
+    
+    <item>
+      <title> Factorials, Tail Recursion and CPS ... in C  </title>
+      <link> http://fons.github.com/factorials-tail-recursion-and-cps--in-c-.html </link>
+      <description> Recursive algorithms are elegant. 
+
+However, if the recursion is not a  
+[tail call](http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf)  
+the growth of the stack leads to a stack overflow. 
+
+
+Tail call recursion is a technique whereby the last call in a recursive function 
+does not depend on the variables pushed on the stack. 
+In other words the function 
+returns the value of its additional (recursive) call.
+
+
+Functional languages like Haskell or Lisp are designed to 
+support the use of tail recursive algorithms.
+The JVM -although now the target platform of a lisp like 
+[clojure](closure.org) or 
+a hybrid functional language like [scala](www.scala-lang.org) - 
+[does not support tail recursion at all](http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm).
+
+In C/C++ the compiler can in fact 
+replace tail recursive calls with a simple loop, thereby eliminating the allocation 
+for additional stack frames all together.
+
+In this post I'll consider various implementations of the humble factorial to illustrate 
+some of these things. </description> 
+      <guid> http://fons.github.com/factorials-tail-recursion-and-cps--in-c-.html </guid>      
+      <pubDate> Sun, 09 Aug 2009 10:27:45 EST </pubDate>
+    </item>
     
     <item>
       <title> CL-BLIKY : A simple lisp based blog engine </title>

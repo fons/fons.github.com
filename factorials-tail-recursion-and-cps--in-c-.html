@@ -1,0 +1,683 @@
+<!---
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title> Programmer Notes  </title>
+    <style type="text/css">
+      /*-------------------------------------------------------------------
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------
+Sheet   : All sheets
+Purpose : General Formatting 
+Comment : Default formatting, no tied to any template or div
+
+This is probably NOT the right way, since I created specific formatting under
+the 'general' settings, esp H1...
+
+-------------------------------------------------------------------------------*/
+
+body{
+      margin:0px;
+      padding:0x;
+      #background:#ffffff;
+      background:#eee9e9;
+      #background:#fffacd;
+      #color:#000011;
+      font-size : 12px;
+      font:normal 100% Sans-Serif;
+      }
+
+p {
+    margin:0px;
+    padding:0x;
+    #background:#ffffff;
+    background:#eee9e9;
+    #color:#000011;
+    font-size : 12px;
+    font:normal 100% Sans-Serif;
+
+
+    }
+
+a{
+   #padding:2px;
+   margin:0px 0px 0px 0px;
+   width:100%;
+   border:none;
+   color:#0000cc;
+   text-decoration:none;
+   }
+
+a:hover{
+         text-decoration:none;
+         }
+
+a:visited{
+           color:#0000cc;
+           }
+
+h1,h2,h3,h4,h5,h6{
+                   color:#595959;
+                   #color:black;
+                   #color:darkblue;
+                   font:bold 100% Sans-Serif;
+                   padding:0px 0px 0px 0px;
+                   margin:0px 0px 5px 0px;
+                   width:100%;
+                   text-align:left;
+                   }
+h1 {
+     font-size:180%;
+     }
+
+
+h2 {
+     font-size:160%;
+     }
+
+h3 {
+     font-size:110%;
+     }
+
+pre {  }
+
+code{
+      #border: 0.30em solid #D6D6D6;
+      border-left: 0.3em solid #D6D6D6;
+      display: block;
+      padding: 1em 1em 1em 1em;
+      color:#330066;
+      background:#EDEDED;
+      }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index page
+Purpose : Formats the main column
+Comment : Basically sets up a two column format
+       
+----------------------------------------------------------------*/
+
+#mainClm{
+          float:left;
+          padding:13px 50px 10px 5%;
+          width:68%;
+          }
+
+
+/*---------------------------------------------------------------
+Sheet   : All pages
+Purpose : Formats the blog title
+Comment : Seperate format for the blog title
+       
+----------------------------------------------------------------*/
+#blog-title {
+              width:75%;
+              }
+
+
+#blog-title h1 {
+                 color: #0000cc;
+                 font:bold 280% Sans-Serif;
+                 float:right;
+                 width:30%;
+                 padding:20px 0px 0px 0px;
+                 #border: 0.15em solid #D6D6D6;
+                }
+
+
+/*---------------------------------------------------------------
+Sheet   : Import Page
+Purpose : formats the import page
+Comment : 
+       
+----------------------------------------------------------------*/
+
+#import-header h1 {
+                    color: #0000cc;
+                    font:bold Sans-Serif;
+                    width:100%;
+                    padding:15px 0px 0px 0px;
+                    font-size: 240%;
+                    #border-bottom:solid 4px #0000cc;
+                    }
+
+#import-edit h1, h2, h3 h4, h5 {
+                                 padding:0px 0px 0px 0px;
+                                 color: #0000cc;
+                                 font:bold Verdana,Sans-Serif;
+                                 width:100%;
+                                 #border-bottom:solid 2px #0000cc;
+                                 }
+
+#import-edit h2 {
+                  font-size: 160%;
+                  }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index Page / index.tmpl
+Purpose : Formats the side bar
+Comment : This is the sidebar to the left of the page
+       
+----------------------------------------------------------------*/
+
+#sideBar{
+          padding:220px 0px 0px 0px;
+          text-align:left;
+          background:#eee9e9;
+          font-size : 12px;
+          font:normal 100% Sans-Serif;
+
+          }
+
+#sideBar p {
+             margin:0px 0px 0px 0px;
+             text-align:left;
+             background:#eee9e9;
+             font-size : 12px;
+             font:normal 100% Sans-Serif;
+             }
+
+#sideBar h2 {
+              color:#0000cc;
+              font-size:120%;
+             }
+
+#sideBar ul{
+             margin:0px 0px 33px 0px;
+             list-style-type:none;
+             font-size:100%;
+             }
+
+#sideBar li {
+              list-style-type:none;
+              color:#111111
+              }
+
+#sideBar a {
+             color:#555555
+             }
+
+#sideBar a:hover {
+                   border-bottom: solid 2px red;
+                   }
+
+#sideBar ul a{
+               #color:#555555;
+               color:black;##FF8000;
+               list-style-type:underline;
+               }
+
+#contact a {
+             color:#555555
+             }
+
+#contact a:hover {
+                   text-decoration:none;
+                   }
+
+#contact a:visited{
+                    color:#0000cc;
+                    }
+
+
+/*-------------------------------------------------------------------------
+Sheet   : Index and post sheets
+Purpose : Format the postings
+Comment : each post has a post and post-intro division
+This is probably NOT the right way, since I created specific formatting under
+the 'general' settings.
+
+--------------------------------------------------------------------------*/
+/* h2 is also used for the blog post title...
+   h6 is special; it's used to format the 'continue reading ..' link    
+*/
+
+#post { 
+        margin:  1em 1em 1em 1em;
+        padding: 1em 1em 1em 1em;
+        border: 0.1em solid #FF8000;
+        background:#F5F5F5;
+        }
+
+#post p { 
+          background:#F5F5F5;
+        }
+
+
+/* h2 is also used for the blog post title...*/
+#post h2 {
+           border-bottom:solid 1px #000000;
+           color: #0000cc;
+           font:bold 160% Sans-Serif;
+           }
+
+
+/*this is a special format to bring h2 in line with the other formats..*/
+
+#post-intro h2 {
+                 #color:#595959;
+                 color:black;
+                 border-bottom:dotted 0px #cccccc;
+                 font-size:140%;
+                 }
+
+#post-body h2 {
+                color:#595959;
+                #color:black;
+                border-bottom:dotted 0px #cccccc;
+                font-size:140%;
+                }
+
+/* h6 is special; it's used to format the 'continue reading ..' link */
+#post h6 {
+          margin:4px 0px 0px 0px;
+          color:#0000cc;
+          #font-family : 'Sans Serif';
+          font-size   : 14px;
+          font-weight : bold;
+          }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index and post sheets
+Purpose : Format the visible time stamp
+Comment : Each blog post has a time stamp in a specific div. 
+
+----------------------------------------------------------------*/
+#post-timestamp p {  
+                    margin:0px 0px 18px 0px;
+                    border-bottom-width : 4px;
+                    color : #cc0000;
+                    #font-family : , 'Sans Serif',;
+                    font-size : 12px;
+                    height : 4px;
+
+                    }
+
+/*---------------------------------------------------------------
+Sheet   : Index sheet
+Purpose : Format the footer
+Comment : Basically sets up a footer pointing to the bliky location
+          on github, with a barely visible link ref.
+
+----------------------------------------------------------------*/
+#footer p { 
+            #font-family : , 'Sans Serif',;           
+            font-size:.75em;
+            margin-top: 3em;
+            text-align: center;
+            text-indent: 0;
+           }
+#footer a { color:#222222; }
+
+#footer a:hover {
+                  border-bottom: solid 2px red;
+                  }
+
+
+/* ---------------------------------------------------------------------
+Sheet       : post-edit.tmpl
+Purpose     : edit a blog post
+Comment     : These are the styles used when editing 
+a blog post
+
+-----------------------------------------------------------------------*/
+#edit-page{
+            float:left;
+            padding:13px 50px 10px 5%;
+            width:80%;
+            }
+
+
+#edit-header {                
+               margin:0px 0px 0px 0px;
+               font-size:240%;
+               }
+
+#edit-header h1 { 
+                  margin:0px 0px 0px 0px;
+                  color:salmon; 
+                  text-align: center;
+                  }
+
+#intro-buttons {  
+                 margin:8px 0px 8px 0px;
+                 #background:#caff70;
+                 background:#f5deb3;
+                 border:solid 1px #cd0000;
+}
+
+#intro-buttons input {  
+                      margin:2px 0px 2px 0px;
+                      text-align:left;
+                      #width:48%;
+                      font-family : 'Sans Serif';
+                      font-size : 20px;
+                      #background:#F5F5F5;
+                      #background:#caff70;
+                       background:#d3d3d3;
+                      }                       
+
+#intro-edit input {  
+                    margin:20px 0px 20px 0px;
+                    text-align:left;
+                    width:100%;
+                    font-family : 'Sans Serif';
+                    font-size : 18px;
+                    #background:#F5F5F5;
+                    background:#f5deb3;
+                    }                       
+
+#intro-edit textarea {  
+                       margin:0px 0px 0px 0px;
+                       text-align:left;
+                       width:100%;
+                       font-family : 'Sans Serif';
+                       font-size : 18px;
+                       #background:#F5F5F5;
+                       background:#f5deb3;
+                       }                       
+
+#intro-edit h2 {
+                 border-bottom:solid 1px #000000;
+                 color: #0000cc;
+                 font:bold 110% Verdana,Sans-Serif;
+                 }
+
+
+/*--------------end of post-edit.tmpl style -------------------------*/
+/* ---------------------------------------------------------------------
+Sheet       : import.tmpl
+Purpose     : import a repo
+Comment     : These are the styles used when importing a repo
+               
+
+-----------------------------------------------------------------------*/
+#import-page{
+            float:left;
+            padding:13px 50px 10px 5%;
+            width:80%;
+            }
+
+
+#import-header {                
+               margin:0px 0px 0px 0px;
+               font-size:240%;
+               }
+
+#import-header h1 { 
+                  margin:0px 0px 0px 0px;
+                  color:salmon; 
+                  text-align: center;
+                  }
+
+
+/*--------------end of import.tmpl style -------------------------*/
+
+/* ---------------------------------------------------------------------
+Sheet       : import.tmpl
+Purpose     : import a repo
+Comment     : These are the styles used when importing a repo
+-----------------------------------------------------------------------*/
+
+#options-header {                
+                  margin:0px 0px 0px 0px;
+                  font-size:240%;
+                  }
+
+#options-header h1 { 
+                     margin:0px 0px 0px 0px;
+                     color:salmon; 
+                     text-align: center;
+                     }
+
+#options-page{
+               float:left;
+               padding:10px 0px 0px 50px;
+               width:80%;
+               font-size: 100%;
+               }
+
+
+/*----------------- end of options style ----------------------------*/
+
+
+    </style>
+  </head>  
+
+  <body>
+    <div id="blog-title">
+      <a href="/"> <h1> Programmer Notes </h1> </a> 
+    </div>
+    
+    <div id="mainClm">
+      <div id="post">
+	<div id="post-type" style="visibility:hidden">
+	  <p>"post"</p>
+	</div>
+	<div id="post-timestamp" >
+	  <p>Sun, 09 Aug 2009 10:27:45 EST </p>
+	</div>
+	<div id="post-header">
+	  <h2> Factorials, Tail Recursion and CPS ... in C   </h2>
+	</div>
+	<div id="post-intro">
+	  <p>Recursive algorithms are elegant. However, if the recursion is not a  <a href="http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf">tail call</a>  the growth of the stack leads to a stack overflow. </p><p>Tail call recursion is a technique whereby the last call in a recursive function does not depend on the variables pushed on the stack. In other words the function returns the value of its additional (recursive) call. </p><p>Functional languages like Haskell or Lisp are designed to support the use of tail recursive algorithms.The JVM -although now the target platform of a lisp like <a href="closure.org">clojure</a> or a hybrid functional language like <a href="www.scala-lang.org">scala</a> - <a href="http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm">does not support tail recursion at all</a>. In C/C++ the compiler can in fact replace tail recursive calls with a simple loop, thereby eliminating the allocation for additional stack frames all together. In this post I'll consider various implementations of the humble factorial to illustrate some of these things. </p>
+	</div>
+	<div id="post-body">
+	  <p><br> The factorial of an integer n is defined as: </p><pre><code>n! = n * (n-1)!  
+1! = 1  
+</code></pre><p>Here's a straightforward implementation using a while : </p><pre><code>fact = 1;  
+while (n &gt; 0) {  
+  	  fact *=n;  
+	  n--;  
+}  
+</code></pre><p>A naive recursive implementation looks like this : </p><pre><code>	int  fact(int n) {  
+        if (n == 1) return 1;  
+   	    return n * fact(n-1);  
+   } </code></pre><p><em>fact</em> cannot return a value until all previous values have been popped of the stack, causing the stack to grow. A tail recursive version of the same algorithm uses an accumulator to remove the multiplication on the last line : </p><pre><code>int fact(int n, int accum) {  
+	if n==1 return accum;  
+	return fact(n-1, n*accum);  
+}  
+</code></pre><p>When discussing recursion the <a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">y-combinator</a> cannot be far behind. </p><p><a href="www.dreamsongs.com/Files/WhyOfY.pdf">This document</a> discusses the reduction of a factorial in scheme to an application of the y-combinator. When I read this, a third possibility of calculating the factorial sprung to mind: pass the function as part of the recursion. This is very much like a <a href="http://library.readscheme.org/page6.html">CPS transformation</a>: Each subsequent call is passed a continuation of the previous calculation. </p><p>C doesn't support continuations. The role of the continuation is played by the stack, but that is not accessible as a first-order object in C. </p><p>A first approach is to rewrite the previous expressions as : </p><pre><code>int fact(Func f, int n, int accum) {  
+  	    if n == 1 return accum;  
+  	    return f(f, n-1, n*accum);  
+} </code></pre><p>What's the signature of f ? It's a function which takes as it's first argument a function , which takes as it's first argument a function, which.... In other words we now need to explicitly type the recursion, which is not possible in C. Never mind then ? Well, we can now take advantage of C's lack of typing and change the implementation just a little: </p><pre><code>     int fact(void* f, int val, int acc) {  
+  	      if (val == 1) return acc;  
+  	      Func* fptr = (Func * ) f;  
+  	      return fptr((void *) f, val-1, acc*val);  
+     } </code></pre><p>This does the trick. </p><hr/><p>The file <em>factorial.c</em> in <a href="http://github.com/fons/c_fact/tree/master">c_fact</a> contains all three implementations discussed above, as well as the 'loop' based calculation. I'm compiling on a 64 bit machine (AMD Turion dual core), running Ubuntu. </p><p>It's instructive too look at the assembly code generated by the compilet for each implementation, at various levels of optimization. </p><p>First, I compile a non-optimized debug version, like so : </p><pre><code>gcc -m32 -g    -c -o factorial.o factorial.c  
+gcc -m32 factorial.o -o factorial  
+objdump -D ./factorial </code></pre><p>The -m32 will force gcc to generate 32 bit code. The 64 bit code is not going to be materially different. <strong>objdump -D</strong> is used to disassemble the resulting executable. </p><p>Here is the dump for the first variation of the factorial function : </p><pre><code> 0804845e factorial:  
+ 804845e:	55                   	push   %ebp  
+ 804845f:	89 e5                	mov    %esp,%ebp  
+ 8048461:	83 ec 08             	sub    $0x8,%esp  
+ 8048464:	83 7d 08 00          	cmpl   $0x0,0x8(%ebp)  
+ 8048468:	75 09                	jne    8048473 &lt;factorial+0x15&gt;  
+ 804846a:	c7 45 fc 01 00 00 00 	movl   $0x1,-0x4(%ebp)  
+ 8048471:	eb 17                	jmp    804848a &lt;factorial+0x2c&gt;  
+ 8048473:	8b 45 08             	mov    0x8(%ebp),%eax  
+ 8048476:	83 e8 01             	sub    $0x1,%eax  
+ 8048479:	89 04 24             	mov    %eax,(%esp)  
+ **804847c:	e8 dd ff ff ff       	call   804845e &lt;factorial&gt;**  
+ 8048481:	89 c2                	mov    %eax,%edx  
+ 8048483:	0f af 55 08          	imul   0x8(%ebp),%edx  
+ 8048487:	89 55 fc             	mov    %edx,-0x4(%ebp)  
+ 804848a:	8b 45 fc             	mov    -0x4(%ebp),%eax  
+ 804848d:	c9                   	leave   
+ 804848e:	c3                   	ret     
+</code></pre><p>Notice that in position <em>804847c</em> the factorial function calls itself again. </p><p>The growth of the stack is quite obvious in the debugger: </p><pre><code>#0  factorial (val=3) at factorial.c:23  
+#1  0x08048481 in factorial (val=4) at factorial.c:24  
+#2  0x08048481 in factorial (val=5) at factorial.c:24  
+#3  0x08048481 in factorial (val=6) at factorial.c:24  
+#4  0x08048481 in factorial (val=7) at factorial.c:24  
+#5  0x08048481 in factorial (val=8) at factorial.c:24  
+#6  0x08048481 in factorial (val=9) at factorial.c:24  
+#7  0x08048481 in factorial (val=10) at factorial.c:24  
+#8  0x0804861e in main (argc=2, argv=0xfffe8364) at factorial.c:66 </code></pre><p>The assembly code generated for the other two implementations is not substantially different. </p><pre><code>0804848f &lt;factorial2&gt;:  
+ 804848f:	55                   	push   %ebp  
+ 8048490:	89 e5                	mov    %esp,%ebp  
+ 8048492:	83 ec 0c             	sub    $0xc,%esp  
+ 8048495:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)  
+ 8048499:	75 08                	jne        80484a3 &lt;factorial2+0x14&gt;  
+ 804849b:	8b 45 0c             	mov    0xc(%ebp),%eax  
+ 804849e:	89 45 fc             	mov    %eax,-0x4(%ebp)  
+ 80484a1:	eb 1c                	jmp        80484bf &lt;factorial2+0x30&gt;  
+ 80484a3:	8b 45 08             	mov    0x8(%ebp),%eax  
+ 80484a6:	0f af 45 0c          	imul   0xc(%ebp),%eax  
+ 80484aa:	8b 55 08             	mov    0x8(%ebp),%edx  
+ 80484ad:	83 ea 01             	sub    $0x1,%edx  
+ 80484b0:	89 44 24 04          	mov    %eax,0x4(%esp)  
+ 80484b4:	89 14 24             	mov    %edx,(%esp)  
+ 80484b7:	e8 d3 ff ff ff       	call       804848f &lt;factorial2&gt;  
+ 80484bc:	89 45 fc             	mov    %eax,-0x4(%ebp)  
+ 80484bf:	8b 45 fc             	mov    -0x4(%ebp),%eax  
+ 80484c2:	c9                   	leave   
+ 80484c3:	c3                   	ret     
+ 
+ 080484c4 &lt;factorial3&gt;:  
+ 80484c4:	55                   	push   %ebp  
+ 80484c5:	89 e5                	mov    %esp,%ebp  
+ 80484c7:	83 ec 28             	sub    $0x28,%esp  
+ 80484ca:	83 7d 0c 01          	cmpl   $0x1,0xc(%ebp)  
+ 80484ce:	75 08                	jne        80484d8 &lt;factorial3+0x14&gt;  
+ 80484d0:	8b 45 10             	mov    0x10(%ebp),%eax  
+ 80484d3:	89 45 ec             	mov    %eax,-0x14(%ebp)  
+ 80484d6:	eb 29                	jmp        8048501 &lt;factorial3+0x3d&gt;  
+ 80484d8:	8b 45 08             	mov    0x8(%ebp),%eax  
+ 80484db:	89 45 fc             	mov    %eax,-0x4(%ebp)  
+ 80484de:	8b 45 10             	mov    0x10(%ebp),%eax  
+ 80484e1:	0f af 45 0c          	imul   0xc(%ebp),%eax  
+ 80484e5:	8b 55 0c             	mov    0xc(%ebp),%edx  
+ 80484e8:	83 ea 01             	sub    $0x1,%edx  
+ 80484eb:	89 44 24 08          	mov    %eax,0x8(%esp)  
+ 80484ef:	89 54 24 04          	mov    %edx,0x4(%esp)  
+ 80484f3:	8b 45 08             	mov    0x8(%ebp),%eax  
+ 80484f6:	89 04 24             	mov    %eax,(%esp)  
+ 80484f9:	8b 45 fc             	mov    -0x4(%ebp),%eax  
+ 80484fc:	ff d0                	call   *%eax  
+ 80484fe:	89 45 ec             	mov    %eax,-0x14(%ebp)  
+ 8048501:	8b 45 ec             	mov    -0x14(%ebp),%eax  
+ 8048504:	c9                   	leave   
+ 8048505:	c3                   	ret    </code></pre><p>In both cases the recursion is indicated by the assembly instruction <em>call</em> on the function itself. </p><p>Ok, now let's turn up the optimization level a bit : </p><pre><code>gcc -m32 -g -O2   -c -o factorial.o factorial.c  
+gcc -m32 factorial.o -o factorial </code></pre><p>Here's the assembly code generated by the compiler for all three versions of the factorial: </p><pre><code> 08048410 &lt;factorial&gt;:  
+ 8048410:	55                   	push   %ebp  
+ 8048411:	b8 01 00 00 00       	mov    $0x1,%eax  
+ 8048416:	89 e5                	mov    %esp,%ebp  
+ 8048418:	8b 55 08             	mov    0x8(%ebp),%edx  
+ 804841b:	85 d2                	test   %edx,%edx  
+ 804841d:	74 09                	je         8048428 &lt;factorial+0x18&gt;  
+ 804841f:	90                   	nop     
+ 
+ 8048420:	0f af c2             	imul   %edx,%eax  
+ 8048423:	83 ea 01             	sub    $0x1,%edx  
+ 8048426:	75 f8                	jne        8048420 &lt;factorial+0x10&gt;  
+ 
+ 8048428:	5d                   	pop    %ebp  
+ 8048429:	c3                   	ret     
+ 804842a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi  
+ 
+ 08048430 &lt;factorial2&gt;:  
+ 8048430:	55                   	push   %ebp  
+ 8048431:	89 e5                	mov    %esp,%ebp  
+ 8048433:	8b 55 08             	mov    0x8(%ebp),%edx  
+ 8048436:	8b 45 0c             	mov    0xc(%ebp),%eax  
+ 8048439:	83 fa 01             	cmp    $0x1,%edx  
+ 804843c:	74 0d                	je         804844b &lt;factorial2+0x1b&gt;  
+ 804843e:	66 90                	xchg   %ax,%ax  
+ 
+ 8048440:	0f af c2             	imul   %edx,%eax  
+ 8048443:	83 ea 01             	sub    $0x1,%edx  
+ 8048446:	83 fa 01             	cmp    $0x1,%edx  
+ 8048449:	75 f5                	jne         8048440 &lt;factorial2+0x10&gt;  
+ 
+ 804844b:	5d                   	pop    %ebp  
+ 804844c:	c3                   	ret     
+ 804844d:	8d 76 00             	lea    0x0(%esi),%esi  
+ 
+ 
+ 08048450 &lt;factorial3&gt;:  
+ 8048450:	55                   	push   %ebp  
+ 8048451:	89 e5                	mov    %esp,%ebp  
+ 8048453:	8b 45 0c             	mov    0xc(%ebp),%eax  
+ 8048456:	8b 4d 08             	mov    0x8(%ebp),%ecx  
+ 8048459:	8b 55 10             	mov    0x10(%ebp),%edx  
+ 804845c:	83 f8 01             	cmp    $0x1,%eax  
+ 804845f:	74 0f                	je     8048470 &lt;factorial3+0x20&gt;  
+ 8048461:	0f af d0             	imul   %eax,%edx  
+ 8048464:	83 e8 01             	sub    $0x1,%eax  
+ 8048467:	89 45 0c             	mov    %eax,0xc(%ebp)  
+ 804846a:	89 55 10             	mov    %edx,0x10(%ebp)  
+ 804846d:	5d                   	pop    %ebp  
+ 
+ 804846e:	ff e1                	jmp    *%ecx  
+ 
+ 8048470:	5d                   	pop    %ebp  
+ 8048471:	89 d0                	mov    %edx,%eax  
+ 8048473:	c3                   	ret     
+ 8048474:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi  
+ 804847a:	8d bf 00 00 00 00    	lea    0x0(%edi),%edi  
+</code></pre><p>At this stage, the recursion has been replaced by a loop in the first two factorial algorithms (<em>factorial</em> and <em>factorial2</em> above). </p><p>In <em>factorial3</em> the recursion has been replaced by a <em>jmp</em> instruction. This is obviously an improvement on the call instruction, since it skips saving the instruction pointer on the stack. Note though, that for all intents and purposes the instruction pointer is already on the stack, as the function pointer is an argument of the function itself. </p><p>It's instructive so see how all three implementations behave in the debugger. If you set a breakpoint at the entry point of the first two functions the breakpoint will respected the first time functions are entered. Since the recursion has been replaced by a loop, this will be the only time the breakpoint is hit. </p><p>That's pretty annoying, if you want to examine the state of the function body on subsequent iterations by breaking on the function invocation. The compiler has rewritten your function body and essentially eliminated that entry point. Sure, gdb allows you to debug at the assembly level, and with the assembly generated by objdump in hand you're certainly in a position to examine the function body nevertheless. But you have to work a level down (or is it up ?) on the abstraction scale. The optimization of the third factorial function does not eliminate the function invocation as a possible break point. </p><hr/><p>What's the upshot of all of this ? </p><p>A C/C++ compiler should be able to optimize a simple recursive algorithm, like the factorial, by replacing the recursive call with a loop. The compiler rewrites the function body, in effect changing the algorithm. That's easy to verify by inspecting the assembly code. For a simple enough function like the first two factorial functions this is probably not too much of an issue. When the function body is more complex, there is going to be a disconnect between the code generated by the compiler and the original. That will complicate reasoning about the correctness of it. </p><p>However, the extend of the rewrite can be controlled. The optimization of the CPS like algorithm kept the original function body substantially in place, but did remove the build up of the stack. The benefit here is that the non-optimized and optimized function are not substantially different, as can be verified by inspection in the debugger. </p> 
+	</div>
+	<div id="post-timestamp-id" style="visibility:hidden">
+	  <p>3458816865 </p>
+	</div>
+      </div>
+
+      <div id="footer">
+	<p>
+	  Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
+	</p>
+      </div>
+      
+    </div><!-- end of main area -->
+
+  </body>
+</html>

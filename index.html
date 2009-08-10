@@ -502,6 +502,25 @@ Comment     : These are the styles used when importing a repo
   
   <div id="post">
     <div id="post-timestamp" >
+      <p>Sun, 09 Aug 2009 10:27:45 EST </p> 
+    </div>
+    <h2> 
+      
+    <a href="/factorials-tail-recursion-and-cps--in-c-.html"> Factorials, Tail Recursion and CPS ... in C  </a>
+    
+    </h2>
+    <div id="post-intro">
+      <p>Recursive algorithms are elegant. However, if the recursion is not a  <a href="http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf">tail call</a>  the growth of the stack leads to a stack overflow. </p><p>Tail call recursion is a technique whereby the last call in a recursive function does not depend on the variables pushed on the stack. In other words the function returns the value of its additional (recursive) call. </p><p>Functional languages like Haskell or Lisp are designed to support the use of tail recursive algorithms.The JVM -although now the target platform of a lisp like <a href="closure.org">clojure</a> or a hybrid functional language like <a href="www.scala-lang.org">scala</a> - <a href="http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm">does not support tail recursion at all</a>. In C/C++ the compiler can in fact replace tail recursive calls with a simple loop, thereby eliminating the allocation for additional stack frames all together. In this post I'll consider various implementations of the humble factorial to illustrate some of these things. </p> 
+    </div>
+    
+    <a href="/factorials-tail-recursion-and-cps--in-c-.html"> <h6> Continue reading "Factorials, Tail Recursion and CPS ... in C " </h6> </a>
+    
+
+    
+  </div>
+  
+  <div id="post">
+    <div id="post-timestamp" >
       <p>Sun, 19 Jul 2009 11:49:05 EST </p> 
     </div>
     <h2> 
@@ -570,7 +589,7 @@ border="0"   />
       
       <h2> Code </h2>
       <div>
-	<ul><li><a href="http://github.com/fons/cl-bliky/tree/master/">c-bliky</a></li></ul>
+	<ul><li><a href="http://github.com/fons/cl-bliky/tree/master/">c-bliky</a>  <br>   <a href="http://github.com/fons/c_fact/tree/master">c_fact</a></li></ul>
 	</div>
       <div>
 	 
