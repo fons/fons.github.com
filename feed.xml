@@ -27,7 +27,32 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Sun, 09 Aug 2009 20:45:33 EST </pubDate>
+    <pubDate> Sun, 30 Aug 2009 10:40:27 EST </pubDate>
+    
+    <item>
+      <title> Simplified command line processing with dyn-options.py </title>
+      <link> http://fons.github.com/simplified-command-line-processing-with-dyn-optionspy.html </link>
+      <description> Am I the only one in the world who feels that using python's  *getopt* is a bit of a struggle ? It involves a lot of boiler plate. 
+Tedious refactoring is required each time you add or change an option.  
+This is not specific to Python, as most languages have a similar facility to parse the command line. which is similarly annoying.
+
+   
+I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. 
+The result is [dyn_options](http://github.com/fons/dyn_options/tree/master). 
+  
+
+[dyn_options](http://github.com/fons/dyn_options/tree/master) considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. 
+The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  
+A simple option flag is one without explicit values and is considered a boolean flag, set to *True*.
+
+[dyn_options](http://github.com/fons/dyn_options/tree/master) creates a read-only object, with attributes and values set to the command line option flags and values respectively.
+
+   
+So, '--opt4 hello world' will be converted to an option flag  called *opt4*, with a value of *hello world*. 
+This makes dealing with spaces on the command line a lot easier. <br><br> </description> 
+      <guid> http://fons.github.com/simplified-command-line-processing-with-dyn-optionspy.html </guid>      
+      <pubDate> Sat, 29 Aug 2009 19:15:49 EST </pubDate>
+    </item>
     
     <item>
       <title> Factorials, Tail Recursion and CPS ... in C  </title>
