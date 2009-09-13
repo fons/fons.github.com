@@ -1,0 +1,712 @@
+<!---
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title> Programmer Notes  </title>
+    <style type="text/css">
+      /*-------------------------------------------------------------------
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------
+Sheet   : All sheets
+Purpose : General Formatting 
+Comment : Default formatting, no tied to any template or div
+
+This is probably NOT the right way, since I created specific formatting under
+the 'general' settings, esp H1...
+
+-------------------------------------------------------------------------------*/
+
+body{
+      margin:0px;
+      padding:0x;
+      #background:#ffffff;
+      background:#eee9e9;
+      #background:#fffacd;
+      #color:#000011;
+      font-size : 12px;
+      font:normal 100% Sans-Serif;
+      }
+
+p {
+    margin:0px;
+    padding:0x;
+    #background:#ffffff;
+    background:#eee9e9;
+    #color:#000011;
+    font-size : 12px;
+    font:normal 100% Sans-Serif;
+
+
+    }
+
+a{
+   #padding:2px;
+   margin:0px 0px 0px 0px;
+   width:100%;
+   border:none;
+   color:#0000cc;
+   text-decoration:none;
+   }
+
+a:hover{
+         text-decoration:none;
+         }
+
+a:visited{
+           color:#0000cc;
+           }
+
+h1,h2,h3,h4,h5,h6{
+                   color:#595959;
+                   #color:black;
+                   #color:darkblue;
+                   font:bold 100% Sans-Serif;
+                   #padding:0px 0px 0px 0px;
+                   margin:5px 0px 5px 0px;
+                   #margin:0px 0px 5px 0px;
+                   width:100%;
+                   text-align:left;
+                   }
+h1 {
+     font-size:180%;
+     }
+
+
+h2 {
+     font-size:160%;
+     }
+
+h3 {
+     font-size:110%;
+     color:black;
+
+     }
+
+pre {  }
+
+code{
+      #border: 0.30em solid #D6D6D6;
+      border-left: 0.3em solid #D6D6D6;
+      display: block;
+      padding: 1em 1em 1em 1em;
+      color:#330066;
+      background:#EDEDED;
+      }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index page
+Purpose : Formats the main column
+Comment : Basically sets up a two column format
+       
+----------------------------------------------------------------*/
+
+#mainClm{
+          float:left;
+          padding:13px 50px 10px 5%;
+          width:68%;
+          }
+
+
+/*---------------------------------------------------------------
+Sheet   : All pages
+Purpose : Formats the blog title
+Comment : Seperate format for the blog title
+       
+----------------------------------------------------------------*/
+#blog-title {
+              width:75%;
+              }
+
+
+#blog-title h1 {
+                 color: #0000cc;
+                 font:bold 280% Sans-Serif;
+                 float:right;
+                 width:30%;
+                 padding:20px 0px 0px 0px;
+                 #border: 0.15em solid #D6D6D6;
+                }
+
+
+/*---------------------------------------------------------------
+Sheet   : Import Page
+Purpose : formats the import page
+Comment : 
+       
+----------------------------------------------------------------*/
+
+#import-header h1 {
+                    color: #0000cc;
+                    font:bold Sans-Serif;
+                    width:100%;
+                    padding:15px 0px 0px 0px;
+                    font-size: 240%;
+                    #border-bottom:solid 4px #0000cc;
+                    }
+
+#import-edit h1, h2, h3 h4, h5 {
+                                 padding:0px 0px 0px 0px;
+                                 color: #0000cc;
+                                 font:bold Verdana,Sans-Serif;
+                                 width:100%;
+                                 #border-bottom:solid 2px #0000cc;
+                                 }
+
+#import-edit h2 {
+                  font-size: 160%;
+                  }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index Page / index.tmpl
+Purpose : Formats the side bar
+Comment : This is the sidebar to the left of the page
+       
+----------------------------------------------------------------*/
+
+#sideBar{
+          padding:220px 0px 0px 0px;
+          text-align:left;
+          background:#eee9e9;
+          font-size : 12px;
+          font:normal 100% Sans-Serif;
+
+          }
+
+#sideBar p {
+             margin:0px 0px 0px 0px;
+             text-align:left;
+             background:#eee9e9;
+             font-size : 12px;
+             font:normal 100% Sans-Serif;
+             }
+
+#sideBar h2 {
+              color:#0000cc;
+              font-size:120%;
+             }
+
+#sideBar ul{
+             margin:0px 0px 33px 0px;
+             list-style-type:none;
+             font-size:100%;
+             }
+
+#sideBar li {
+              list-style-type:none;
+              color:#111111
+              }
+
+#sideBar a {
+             color:#555555
+             }
+
+#sideBar a:hover {
+                   border-bottom: solid 2px red;
+                   }
+
+#sideBar ul a{
+               #color:#555555;
+               color:black;##FF8000;
+               list-style-type:underline;
+               }
+
+#contact a {
+             color:#555555
+             }
+
+#contact a:hover {
+                   text-decoration:none;
+                   }
+
+#contact a:visited{
+                    color:#0000cc;
+                    }
+
+
+/*-------------------------------------------------------------------------
+Sheet   : Index and post sheets
+Purpose : Format the postings
+Comment : each post has a post and post-intro division
+This is probably NOT the right way, since I created specific formatting under
+the 'general' settings.
+
+--------------------------------------------------------------------------*/
+/* h2 is also used for the blog post title...
+   h6 is special; it's used to format the 'continue reading ..' link    
+*/
+
+#post { 
+        margin:  1em 1em 1em 1em;
+        padding: 1em 1em 1em 1em;
+        border: 0.1em solid #FF8000;
+        background:#F5F5F5;
+        }
+
+#post p { 
+          background:#F5F5F5;
+        }
+
+
+/* h2 is also used for the blog post title...*/
+#post h2 {
+           border-bottom:solid 1px #000000;
+           color: #0000cc;
+           font:bold 160% Sans-Serif;
+           }
+
+
+/*this is a special format to bring h2 in line with the other formats..*/
+
+#post-intro h2 {
+                 #color:#595959;
+                 color:black;
+                 border-bottom:dotted 0px #cccccc;
+                 font-size:140%;
+                 }
+
+#post-body h2 {
+                color:#595959;
+                #color:black;
+                border-bottom:dotted 0px #cccccc;
+                font-size:140%;
+                }
+
+/* h6 is special; it's used to format the 'continue reading ..' link */
+#post h6 {
+          margin:4px 0px 0px 0px;
+          color:#0000cc;
+          #font-family : 'Sans Serif';
+          font-size   : 14px;
+          font-weight : bold;
+          }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index and post sheets
+Purpose : Format the visible time stamp
+Comment : Each blog post has a time stamp in a specific div. 
+
+----------------------------------------------------------------*/
+#post-timestamp p {  
+                    margin:0px 0px 18px 0px;
+                    border-bottom-width : 4px;
+                    color : #cc0000;
+                    #font-family : , 'Sans Serif',;
+                    font-size : 12px;
+                    height : 4px;
+
+                    }
+
+/*---------------------------------------------------------------
+Sheet   : Index sheet
+Purpose : Format the footer
+Comment : Basically sets up a footer pointing to the bliky location
+          on github, with a barely visible link ref.
+
+----------------------------------------------------------------*/
+#footer p { 
+            #font-family : , 'Sans Serif',;           
+            font-size:.75em;
+            margin-top: 3em;
+            text-align: center;
+            text-indent: 0;
+           }
+#footer a { color:#222222; }
+
+#footer a:hover {
+                  border-bottom: solid 2px red;
+                  }
+
+
+/* ---------------------------------------------------------------------
+Sheet       : post-edit.tmpl
+Purpose     : edit a blog post
+Comment     : These are the styles used when editing 
+a blog post
+
+-----------------------------------------------------------------------*/
+#edit-page{
+            float:left;
+            padding:13px 50px 10px 5%;
+            width:80%;
+            }
+
+
+#edit-header {                
+               margin:0px 0px 0px 0px;
+               font-size:240%;
+               }
+
+#edit-header h1 { 
+                  margin:0px 0px 0px 0px;
+                  color:salmon; 
+                  text-align: center;
+                  }
+
+#intro-buttons {  
+                 margin:8px 0px 8px 0px;
+                 #background:#caff70;
+                 background:#f5deb3;
+                 border:solid 1px #cd0000;
+}
+
+#intro-buttons input {  
+                      margin:2px 0px 2px 0px;
+                      text-align:left;
+                      #width:48%;
+                      font-family : 'Sans Serif';
+                      font-size : 20px;
+                      #background:#F5F5F5;
+                      #background:#caff70;
+                       background:#d3d3d3;
+                      }                       
+
+#intro-edit input {  
+                    margin:20px 0px 20px 0px;
+                    text-align:left;
+                    width:100%;
+                    font-family : 'Sans Serif';
+                    font-size : 18px;
+                    #background:#F5F5F5;
+                    background:#f5deb3;
+                    }                       
+
+#intro-edit textarea {  
+                       margin:0px 0px 0px 0px;
+                       text-align:left;
+                       width:100%;
+                       font-family : 'Sans Serif';
+                       font-size : 18px;
+                       #background:#F5F5F5;
+                       background:#f5deb3;
+                       }                       
+
+#intro-edit h2 {
+                 border-bottom:solid 1px #000000;
+                 color: #0000cc;
+                 font:bold 110% Verdana,Sans-Serif;
+                 }
+
+
+/*--------------end of post-edit.tmpl style -------------------------*/
+/* ---------------------------------------------------------------------
+Sheet       : import.tmpl
+Purpose     : import a repo
+Comment     : These are the styles used when importing a repo
+               
+
+-----------------------------------------------------------------------*/
+#import-page{
+            float:left;
+            padding:13px 50px 10px 5%;
+            width:80%;
+            }
+
+
+#import-header {                
+               margin:0px 0px 0px 0px;
+               font-size:240%;
+               }
+
+#import-header h1 { 
+                  margin:0px 0px 0px 0px;
+                  color:salmon; 
+                  text-align: center;
+                  }
+
+
+/*--------------end of import.tmpl style -------------------------*/
+
+/* ---------------------------------------------------------------------
+Sheet       : import.tmpl
+Purpose     : import a repo
+Comment     : These are the styles used when importing a repo
+-----------------------------------------------------------------------*/
+
+#options-header {                
+                  margin:0px 0px 0px 0px;
+                  font-size:240%;
+                  }
+
+#options-header h1 { 
+                     margin:0px 0px 0px 0px;
+                     color:salmon; 
+                     text-align: center;
+                     }
+
+#options-page{
+               float:left;
+               padding:10px 0px 0px 50px;
+               width:80%;
+               font-size: 100%;
+               }
+
+
+/*----------------- end of options style ----------------------------*/
+
+
+    </style>
+  </head>  
+
+  <body>
+    <div id="blog-title">
+      <a href="/"> <h1> Programmer Notes </h1> </a> 
+    </div>
+    
+    <div id="mainClm">
+      <div id="post">
+	<div id="post-type" style="visibility:hidden">
+	  <p>"post"</p>
+	</div>
+	<div id="post-timestamp" >
+	  <p>Sat, 12 Sep 2009 17:03:23 EST </p>
+	</div>
+	<div id="post-header">
+	  <h2> Threading the Sieve in Python  </h2>
+	</div>
+	<div id="post-intro">
+	  <p>This is the first of two posts on threading and multiprocessing in Python. In this post I'll explore the thread module and in the second post I'll look at Python's multiprocessing module. My starting point is the multi-threaded implementation of the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> found in this <a href="heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial on multi-threading in Python (pdf).</a> <br /> <br /> Threading a compute-bound algorithm, like the <em>Sieve</em> consists of subdividing of the main task into autonomous sub-tasks which share as little state as possible. Having no shared state eliminates the overhead that inevitably comes with locking. It turns out that Python is not very good at multi-threading compute-bound processes. <a href=http://www.dabeaz.com/blog/dablog.html> This</a> <a href=http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html> is</a> <a href="http://www.grouplens.org/node/244">  not a </a> <a href="http://blog.ianbicking.org/gil-of-doom.html">  surprise. </a>  CPython has a <a href=www.dabeaz.com/python/GIL.pdf> global interpretor lock (GIL)</a>  which prevents threads from running concurrently. <br /> <br />  Regardless, there are other lessons I learned when multi-threading the <em>Sieve</em> algorithm. One is that sharing state between threads may be unavoidable to achieve reasonable performance. In fact, if you <em>don't</em> share state, performance can become predictable <em>worse</em> as the number of threads of execution increases. <br /> <br /> The other is that locking can have a surprising impact on performance. It's not just the cost of locking per se, but the effect locking has on the distribution of work between the various threads. </p>
+	</div>
+	<div id="post-body">
+	  <h2>Sieve of Erasthones</h2><p>The Sieve of Erasthones is a way to find all the prime numbers smaller than N. You start with an array of size N, with all slots initialized to 1 (i.e. to 'true').   <br />
+ You start moving down the array, and if the value of the slot at your current position is 'true' (i.e. 1),  you set the slots at multiples of your current position index to false (i.e. 0). At each position there only one transition, from true (1) to false (0), and not vice-versa. The largest multiplier for a position with index i is N/i. You're done when you hit the slot with index equal to the square root of N. Note, that as you make your way through the array, you zero out less and less positions. </p><p>For example, if you want to find all the primes up to 10, you start at position index 2, and zero out 4,6,8 and so on. You move to 3, and zero out 6 and9. since N  = 10, you stop here. The next non-zero position is 5, as 4 was already set to false previously. All slots still flagged as true (1) are primes : 2, 3, 5 and 7. </p><h2>Testing Platform</h2><p>All tests are performed on a Toshiba A215-S4747 with an AMD Turion 64 X2 (dual-core) processor. The operating system is Ubuntu 8.04.3. I replaced the Python version shipped with Ubuntu with version 2.6.2. </p><p>For the Jython test I installed Jython 2.5, from the Jython web site in stand-alone mode. IronPython 1.1.1. was installed as well. </p><p>Each implementation I'm going to discuss below is part of <em>prime_share.py</em> in the <a href="git://github.com/fons/blog-code.git">blog-code package</a> on github. </p><p><em>prime_share.py</em> is designed to perform side-by-side comparisons of the various implementations. It allows you to specify a range of threads used in the distribution of the calculation. Timing is done using Python's timeit module, with garbage collection turned off. </p><h2>Various Implementations</h2><p>This section discusses four different multi-threaded implementations of the <em>Sieve</em>. </p><ul><li><p>main_orig: From the tutorial.<a href="heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial (pdf).</a></p></li><li><p>main_nolocks: Drastically reduces locking.</p></li><li><p>main_nolocks_alt: Splits the sieve across threads.</p></li><li><p>main_nolocks_alt2: Distributes the work more equitably amongst the threads.</p></li></ul><p>The main difference between the implementations is the amount of locking, and the way work is distributed across multiple threads. </p><p>I'll start out <a href="#allresults">  by showing </a>  the result of a performance test of each of these algorithms. The x-axis shows the number of threads used in the run. Each run calculates the number of primes up to 10000. The time it took to run this calculation 40 times in sucession is shown on the y-axis. Each data set is labelled  'main_xyz' where 'xyz' identifies the implementation. <p>  <a name="allresults">  <img src="http://github.com/fons/blog-images/raw/master/thread.png">  </a>  </p>  </p><p>You would expect the run time to decrease as the number of threads increases. That's clearly not the case. The performance the <em>main_orig</em> implementation is extremenly erratic, and the performance of the <em>main_nolock_alt</em> implementation <em>decreases</em> steadily as the number of threads increases.<br />
+ The performance of the remaining two implementations is unaffected by the number of threads.  </p><p>What's the reason for this ? Well, below are four sections discussing these four implementations. </p><h3>main_orig : the original implementation</h3><p>As I mentioned before, the implementation of the <em>Sieve</em> as shown in the <a href="heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial</a> is the starting point for subsequent implementations. The full code I used in my test is shown below : </p><pre><code>def count_primes(prime) :  
+	p = reduce(lambda x, y: x + y, prime) - 2  
+	return p  
+ 
+def dowork_orig(tn): # thread number tn  
+	global n,prime_global,nexti_global,nextilock,nstarted,nstartedlock,donelock  
+    donelock[tn].acquire()  
+    nstartedlock.acquire()  
+    nstarted += 1  
+    nstartedlock.release()  
+    lim = math.sqrt(n)  
+ 
+    while 1:  
+       nextilock.acquire()  
+       k = nexti_global  
+       nexti_global += 1  
+       nextilock.release()  
+       if k &gt; lim: break  
+       if prime_global[k]:  
+           r = n / k  
+           for i in range(2,r+1):  
+               prime_global[i*k] = 0  
+ 
+    donelock[tn].release()  
+ 
+def main_orig(top, nthreads):  
+   global n,prime_global,nexti_global,nextilock,nstarted,nstartedlock,donelock  
+ 
+   n        = int(top)  
+   nthreads  = int(nthreads)  
+   prime_global = (n+1) * [1]  
+ 
+   nstarted = 0  
+   nexti_global = 2  
+ 
+   nextilock = thread.allocate_lock()  
+   nstartedlock = thread.allocate_lock()  
+   donelock = []  
+   for i in range(nthreads):  
+       d = thread.allocate_lock()  
+       donelock.append(d)  
+       thread.start_new_thread(dowork_orig,(i,))  
+   while nstarted &lt; nthreads: pass  
+   for i in range(nthreads):  
+       donelock[i].acquire()  
+ 
+   return count_primes(prime_global)    </code></pre><p>The variable <em>n</em> is the upper limit of the search and <em>nthreads</em> is the number of threads. The global variable <em>prime_global</em> is the sieve, and <em>nexti_global</em> is its index. </p><p>The function <em>dowork_orig</em> implements the sieve algorithm along the lines mentioned earlier. </p><p>All the global variables are shared amongst the threads. There are three locking variables.<br />
+ The first one is <em>nstartedlock</em>, which is used to set a counter. The counter is used in the main  to wait for all threads to start. </p><p>The second one is the <em>donelock</em> array. This is used to implement a mechanism to wait for all the threads to finish, similar to 'join' in other threading packages. The number of entries is equal to the number of threads. </p><p>The last lock is <em>nexti_lock</em>. It's purpose is to protect access to the global index variable so that each thread processes a unique index.<br />
+</p><p>Access to the 'sieve' variable <em>prime_global</em> is not protected by lock. There is no need to, since the value of each slot can only go from 1 (true) to 0 (false). If two threads access the same slot simultaneously they can't reach conflicting conclusions of it's final state. Obviously, the GIL effectively prevents any of this from happening, but it's good the know that if it didn't the algorithm wouldn't break. Even out-of-order execution where a higher index is processed first, is not going to lead to different final state (provided all indexes are processed). </p><p>As you can see in the <a href="#allresults">  side-by-side comparison </a>  the performance of this implementation is very erratic, and shows no obvious dependence on the number threads. </p><p> <img src="http://github.com/fons/blog-images/raw/master/thread_repeat.png">  </p>  <p>  Here I show five data sets generated by running the <em>main_orig</em> implementation with the same input parameters as in the <a href="#allresults">  side-by-side comparison </a>  above. Note the how the speed varies dramatically in each data set, and between data sets. </p>  <p>For a single thread the performance in of all four data sets is roughly the same. The small differences are probably due to other activity on the box taking some time away from the test run. In general the calculation time increases as the number of threads increases, except for the first ('red') data set. </p><p>The reason for the wide variation in performance I believe are the <em>nstartedlock</em> and <em>nextilock</em>. </p><p>Each thread tries to acquire <em>nstartedlock</em> at startup. My suspicion is that this lock acquisition varies<br />
+ the start of the threads sufficiently to change to way work is balanced between the threads for each  subsequent run, leading to the dramatic variation in speed. That's because the amount of work a thread performs depends on the index it's processing. For example, let's say that we have run of three threads. The first thread is active, and the other two threads are dormant. The first thread will process indices two and three, and therefore do most of the work. When the other threads wake up, they 'll do less work. On a second run, a context switch occurs sooner and the second thread works on index three, leading to a more equitable distribution of the work. </p><p>In addition, there is contention on <em>nextilock</em>. As I pointed out, for higher index values, less work is done. So when the prime check return false (as it would most of the time for these values), the thread will try to acquire the lock again which puts it in contention with other threads. The way the lock is hit by a particular thread probably varies bit from run to run, and this results in the erratic performance profile. </p><p>The main difference between this implementation and the three others discussed below is the removal of this lock, and the lock around the index variable. As you <a href="#allresults">  can see </a>  this has dramatic impact on performance. </p><h3>main_nolocks: remove locking; load balance naively</h3><p>In this implementation I've removed the <em>nstartedlock</em> as well as the <em>nextilock</em> lock. The <em>donelock</em> array is kept in place, since the thread package has no 'join' mechanism. </p><p>Here's the complete code for the variation. The other two main_nolocks* which I' m discussing below are very similar. </p><pre><code>def dowork2(n, nexti_ns, prime_nl) :  
+ 
+   k     = nexti_ns[0]  
+   lim   = nexti_ns[1]  
+   if nexti_ns[0] &gt; nexti_ns[1] :  
+       raise "boundaries out-of-order"  
+ 
+   while 1 :  
+ 
+       if not (k &lt; lim) : break  
+ 
+       if prime_nl[k] == 1 :  
+           r = n / k  
+           for i in range(2, r+1) :  
+               prime_nl[i*k] = 0  
+ 
+       k   = k + 1  
+ 
+ 
+return prime_nl  
+ 
+def dowork_th(tn, donelock, n, nexti_ns) :  
+   global prime_nl  
+   prime_nl = dowork2(n, nexti_ns, prime_nl)  
+   donelock.release()  
+ 
+ 
+def load_balance(s, th) :  
+ 
+   len_s = len(s)  
+   if len_s == 0 :  
+       return [ s ]  
+ 
+   base = len_s / th  
+   rem  = len_s - base * th  
+   K = map(lambda i : i * base, range(1, th+1))  
+   t = range(1, rem + 1 )  + (th - rem )*[rem]  
+   K = map(lambda p : p[0] + p[1], zip(K, t))  
+   K = zip([0] + K, K)  
+   last = s[len_s - 1]  
+   s.append(last+1)  
+   K = map(lambda p : (s[p[0]], s[p[1]]), K)  
+   return K  
+ 
+def start_th(fn, args) :  
+   return  thread.start_new_thread(fn, args)  
+ 
+def main_nolocks(top, nthreads) :  
+   global prime_nl  
+   n             = int(top)  
+   nthreads      = int(nthreads)  
+ 
+   prime_nl      = (n + 1)  * [1]  
+   donelock      = map(lambda l : l.acquire() and l,  
+                       map(lambda i : thread.allocate_lock(), range(nthreads)))  
+ 
+   lim   = int(math.sqrt(n)) + 1  
+   nexti_ns = range(2, lim, 1)  
+ 
+   B = load_balance(nexti_ns, nthreads)  
+ 
+   map(lambda i : start_th(dowork_th, (i, donelock[i], n, B[i])),  
+       range(nthreads))  
+ 
+   map(lambda i : donelock[i].acquire(), range(nthreads) )  
+ 
+   return count_primes(prime_nl)    </code></pre><p>In the original implementation the <em>nexti_global</em> variable was shared between the threads and used to balance the load between them. In this version that's replaced by the <em>load_balance</em> routine. </p><p><em>load_balance</em> takes as its input an array and the number of threads and returns a list of pairs which represent the start and end point of the sub arrays each thread will work on. </p><p>For example, if we want to know the number of primes smaller than 101, the indexes we consider in the sieve algorithm would run from 2 to 10. If the number of threads is 3, <em>load_balance</em> would return the following array : <code>[ (2, 5), (5, 8), (8, 11) ]</code> </p><p>This is naive, because the thread working on the first pair will do a lot more work than the one assigned the last pair. </p><p>The difference in performance with the original implementation is <a href="#allresults">  quite dramatic. </a>  </p><p>The big difference in performance even for a single thread between this and the previous version must be due to the difference in locking. </p><p>The original implementation acquires a lock at the startup of each thread and uses locks to control access to the global index counter. In this implementation these locks have been removed. The benefit this removal is quite obvious from the graph. </p><p>The effect of the GIL is also quite obvious: The performance does not depend on the number of threads at all. </p><h3>main_nolocks_alt: remove locking, split the sieve</h3><p>This version is a minor variation of the previous one. Previously the <em>range</em> of indices from 2 to sqrt(N) was split up between the threads. </p><p>In this version each thread processes the full index range, but the <em>sieve array</em> is split between the threads: One thread works on the first part of the sieve, the second on a second part and so on. </p><p>For example, if the size of the sieve is 100, and we have three threads, the first thread works on the sieve up to index 33, the second thread takes indexes 34 to 66 and thread 3 takes the rest. </p><p>The <em>dowork</em> routine changes a little bit : </p><pre><code>def dowork3(n, irange, prime_nla) :  
+   k     = 2  
+   lim   = int(math.sqrt(n)) + 1  
+   istart, iend = irange  
+   while 1 :  
+ 
+       if not (k &lt; lim)  : break  
+       if not (k &lt; iend) : break  
+ 
+       if k &lt; istart :  
+            s = (istart / k ) + 1  
+            r = (iend / k) + 1  
+            for i in range(s, r) :  
+               prime_nla[i*k] = 0  
+       elif prime_nla[k] == 1 :  
+           assert k &gt;= istart and k &lt;= iend  
+           s = 2  
+           r = (iend / k) + 1  
+           for i in range(s, r) :  
+               prime_nla[i*k] = 0  
+ 
+       k   = k + 1  
+ 
+return prime_nla </code></pre><p>If the index is smaller than the starting index of the part of the sieve array under consideration, we can just zero out multiples of the index. If that's not case we proceed as before, but stop at the upper index of the array if it's smaller than sqrt(N). </p><p>If you look <a href="#allresults">  at the results  </a> , notice that the single-threaded performance of this and the previous version are the same. That's to be expected as both versions perform the same amount of work. Less expected is that the performance of this version decreases steadily as the number of threads increases. </p><p>The reason is that the amount of work performed across all threads (i.e. on the process level) increases as the number of threads increases. That's because threads working on the 'higher' part of the sieve can't take advantage of the primes 'discovered' by the thread working on the first, 'lower' part of the sieve. </p><p>Suppose we start with N = 100, and two threads. The first thread works on the sieve range from 0 to 50. It performs the basic sieve operations for the case N = 50. The second thread basically zeros out multiples of values in the range 2 to 11. This thread can't probe the lower part of the sieve to see if it's working with a prime, so it needs to calculate multiples of every element in the range. The more disconnected pieces, the more extra work is done. </p><p>In the absence of the GIL, the additional work per thread could be balanced by the performance gain from distributing the load across multiple threads. I"ll revisit this when tmultiprocessing module is discussed, as it doesn't use a GIL. </p><h3>main_nolocks_alt2: remove locking, load balance more accurately</h3><p>In this last version I try to distribute the work more evenly amongst the threads. This is in contrast with to just splitting the range in pieces, and assigning each thread a piece. This leads to the thread assigned the lowest index range doing most of the work. </p><p>To accomplish a more equitable distribution, I estimate the number of operations per index i. I then assign each thread a set of indices so that the total number of operations per thread varies very little. </p><p>An upper limit for the number of operations for index i for a sieve of length N is : </p><pre><code>1 + N/i - i </code></pre><p>This assumes that the sieve array is not shared amongst the threads. If it is, than we're over-counting the number of operations, since it also counts operations on indices that are multiples of each other. </p><p>For example, when N = 200, for i = 2 the number of operations is 99. For i = 4 the that number is in fact 0 as all multiples of four are also multiples of two. </p><p>Here's the code fragment where the load balancing takes place : </p><pre><code>def smp_load_balance(th , n) :  
+ 
+   def operations(t) :  
+       return int((n / t) + 1 - t)  
+ 
+   def find_min(thr_alloc) :  
+       min, lst = thr_alloc[0]  
+       if min == 0 :  
+           return 0  
+       midx = 0  
+       for index in range(1, len(thr_alloc)) :  
+           count, lst = thr_alloc[index]  
+           if count &lt; min :  
+               min   = count  
+               midx  = index  
+       return midx  
+ 
+   lim           = int(math.sqrt(n)) + 1  
+   nexti_lb      = range(2, lim, 1)  
+ 
+   if th &lt; 2 :  
+       return [nexti_lb]  
+ 
+   thr_allocs = map(lambda i : (0, [] ), range(th))  
+   Z = map(operations, nexti_lb)  
+ 
+   L = zip(map(operations, nexti_lb), nexti_lb)  
+ 
+   for i in L :  
+       ops, index = i  
+       mindex = find_min(thr_allocs)  
+       cnt, lst = thr_allocs[mindex]  
+       cnt += ops  
+       lst.append(index)  
+       thr_allocs[mindex] = (cnt, lst)  
+ 
+   return map(lambda p: p[1], thr_allocs) </code></pre><p>The distribution between the threads is done as follows: For each index, estimate the number of operations using the equation above. Then, assign the index to the thread with the least amount of work already assigned to it. </p><p>For example, for N = 200 the estimated number of operations per index assuming no sharing is shown in <a href="#smpdist">  this graph </a> . </p><p> <a name="smpdist">  <img src="http://github.com/fons/blog-images/raw/master/smp_dist.png ">  </a>  </p>  <p>For three threads of execution the distribution of the sieve indices given </p><p>by <em>smp_load_balance</em> is : </p><ul><li><p>thread 1 : [2, 9, 12, 14], with a total number of operations of 120.</p></li><li><p>thread 2 : [3, 6, 8, 11], with a total number of operations of 119.</p></li><li><p>thread 3 : [4, 5, 7, 10, 13], with a total number of operations of 123.</p></li></ul><p>When the sieve is shared, the amount of work remains unbalanced. Consider the example above. Thread 3 is assigned index 4, but - when the sieve is shared - there's no work to be done. </p><p>The <a href="#allresults"> timing test </a> shows that there is no difference<br />
+ when using naive load balancing as is done in <em>main_nolocks</em>.  In fact, the performance of both is comparable. </p><p>That's because the total number of operations across all threads of execution remains the same, and the GIL effectively prevents real parallel execution of the threads. So it really doesn't matter how unbalanced the work is. </p><h3>What about Jython and IronPython ?</h3><p>I repeated the runs <a href="#allresults">  shown earlier </a>  on Jython 2.5. I run Jython in stand-alone mode. <p>  <img src="http://github.com/fons/blog-images/raw/master/threads_jython.png">  </p>  </p><p>Note that all run times are about a factor three higher than under CPython.  The Jython run times are pretty much the same. However, you still see that the locking used in the original implementation creates a performance hit. In addition, the performance doesn't depend on the number of threads either. </p><p>I attempted to repeat this experiment with IronPython. However, IronPython will not run the timing tests with garbage collection disabled. </p><h2>Conclusions</h2><p>The thread module in Python is not well suited when multi-treading compute-bound algorithms. That's nothing knew. </p><p>There are other lessons I learned from the various ways the <em>Sieve</em> can be distributed across threads: avoid locking, consider sharing state, and be aware how much work each thread does. </p><p>Let's start with locking. It's obvious from the <a href=#allresults>  results </a>  that locking comes at a huge cost. Removing the locks proved to be the single most effective performance booster. </p><p>The <em>Sieve</em> algorithm is interesting in that shared state is quite beneficial to performance. Look at the <a href=#allresults>  <em>main_nolocks_alt</em> implementation. </a>  That was an attempt to eliminate shared state amongst the threads. Each thread proceeds based on it's local data only. But because the prime numbers discovered by one of the threads couldn't be shared with the others, they ended up doing more work, and performance decreased. It could be that when real parallel processing is possible, this may be balanced out by the increase in performance due to better parallelism. That however remains to be seen. </p><p>An alternative approach is to remove the global sieve variable in <em>main_nolocks_alt</em>. Each thread would work independently on a local seive array, resulting in a partially processed seive. The 'partial' sieves need to be combined to get the final sieve array. </p><p>One way to think of this is as a 'map' operation over the inputs, where each 'map' operation works independently. The results of the mapping phase are the combined (i.e. 'reduced') to get the final result, hence <a href="http://www.cs.vu.nl/~ralf/MapReduce/">map-reduce</a>. </p><p>The amount of work for each index in the <em>Sieve</em> algorithm varies quite a bit. So care should be taken to make sure that the work load is properly balanced amongst the threads. The effect of the (lack of) balance wasn't so obvious here, since the GIL limits parallelism.<br />
+</p><p>These last two points are going to play a part in my next post where I "Al be using the <em>Sieve</em> to explore the multiprocessing module. </p> 
+	</div>
+	<div id="post-timestamp-id" style="visibility:hidden">
+	  <p>3461778203 </p>
+	</div>
+      </div>
+
+      <div id="footer">
+	<p>
+	  Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
+	</p>
+      </div>
+      
+    </div><!-- end of main area -->
+
+  </body>
+</html>
