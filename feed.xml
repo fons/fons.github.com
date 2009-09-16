@@ -1,4 +1,5 @@
-<!---
+<?xml version="1.0"?>
+<!--
 ;;
 ;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
 ;;
@@ -19,15 +20,15 @@
 ;;
 ;;
 
---->
+-->
 
-<?xml version="1.0"?>
+
 <rss version='2.0' xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Sun, 13 Sep 2009 11:49:54 EST </pubDate>
+    <pubDate> Tue, 15 Sep 2009 21:30:33 EST </pubDate>
     
     <item>
       <title> Threading the Sieve in Python </title>
