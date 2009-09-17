@@ -30,7 +30,7 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Wed, 16 Sep 2009 23:03:32 EST </pubDate>
+    <pubDate> Wed, 16 Sep 2009 23:15:19 EST </pubDate>
     
     <item>
       <title> Threading the Sieve in Python </title>
@@ -51,7 +51,7 @@ It turns out that Python is not very good at multi-threading compute-bound proce
 [is ](http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html)
 [not a ](http://www.grouplens.org/node/244) 
 [surprise.](http://blog.ianbicking.org/gil-of-doom.html)  
-CPython has a global interpretor lock [(GIL)](www.dabeaz.com/python/GIL.pdf) 
+CPython has a global interpretor lock [(GIL)](http://www.dabeaz.com/python/GIL.pdf) 
 which prevents threads from running concurrently. 
  
 
@@ -63,7 +63,7 @@ threads of execution increases.
 The other is that locking can have a surprising impact on performance. 
 It's not just the cost of locking per se, but the effect locking has on the distribution of work 
 between the various threads. </description> 
-      <content:encoded><![CDATA[<p>This is the first of two posts on threading and multiprocessing in Python. In this post I'll explore the thread module and in the second post I'll look at Python's multiprocessing module. My starting point is the multi-threaded implementation of the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> found in this <a href="http://heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial on multi-threading in Python (pdf).</a> <br /> <br /> Threading a compute-bound algorithm, like the <em>Sieve</em> consists of subdividing of the main task into autonomous sub-tasks which share as little state as possible. Having no shared state eliminates the overhead that inevitably comes with locking. It turns out that Python is not very good at multi-threading compute-bound processes. <a href="http://www.dabeaz.com/blog/dablog.html">This </a>  <a href="http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html">is </a><a href="http://www.grouplens.org/node/244">not a </a> <a href="http://blog.ianbicking.org/gil-of-doom.html">surprise.</a>  CPython has a global interpretor lock <a href="www.dabeaz.com/python/GIL.pdf">(GIL)</a> which prevents threads from running concurrently. <br /> <br />  Regardless, there are other lessons I learned when multi-threading the <em>Sieve</em> algorithm. One is that sharing state between threads may be unavoidable to achieve reasonable performance. In fact, if you <em>don't</em> share state, performance can become predictable <em>worse</em> as the number of threads of execution increases. <br /> <br /> The other is that locking can have a surprising impact on performance. It's not just the cost of locking per se, but the effect locking has on the distribution of work between the various threads. </p> ]]></content:encoded>
+      <content:encoded><![CDATA[<p>This is the first of two posts on threading and multiprocessing in Python. In this post I'll explore the thread module and in the second post I'll look at Python's multiprocessing module. My starting point is the multi-threaded implementation of the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> found in this <a href="http://heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial on multi-threading in Python (pdf).</a> <br /> <br /> Threading a compute-bound algorithm, like the <em>Sieve</em> consists of subdividing of the main task into autonomous sub-tasks which share as little state as possible. Having no shared state eliminates the overhead that inevitably comes with locking. It turns out that Python is not very good at multi-threading compute-bound processes. <a href="http://www.dabeaz.com/blog/dablog.html">This </a>  <a href="http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html">is </a><a href="http://www.grouplens.org/node/244">not a </a> <a href="http://blog.ianbicking.org/gil-of-doom.html">surprise.</a>  CPython has a global interpretor lock <a href="http://www.dabeaz.com/python/GIL.pdf">(GIL)</a> which prevents threads from running concurrently. <br /> <br />  Regardless, there are other lessons I learned when multi-threading the <em>Sieve</em> algorithm. One is that sharing state between threads may be unavoidable to achieve reasonable performance. In fact, if you <em>don't</em> share state, performance can become predictable <em>worse</em> as the number of threads of execution increases. <br /> <br /> The other is that locking can have a surprising impact on performance. It's not just the cost of locking per se, but the effect locking has on the distribution of work between the various threads. </p> ]]></content:encoded>
       <guid> http://fons.github.com/threading-the-sieve-in-python.html </guid>      
       <pubDate> Sat, 12 Sep 2009 17:03:23 EST </pubDate>
     </item>
