@@ -30,7 +30,7 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Wed, 16 Sep 2009 22:56:23 EST </pubDate>
+    <pubDate> Wed, 16 Sep 2009 23:03:32 EST </pubDate>
     
     <item>
       <title> Threading the Sieve in Python </title>
@@ -75,15 +75,15 @@ between the various threads. </description>
   
 
 I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. 
-The result is [dyn_options]("http://github.com/fons/dyn_options/tree/master"). 
+The result is [dyn_options](http://github.com/fons/dyn_options/tree/master). 
   
 
-[dyn_options]("http://github.com/fons/dyn_options/tree/master") considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to _True_. 
-[dyn_options]("http://github.com/fons/dyn_options/tree/master") creates a read-only object, with attributes and values set to the command line option flags and values respectively. 
+[dyn_options](http://github.com/fons/dyn_options/tree/master) considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to _True_. 
+[dyn_options](http://github.com/fons/dyn_options/tree/master) creates a read-only object, with attributes and values set to the command line option flags and values respectively. 
   
 
 So, '--opt4 hello world' will be converted to an option flag  called _opt4_, with a value of *hello world*. This makes dealing with spaces on the command line a lot easier. </description> 
-      <content:encoded><![CDATA[<p>Am I the only one in the world who feels that using python's  <em>getopt</em> is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. <br /> <br />  I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. The result is <a href=""http://github.com/fons/dyn_options/tree/master"">dyn_options</a>. <br /> <br />  <a href=""http://github.com/fons/dyn_options/tree/master"">dyn_options</a> considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to <em>True</em>. <a href=""http://github.com/fons/dyn_options/tree/master"">dyn_options</a> creates a read-only object, with attributes and values set to the command line option flags and values respectively. <br /> <br />  So, '--opt4 hello world' will be converted to an option flag  called <em>opt4</em>, with a value of <em>hello world</em>. This makes dealing with spaces on the command line a lot easier. </p> ]]></content:encoded>
+      <content:encoded><![CDATA[<p>Am I the only one in the world who feels that using python's  <em>getopt</em> is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. <br /> <br />  I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. The result is <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a>. <br /> <br />  <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to <em>True</em>. <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> creates a read-only object, with attributes and values set to the command line option flags and values respectively. <br /> <br />  So, '--opt4 hello world' will be converted to an option flag  called <em>opt4</em>, with a value of <em>hello world</em>. This makes dealing with spaces on the command line a lot easier. </p> ]]></content:encoded>
       <guid> http://fons.github.com/simplified-command-line-processing-with-dyn-optionspy.html </guid>      
       <pubDate> Sat, 29 Aug 2009 19:15:49 EST </pubDate>
     </item>
