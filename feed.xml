@@ -28,7 +28,7 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Tue, 15 Sep 2009 21:30:33 EST </pubDate>
+    <pubDate> Wed, 16 Sep 2009 22:18:26 EST </pubDate>
     
     <item>
       <title> Threading the Sieve in Python </title>
@@ -45,10 +45,10 @@ Threading a compute-bound algorithm, like the *Sieve* consists of subdividing of
 autonomous sub-tasks which share as little state as possible. 
 Having no shared state eliminates the overhead that inevitably comes with locking. 
 It turns out that Python is not very good at multi-threading compute-bound processes. 
-<a href=http://www.dabeaz.com/blog/dablog.html>This</a>
-<a href=http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html>is</a>
-<a href="http://www.grouplens.org/node/244"> not a </a>
-<a href="http://blog.ianbicking.org/gil-of-doom.html"> surprise. </a> 
+[This ](http://www.dabeaz.com/blog/dablog.html)  
+[is ](http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html)
+[not a ](http://www.grouplens.org/node/244) 
+[surprise.](http://blog.ianbicking.org/gil-of-doom.html)  
 CPython has a <a href=www.dabeaz.com/python/GIL.pdf>global interpretor lock (GIL)</a> 
 which prevents threads from running concurrently. 
  
