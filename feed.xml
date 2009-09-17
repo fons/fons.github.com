@@ -28,7 +28,7 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Wed, 16 Sep 2009 22:24:29 EST </pubDate>
+    <pubDate> Wed, 16 Sep 2009 22:27:36 EST </pubDate>
     
     <item>
       <title> Threading the Sieve in Python </title>
@@ -68,8 +68,9 @@ between the various threads. </description>
     <item>
       <title> Simplified command line processing with dyn-options.py </title>
       <link> http://fons.github.com/simplified-command-line-processing-with-dyn-optionspy.html </link>
-      <description> Am I the only one in the world who feels that using python's  *getopt* is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line. which is similarly annoying. 
-<BR> <BR>
+      <description> Am I the only one in the world who feels that using python's  *getopt* is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. 
+  
+
 I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. 
 The result is [dyn_options]("http://github.com/fons/dyn_options/tree/master"). 
   
