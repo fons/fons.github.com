@@ -30,39 +30,12 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Wed, 16 Sep 2009 23:15:19 EST </pubDate>
+    <pubDate> Fri, 18 Sep 2009 19:39:17 EST </pubDate>
     
     <item>
       <title> Threading the Sieve in Python </title>
       <link> http://fons.github.com/threading-the-sieve-in-python.html </link>
-      <description> This is the first of two posts on threading and multiprocessing in Python. 
-In this post I'll explore the thread module and in the second post I'll look at Python's 
-multiprocessing module. 
-My starting point is the multi-threaded implementation of the 
-[Sieve of Erasthones](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) found in this 
-[tutorial on multi-threading in Python (pdf).](http://heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf)
-
- 
-Threading a compute-bound algorithm, like the *Sieve* consists of subdividing of the main task into 
-autonomous sub-tasks which share as little state as possible. 
-Having no shared state eliminates the overhead that inevitably comes with locking. 
-It turns out that Python is not very good at multi-threading compute-bound processes. 
-[This ](http://www.dabeaz.com/blog/dablog.html)  
-[is ](http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html)
-[not a ](http://www.grouplens.org/node/244) 
-[surprise.](http://blog.ianbicking.org/gil-of-doom.html)  
-CPython has a global interpretor lock [(GIL)](http://www.dabeaz.com/python/GIL.pdf) 
-which prevents threads from running concurrently. 
- 
-
-Regardless, there are other lessons I learned when multi-threading the *Sieve* algorithm. 
-One is that sharing state between threads may be unavoidable to achieve reasonable performance. 
-In fact, if you *don't* share state, performance can become predictable *worse* as the number of 
-threads of execution increases. 
-  
-The other is that locking can have a surprising impact on performance. 
-It's not just the cost of locking per se, but the effect locking has on the distribution of work 
-between the various threads. </description> 
+      <description> &lt;p&gt;This is the first of two posts on threading and multiprocessing in Python. In this post I'll explore the thread module and in the second post I'll look at Python's multiprocessing module. My starting point is the multi-threaded implementation of the &lt;a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"&gt;Sieve of Erasthones&lt;/a&gt; found in this &lt;a href="http://heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf"&gt;tutorial on multi-threading in Python (pdf).&lt;/a&gt; &lt;br /&gt; &lt;br /&gt; Threading a compute-bound algorithm, like the &lt;em&gt;Sieve&lt;/em&gt; consists of subdividing of the main task into autonomous sub-tasks which share as little state as possible. Having no shared state eliminates the overhead that inevitably comes with locking. It turns out that Python is not very good at multi-threading compute-bound processes. &lt;a href="http://www.dabeaz.com/blog/dablog.html"&gt;This &lt;/a&gt;  &lt;a href="http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html"&gt;is &lt;/a&gt;&lt;a href="http://www.grouplens.org/node/244"&gt;not a &lt;/a&gt; &lt;a href="http://blog.ianbicking.org/gil-of-doom.html"&gt;surprise.&lt;/a&gt;  CPython has a global interpretor lock &lt;a href="http://www.dabeaz.com/python/GIL.pdf"&gt;(GIL)&lt;/a&gt; which prevents threads from running concurrently. &lt;br /&gt; &lt;br /&gt;  Regardless, there are other lessons I learned when multi-threading the &lt;em&gt;Sieve&lt;/em&gt; algorithm. One is that sharing state between threads may be unavoidable to achieve reasonable performance. In fact, if you &lt;em&gt;don't&lt;/em&gt; share state, performance can become predictable &lt;em&gt;worse&lt;/em&gt; as the number of threads of execution increases. &lt;br /&gt; &lt;br /&gt; The other is that locking can have a surprising impact on performance. It's not just the cost of locking per se, but the effect locking has on the distribution of work between the various threads. &lt;/p&gt; </description> 
       <content:encoded><![CDATA[<p>This is the first of two posts on threading and multiprocessing in Python. In this post I'll explore the thread module and in the second post I'll look at Python's multiprocessing module. My starting point is the multi-threaded implementation of the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> found in this <a href="http://heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial on multi-threading in Python (pdf).</a> <br /> <br /> Threading a compute-bound algorithm, like the <em>Sieve</em> consists of subdividing of the main task into autonomous sub-tasks which share as little state as possible. Having no shared state eliminates the overhead that inevitably comes with locking. It turns out that Python is not very good at multi-threading compute-bound processes. <a href="http://www.dabeaz.com/blog/dablog.html">This </a>  <a href="http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html">is </a><a href="http://www.grouplens.org/node/244">not a </a> <a href="http://blog.ianbicking.org/gil-of-doom.html">surprise.</a>  CPython has a global interpretor lock <a href="http://www.dabeaz.com/python/GIL.pdf">(GIL)</a> which prevents threads from running concurrently. <br /> <br />  Regardless, there are other lessons I learned when multi-threading the <em>Sieve</em> algorithm. One is that sharing state between threads may be unavoidable to achieve reasonable performance. In fact, if you <em>don't</em> share state, performance can become predictable <em>worse</em> as the number of threads of execution increases. <br /> <br /> The other is that locking can have a surprising impact on performance. It's not just the cost of locking per se, but the effect locking has on the distribution of work between the various threads. </p> ]]></content:encoded>
       <guid> http://fons.github.com/threading-the-sieve-in-python.html </guid>      
       <pubDate> Sat, 12 Sep 2009 17:03:23 EST </pubDate>
@@ -71,18 +44,7 @@ between the various threads. </description>
     <item>
       <title> Simplified command line processing with dyn-options.py </title>
       <link> http://fons.github.com/simplified-command-line-processing-with-dyn-optionspy.html </link>
-      <description> Am I the only one in the world who feels that using python's  *getopt* is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. 
-  
-
-I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. 
-The result is [dyn_options](http://github.com/fons/dyn_options/tree/master). 
-  
-
-[dyn_options](http://github.com/fons/dyn_options/tree/master) considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to _True_. 
-[dyn_options](http://github.com/fons/dyn_options/tree/master) creates a read-only object, with attributes and values set to the command line option flags and values respectively. 
-  
-
-So, '--opt4 hello world' will be converted to an option flag  called _opt4_, with a value of *hello world*. This makes dealing with spaces on the command line a lot easier. </description> 
+      <description> &lt;p&gt;Am I the only one in the world who feels that using python's  &lt;em&gt;getopt&lt;/em&gt; is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. &lt;br /&gt; &lt;br /&gt;  I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. The result is &lt;a href="http://github.com/fons/dyn_options/tree/master"&gt;dyn_options&lt;/a&gt;. &lt;br /&gt; &lt;br /&gt;  &lt;a href="http://github.com/fons/dyn_options/tree/master"&gt;dyn_options&lt;/a&gt; considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to &lt;em&gt;True&lt;/em&gt;. &lt;a href="http://github.com/fons/dyn_options/tree/master"&gt;dyn_options&lt;/a&gt; creates a read-only object, with attributes and values set to the command line option flags and values respectively. &lt;br /&gt; &lt;br /&gt;  So, '--opt4 hello world' will be converted to an option flag  called &lt;em&gt;opt4&lt;/em&gt;, with a value of &lt;em&gt;hello world&lt;/em&gt;. This makes dealing with spaces on the command line a lot easier. &lt;/p&gt; </description> 
       <content:encoded><![CDATA[<p>Am I the only one in the world who feels that using python's  <em>getopt</em> is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. <br /> <br />  I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. The result is <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a>. <br /> <br />  <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to <em>True</em>. <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> creates a read-only object, with attributes and values set to the command line option flags and values respectively. <br /> <br />  So, '--opt4 hello world' will be converted to an option flag  called <em>opt4</em>, with a value of <em>hello world</em>. This makes dealing with spaces on the command line a lot easier. </p> ]]></content:encoded>
       <guid> http://fons.github.com/simplified-command-line-processing-with-dyn-optionspy.html </guid>      
       <pubDate> Sat, 29 Aug 2009 19:15:49 EST </pubDate>
@@ -91,32 +53,7 @@ So, '--opt4 hello world' will be converted to an option flag  called _opt4_, wit
     <item>
       <title> Factorials, Tail Recursion and CPS ... in C  </title>
       <link> http://fons.github.com/factorials-tail-recursion-and-cps--in-c-.html </link>
-      <description> Recursive algorithms are elegant. 
-
-However, if the recursion is not a  
-[tail call](http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf)  
-the growth of the stack leads to a stack overflow. 
-
-
-Tail call recursion is a technique whereby the last call in a recursive function 
-does not depend on the variables pushed on the stack. 
-In other words the function 
-returns the value of its additional (recursive) call.
-
-
-Functional languages like Haskell or Lisp are designed to 
-support the use of tail recursive algorithms.
-The JVM -although now the target platform of a lisp like 
-[clojure](closure.org) or 
-a hybrid functional language like [scala](www.scala-lang.org) - 
-[does not support tail recursion at all](http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm).
-
-In C/C++ the compiler can in fact 
-replace tail recursive calls with a simple loop, thereby eliminating the allocation 
-for additional stack frames all together.
-
-In this post I'll consider various implementations of the humble factorial to illustrate 
-some of these things. </description> 
+      <description> &lt;p&gt;Recursive algorithms are elegant. However, if the recursion is not a  &lt;a href="http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf"&gt;tail call&lt;/a&gt;  the growth of the stack leads to a stack overflow. &lt;/p&gt;&lt;p&gt;Tail call recursion is a technique whereby the last call in a recursive function does not depend on the variables pushed on the stack. In other words the function returns the value of its additional (recursive) call. &lt;/p&gt;&lt;p&gt;Functional languages like Haskell or Lisp are designed to support the use of tail recursive algorithms.The JVM -although now the target platform of a lisp like &lt;a href="closure.org"&gt;clojure&lt;/a&gt; or a hybrid functional language like &lt;a href="www.scala-lang.org"&gt;scala&lt;/a&gt; - &lt;a href="http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm"&gt;does not support tail recursion at all&lt;/a&gt;. In C/C++ the compiler can in fact replace tail recursive calls with a simple loop, thereby eliminating the allocation for additional stack frames all together. In this post I'll consider various implementations of the humble factorial to illustrate some of these things. &lt;/p&gt; </description> 
       <content:encoded><![CDATA[<p>Recursive algorithms are elegant. However, if the recursion is not a  <a href="http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf">tail call</a>  the growth of the stack leads to a stack overflow. </p><p>Tail call recursion is a technique whereby the last call in a recursive function does not depend on the variables pushed on the stack. In other words the function returns the value of its additional (recursive) call. </p><p>Functional languages like Haskell or Lisp are designed to support the use of tail recursive algorithms.The JVM -although now the target platform of a lisp like <a href="closure.org">clojure</a> or a hybrid functional language like <a href="www.scala-lang.org">scala</a> - <a href="http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm">does not support tail recursion at all</a>. In C/C++ the compiler can in fact replace tail recursive calls with a simple loop, thereby eliminating the allocation for additional stack frames all together. In this post I'll consider various implementations of the humble factorial to illustrate some of these things. </p> ]]></content:encoded>
       <guid> http://fons.github.com/factorials-tail-recursion-and-cps--in-c-.html </guid>      
       <pubDate> Sun, 09 Aug 2009 10:27:45 EST </pubDate>
@@ -125,12 +62,7 @@ some of these things. </description>
     <item>
       <title> CL-BLIKY : A simple lisp based blog engine </title>
       <link> http://fons.github.com/cl-bliky--a-simple-lisp-based-blog-engine.html </link>
-      <description> I 'm writing this using a self rolled blog engine called cl-bliky. I'm indebted to an excellent 
-[tutorial](http://roeim.net/vetle/docs/cl-webapp-intro/) 
-put together by [Vetle Roeim](http://roeim.net/vetle/). 
-His goal was obviously to put together a compelling tutorial and he succeeded. 
-My goal was to use lisp in a small programming project, and developing a simple and easily 
-customizable blog engine seemed like a good start. </description> 
+      <description> &lt;p&gt;I 'm writing this using a self rolled blog engine called cl-bliky. I'm indebted to an excellent &lt;a href="http://roeim.net/vetle/docs/cl-webapp-intro/"&gt;tutorial&lt;/a&gt; put together by &lt;a href="http://roeim.net/vetle/"&gt;Vetle Roeim&lt;/a&gt;. His goal was obviously to put together a compelling tutorial and he succeeded. My goal was to use lisp in a small programming project, and developing a simple and easily customizable blog engine seemed like a good start. &lt;/p&gt; </description> 
       <content:encoded><![CDATA[<p>I 'm writing this using a self rolled blog engine called cl-bliky. I'm indebted to an excellent <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> put together by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. His goal was obviously to put together a compelling tutorial and he succeeded. My goal was to use lisp in a small programming project, and developing a simple and easily customizable blog engine seemed like a good start. </p> ]]></content:encoded>
       <guid> http://fons.github.com/cl-bliky--a-simple-lisp-based-blog-engine.html </guid>      
       <pubDate> Sun, 19 Jul 2009 11:49:05 EST </pubDate>
