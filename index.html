@@ -505,6 +505,25 @@ Comment     : These are the styles used when importing a repo
   
   <div id="post">
     <div id="post-timestamp" >
+      <p>Sun, 27 Sep 2009 14:52:50 EST </p> 
+    </div>
+    <h2> 
+      
+    <a href="/processing-the-sieve-in-python.html"> Processing the Sieve in Python </a>
+    
+    </h2>
+    <div id="post-intro">
+      <p>In a <a href="http://www.prognotes.com/threading-the-sieve-in-python.html">previous post</a> I discussed four methods to multi-thread the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> in Python. I concluded that multi-threading didn't increase performance, and in fact could have a significant adverse effect. The <a href="www.dabeaz.com/python/GIL.pdf">global interpretor lock (GIL)</a> prevents threads from running concurrently and thus limits the upside of threading. The use of locks or avoiding the use of shared data can than decrease performance quite a bit. <br /> <br />  In this section I'll be using Python's <a href="http://docs.python.org/library/multiprocessing.html">multiprocessing</a> module to 'multi-thread' the <em>Sieve</em>. <br /> <br />  The multiprocessing module spawns a number of processes and distributes the calculation amongst them.There is no equivalent to the GIL so I should be able to see some gain in performance as the number of processes increases. On the other hand, spawning processes means that there is startup overhead which may offset any performance gain due to the distribution of its execution across multiple processes.  However, I should still be able to investigate how performance scales with the number of processes, and whether the <a href="http://docs.python.org/library/multiprocessing.html">multiprocessing module</a> is able to take advantage of multiple cores. In this post I'll discuss four approaches to distributing the <em>Sieve</em> algorithm, basically following the approaches I discussed <a href="http://www.prognotes.com/threading-the-sieve-in-python.html">earlier</a> when using the multi-threading package.The various approaches differ in the way the load is balanced and whether the state of the sieve is shared.<br /> <br />  The source for the code discussed here and in the  <a href="http://www.prognotes.com/threading-the-sieve-in-python.html">previous post</a> can be found in  <em>prime_share.py</em> in the <a href="git://github.com/fons/blog-code.git">blog-code package</a> on github. </p> 
+    </div>
+    
+    <a href="/processing-the-sieve-in-python.html"> <h6> Continue reading "Processing the Sieve in Python" </h6> </a>
+    
+
+    
+  </div>
+  
+  <div id="post">
+    <div id="post-timestamp" >
       <p>Sat, 12 Sep 2009 17:03:23 EST </p> 
     </div>
     <h2> 
