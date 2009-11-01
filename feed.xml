@@ -30,7 +30,16 @@
     <title> Programmer Notes </title>
     <link>  http://fons.github.com/ </link>
     <description> This is mostly concerned with programming. </description>
-    <pubDate> Mon, 28 Sep 2009 05:24:55 EST </pubDate>
+    <pubDate> Sun, 01 Nov 2009 11:14:49 EST </pubDate>
+    
+    <item>
+      <title> Toy Problem: Simple One Dimensional Least Squares Learner. </title>
+      <link> http://fons.github.com/toy-problem-simple-one-dimensional-least-squares-learner.html </link>
+      <description> &lt;p&gt;In chapter two of Hastie, Tibshirani and Friedman 's  &lt;a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/"&gt;'The Elements of Statistical Learning'&lt;/a&gt;  the authors discuss the use of least- squares regression to construct a data classifier for linearly separable data. &lt;br /&gt; &lt;br /&gt;  A set of training data together with the least-squares method is used to construct a hyper-plane in the data space. The classification of a data point depends on what side of the hyper-plane you end up on.&lt;br /&gt; &lt;br /&gt;  The example in Hastie uses two data classes in a two dimensional parameter space. I didn't grok the the example immediately, and I thought it would be helpful to try to construct my own much simpler example by staying in one dimension and using a simple normal distribution. The rest of this post describes the details. &lt;/p&gt; </description> 
+      <content:encoded><![CDATA[<p>In chapter two of Hastie, Tibshirani and Friedman 's  <a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">'The Elements of Statistical Learning'</a>  the authors discuss the use of least- squares regression to construct a data classifier for linearly separable data. <br /> <br />  A set of training data together with the least-squares method is used to construct a hyper-plane in the data space. The classification of a data point depends on what side of the hyper-plane you end up on.<br /> <br />  The example in Hastie uses two data classes in a two dimensional parameter space. I didn't grok the the example immediately, and I thought it would be helpful to try to construct my own much simpler example by staying in one dimension and using a simple normal distribution. The rest of this post describes the details. </p> ]]></content:encoded>
+      <guid> http://fons.github.com/toy-problem-simple-one-dimensional-least-squares-learner.html </guid>      
+      <pubDate> Sun, 01 Nov 2009 10:30:37 EST </pubDate>
+    </item>
     
     <item>
       <title> Processing the Sieve in Python </title>

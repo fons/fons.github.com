@@ -22,10 +22,10 @@
 --->
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset =UTF-8"> 
-    <title> Programmer Notes </title>
+    <title> Programmer Notes  </title>
     <style type="text/css">
       /*-------------------------------------------------------------------
 ;;
@@ -493,201 +493,64 @@ Comment     : These are the styles used when importing a repo
 
 
     </style>
-  </head>
+  </head>  
 
-<body>
-  <div id="blog-title">
-    <a href="/"> <h1> Programmer Notes </h1> </a>
-  </div>
-  <div id="mainClm">
-      
-
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sun, 01 Nov 2009 10:30:37 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/toy-problem-simple-one-dimensional-least-squares-learner.html"> Toy Problem: Simple One Dimensional Least Squares Learner. </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>In chapter two of Hastie, Tibshirani and Friedman 's  <a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">'The Elements of Statistical Learning'</a>  the authors discuss the use of least- squares regression to construct a data classifier for linearly separable data. <br /> <br />  A set of training data together with the least-squares method is used to construct a hyper-plane in the data space. The classification of a data point depends on what side of the hyper-plane you end up on.<br /> <br />  The example in Hastie uses two data classes in a two dimensional parameter space. I didn't grok the the example immediately, and I thought it would be helpful to try to construct my own much simpler example by staying in one dimension and using a simple normal distribution. The rest of this post describes the details. </p> 
+  <body>
+    <div id="blog-title">
+      <a href="/"> <h1> Programmer Notes </h1> </a> 
     </div>
     
-    <a href="/toy-problem-simple-one-dimensional-least-squares-learner.html"> <h6> Continue reading "Toy Problem: Simple One Dimensional Least Squares Learner." </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sun, 27 Sep 2009 14:52:50 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/processing-the-sieve-in-python.html"> Processing the Sieve in Python </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>In a <a href="http://www.prognotes.com/threading-the-sieve-in-python.html">previous post</a> I discussed four methods to multi-thread the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> in Python. I concluded that multi-threading didn't increase performance, and in fact could have a significant adverse effect. The <a href="www.dabeaz.com/python/GIL.pdf">global interpretor lock (GIL)</a> prevents threads from running concurrently and thus limits the upside of threading. The use of locks or avoiding the use of shared data can than decrease performance quite a bit. <br /> <br />  In this section I'll be using Python's <a href="http://docs.python.org/library/multiprocessing.html">multiprocessing</a> module to 'multi-thread' the <em>Sieve</em>. <br /> <br />  The multiprocessing module spawns a number of processes and distributes the calculation amongst them.There is no equivalent to the GIL so I should be able to see some gain in performance as the number of processes increases. On the other hand, spawning processes means that there is startup overhead which may offset any performance gain due to the distribution of its execution across multiple processes.  However, I should still be able to investigate how performance scales with the number of processes, and whether the <a href="http://docs.python.org/library/multiprocessing.html">multiprocessing module</a> is able to take advantage of multiple cores. In this post I'll discuss four approaches to distributing the <em>Sieve</em> algorithm, basically following the approaches I discussed <a href="http://www.prognotes.com/threading-the-sieve-in-python.html">earlier</a> when using the multi-threading package.The various approaches differ in the way the load is balanced and whether the state of the sieve is shared.<br /> <br />  The source for the code discussed here and in the  <a href="http://www.prognotes.com/threading-the-sieve-in-python.html">previous post</a> can be found in  <em>prime_share.py</em> in the <a href="git://github.com/fons/blog-code.git">blog-code package</a> on github. </p> 
-    </div>
-    
-    <a href="/processing-the-sieve-in-python.html"> <h6> Continue reading "Processing the Sieve in Python" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sat, 12 Sep 2009 17:03:23 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/threading-the-sieve-in-python.html"> Threading the Sieve in Python </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>This is the first of two posts on threading and multiprocessing in Python. In this post I'll explore the thread module and in the second post I'll look at Python's multiprocessing module. My starting point is the multi-threaded implementation of the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Erasthones</a> found in this <a href="http://heather.cs.ucdavis.edu/~matloff/Python/PyThreads.pdf">tutorial on multi-threading in Python (pdf).</a> <br /> <br /> Threading a compute-bound algorithm, like the <em>Sieve</em> consists of subdividing of the main task into autonomous sub-tasks which share as little state as possible. Having no shared state eliminates the overhead that inevitably comes with locking. It turns out that Python is not very good at multi-threading compute-bound processes. <a href="http://www.dabeaz.com/blog/dablog.html">This </a>  <a href="http://ttimo.vox.com/library/post/python-gil-threading-and-multicore-hardware.html">is </a><a href="http://www.grouplens.org/node/244">not a </a> <a href="http://blog.ianbicking.org/gil-of-doom.html">surprise.</a>  CPython has a global interpretor lock <a href="http://www.dabeaz.com/python/GIL.pdf">(GIL)</a> which prevents threads from running concurrently. <br /> <br />  Regardless, there are other lessons I learned when multi-threading the <em>Sieve</em> algorithm. One is that sharing state between threads may be unavoidable to achieve reasonable performance. In fact, if you <em>don't</em> share state, performance can become predictable <em>worse</em> as the number of threads of execution increases. <br /> <br /> The other is that locking can have a surprising impact on performance. It's not just the cost of locking per se, but the effect locking has on the distribution of work between the various threads. </p> 
-    </div>
-    
-    <a href="/threading-the-sieve-in-python.html"> <h6> Continue reading "Threading the Sieve in Python" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sat, 29 Aug 2009 19:15:49 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/simplified-command-line-processing-with-dyn-optionspy.html"> Simplified command line processing with dyn-options.py </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>Am I the only one in the world who feels that using python's  <em>getopt</em> is a bit of a struggle ? It involves a lot of boiler plate. Tedious refactoring is required each time you add or change an option.  This is not specific to Python, as most languages have a similar facility to parse the command line, which is similarly annoying. <br /> <br />  I decided to create an easier way to process command line options, by transforming the command line into an immutable (read-only) object. The result is <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a>. <br /> <br />  <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> considers every string on the command line which starts with either  - or -- (i.e. a single or double dash) an option flag. The value of the option flag is a concatenation of everything that follows it, until the next flag is encountered.  A simple option flag is one without explicit values and is considered a boolean flag, set to <em>True</em>. <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> creates a read-only object, with attributes and values set to the command line option flags and values respectively. <br /> <br />  So, '--opt4 hello world' will be converted to an option flag  called <em>opt4</em>, with a value of <em>hello world</em>. This makes dealing with spaces on the command line a lot easier. </p> 
-    </div>
-    
-    <a href="/simplified-command-line-processing-with-dyn-optionspy.html"> <h6> Continue reading "Simplified command line processing with dyn-options.py" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sun, 09 Aug 2009 10:27:45 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/factorials-tail-recursion-and-cps--in-c-.html"> Factorials, Tail Recursion and CPS ... in C  </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>Recursive algorithms are elegant. However, if the recursion is not a  <a href="http://repository.readscheme.org/ftp/papers/ai-lab-pubs/AIM-453.pdf">tail call</a>  the growth of the stack leads to a stack overflow. </p><p>Tail call recursion is a technique whereby the last call in a recursive function does not depend on the variables pushed on the stack. In other words the function returns the value of its additional (recursive) call. </p><p>Functional languages like Haskell or Lisp are designed to support the use of tail recursive algorithms.The JVM -although now the target platform of a lisp like <a href="http://www.clojure.org">clojure</a> or a hybrid functional language like <a href="http://www.scala-lang.org">scala</a> - <a href="http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm">does not support tail recursion at all</a>. In C/C++ the compiler can in fact replace tail recursive calls with a simple loop, thereby eliminating the allocation for additional stack frames all together. In this post I'll consider various implementations of the humble factorial to illustrate some of these things. </p> 
-    </div>
-    
-    <a href="/factorials-tail-recursion-and-cps--in-c-.html"> <h6> Continue reading "Factorials, Tail Recursion and CPS ... in C " </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="post">
-    <div id="post-timestamp" >
-      <p>Sun, 19 Jul 2009 11:49:05 EST </p> 
-    </div>
-    <h2> 
-      
-    <a href="/cl-bliky--a-simple-lisp-based-blog-engine.html"> CL-BLIKY : A simple lisp based blog engine </a>
-    
-    </h2>
-    <div id="post-intro">
-      <p>I 'm writing this using a self rolled blog engine called cl-bliky. I'm indebted to an excellent <a href="http://roeim.net/vetle/docs/cl-webapp-intro/">tutorial</a> put together by <a href="http://roeim.net/vetle/">Vetle Roeim</a>. His goal was obviously to put together a compelling tutorial and he succeeded. My goal was to use lisp in a small programming project, and developing a simple and easily customizable blog engine seemed like a good start. </p> 
-    </div>
-    
-    <a href="/cl-bliky--a-simple-lisp-based-blog-engine.html"> <h6> Continue reading "CL-BLIKY : A simple lisp based blog engine" </h6> </a>
-    
-
-    
-  </div>
-  
-  <div id="footer">
-    <p>
-      Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
-       
-	<script type="text/javascript">          
-       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");          
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));          
-</script>          
-<script type="text/javascript">          
-      try {          
-	    var pageTracker = _gat._getTracker("UA-9319248-1");          
-	    pageTracker._trackPageview();          
-      } catch(err) {}         
-</script> 
-      
-    </p>
-  </div>
-  
-  </div>
-  <!-- end of main area -->
-  
-  <!-- start of the sidebar -->
-  
-  <div id="sideBar">
-    <div id="about">
-      
-      <a href="/about.html"> <h2> About </h2> </a>
-      
-      
-    </div>
-
-    <div id="contact">
-       
-	<a href="http://kontactr.com/user/prognotes"><img src="http://kontactr.com/pics/small.gif" border="0" width="90px" height="16px" /></a> 
-      
-    </div>
-    <div id="rss-feed">
-      
-	<a href="/feed.xml"> 
-	  
-	   
-	<img src="http://github.com/fons/cl-bliky/raw/master/img/rss_pill_blue_32.png" title="Subscribe to my RSS feed" border="0"   /> 
-      
-	</a>
-    </div>
-    <div id="rss-validator">
-       
-	<a href="http://beta.feedvalidator.org/check.cgi?url=http%3A//www.prognotes.com/feed.xml"><img src="http://github.com/fons/cl-bliky/raw/master/img/valid-rss.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a> 
-      
-    </div>
-
-    <div id="side-bars">
-      
-      
-      <h2> Code </h2>
-      <div>
-	<ul> <li>   <a href="http://github.com/fons/cl-bliky/tree/master/">c-bliky</a>  </li>  <li>  <a href="http://github.com/fons/c_fact/tree/master">c_fact</a> </li>  <li>   <a href="http://github.com/fons/dyn_options/tree/master">dyn_options</a> </li> </ul>  
+    <div id="mainClm">
+      <div id="post">
+	<div id="post-type" style="visibility:hidden">
+	  <p>"post"</p>
 	</div>
-      <div>
-	 
+	<div id="post-timestamp" >
+	  <p>Sun, 01 Nov 2009 10:30:37 EST </p>
 	</div>
-      
-      
-      
-      
-    </div> 
-    <!--end of sidebar-->
+	<div id="post-header">
+	  <h2> Toy Problem: Simple One Dimensional Least Squares Learner.  </h2>
+	</div>
+	<div id="post-intro">
+	  <p>In chapter two of Hastie, Tibshirani and Friedman 's  <a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">'The Elements of Statistical Learning'</a>  the authors discuss the use of least- squares regression to construct a data classifier for linearly separable data. <br /> <br />  A set of training data together with the least-squares method is used to construct a hyper-plane in the data space. The classification of a data point depends on what side of the hyper-plane you end up on.<br /> <br />  The example in Hastie uses two data classes in a two dimensional parameter space. I didn't grok the the example immediately, and I thought it would be helpful to try to construct my own much simpler example by staying in one dimension and using a simple normal distribution. The rest of this post describes the details. </p>
+	</div>
+	<div id="post-body">
+	  <h2>Data Classes and Least Squares</h2><p>My data points are generated by two <a href="http://en.wikipedia.org/wiki/Normal_distribution">normal distributions.</a> with means on the interval [0,1].<br /> <br /> Class 1 is classified as -1 and class 2 as 1. In my example, class 1 will always have the smaller mean, and hence will lie to the left of class 2. As in  Hastie <a href="http://en.wikipedia.org/wiki/Linear_regression">linear regression.</a> is used to find a linear classifier for a set of training data for these two classes.<br /> <br />  The data space is one-dimensional and the classification boundary will be a point on the interval [0,1] somewhere between the means of the two data classes. For a one dimensional data space linear regression models the classification response function as a line:     y = Mx + Q </p><p>The RSS is the sum of the squares of the difference between the actual and response predicted by the LSM equation : </p><pre><code>RSS = SUM ( (y_obs - y_calc) ^2 ) </code></pre><p>LSM tries to find the slope M and intercept Q such that the responses  generated by the least-squares model (LSM) have the smallest 'residual sum of squared errors' (RSS). </p><p><em>x</em> represents the input and is going to be generated by the normal distributions associated with one of the two data classes. <em>y</em> represents the response and the only values are -1 or 1, depending on whether <em>x</em> was generated by the first or second class distribution respectively. </p><p>The observed classifications, <em>y_obs</em>, can have only one of two values : -1 or 1. The values generated by the LSM, <em>y_calc</em>, range from Q (for <em>x</em> = 0) to M + Q (for <em>x</em> = 1). </p><p>The LSM separates the space into two pieces, one for one class and one for the other. In this case the data space is the line piece [0,1], and the 'hyper-plane' separating that space is where the linear regression line crosses the data space, yielding a classification boundary of : </p><pre><code> S = -Q / M </code></pre><p>The LSM estimate of the classifier is then : </p><pre><code>x &lt; S -&gt; class 1  
+x &gt; S -&gt; class 2  
+</code></pre><h2>A simple R script</h2><p>I've put together a quick <a href="http://www.r-project.org/">R script</a>  implementing these ideas. </p><p>This [R script]( http://github.com/fons/blog-code/blob/master/1d-classification-toy/sl-1d-regression.R) has two main functions : <em>train</em> and <em>sim</em>. The script is loaded on the R command prompt like so: </p><pre><code>source('sl-1d-regression.R') </code></pre><p>The <em>train</em> function is used to generate a graph showing two data classes as well as the line generated by the LSM separating both classes. The example discussed below was generated using train as follows : </p><pre><code>&gt; train(20, 0.35, 0.15, 0.65, 0.15)  
+  coefficients :  -1.916889  3.973720  
+  classifier :  0.4824  
+  prob of misclassification of class 1 :  0.16  
+  prob of misclassification of class 2 :  0.16  
+ 
+</code></pre><p>The <em>sim</em> function returns a vector of monte-carlo simulations of the separation boundary. For example, here's  10 values of the boundary generated by <em>sim</em> : </p><pre><code>&gt; sim(10, 0.35, 0.15, 0.65, 0.15)  
+  (Intercept) (Intercept) (Intercept) (Intercept) (Intercept) (Intercept)  
+   0.4495022   0.5185030   0.4978533   0.5887321   0.4547277   0.5029925  
+  (Intercept) (Intercept) (Intercept) (Intercept)  
+   0.4792027   0.5665940   0.4952061   0.5337139 </code></pre><p>The following plots the density function for 400 values of the classification boundary, for the same class parameters as the <em>train</em> example above. </p><pre><code>plot(density(sim(400, 0.15, 0.35, 0.65, 0.15)), xlim=c(0,1), xlab="", ylab="")  
+</code></pre><p>Obviously, since these  are monte-carlo simulations, subsequent runs are going to be different as the random values generated by <em>rnorm</em> are going to be different each time the function is run. </p><h2>Classification Results</h2><p><a name="narrow1d"> <img src="http://github.com/fons/blog-images/raw/master/20091101/narrow1d.png">  </a>  </p>  </p><p><a href=""narrow1d"">This graph</a> shows two classes and the resulting least-squares model. Both distributions have the same standard deviation of 0.15. One class marked the with red inverted triangles has a mean of 0.35.  The other class is marked with the blue squares and has a mean of 0.65. The size of each training class is 20. </p><p>Each class shows up twice. Once as part of the x-axis which is the data space for this problem. The second time I show them as data points (x,y) used in the linear regression. Obviously the red triangles all have y = -1, and the blue squares all have y = 1. </p><p>As you can see, there is some overlap between the two data sets, because of the variance of the normal distribution. </p><p>The green line represents the best fit of the data points according to the least-squares model (LSM). The classification boundary is the point where the green line crosses the x-axis. As you can see that's somewhere around 0.5. </p><p>You would expect 0.5 to be a good estimate of the classification boundary S because the normal distribution is symmetric around the mean and both classes are equi-distant from 0.5. </p><p>The R-script generates the probability of misclassification defined as the probability of ending up on the wrong side of the estimated classification boundary : </p><pre><code> S_est = 0.5 * (mean_1 + mean_2)  
+ 
+ P_mis_classified = Prob( x &gt; S_est) for class 1  
+ 		      = Prob( x &lt; S_est) for class 2  
+</code></pre><p>This is obviously determined in large part by the variance (for given mean), and for this example the probability is around 16 % for both classes. </p><p>The <em>sim</em> can be used to generate a whole set of estimates of the classification boundary. This is in fact sampling the space of estimators. The mean of this sample should be very close to the actual value thanks to the <a href="http://en.wikipedia.org/wiki/Central_limit_theorem">central limit theorem.</a> Here's a typical run </p><pre><code> &gt;mean(sim(400, 0.35, 0.15, 0.65, 0.15))  
+  [1] 0.4977804  
+&gt; mean(sim(400, 0.35, 0.15, 0.65, 0.15))  
+  [1] 0.4990484  
+&gt; mean(sim(400, 0.35, 0.15, 0.65, 0.15))  
+  [1] 0.5024554 </code></pre><p>The R function <em>mean</em> is used to find the mean of the values of the vector of simulation results. </p><p><a name="samplemean1d"> <img src="http://github.com/fons/blog-images/raw/master/20091101/samplemean1d.png">  </a>  </p>  </p><p><a href=""samplemean1d"">This graph</a> shows a plot of the density of the sample distribution for the mean. The graph shows two distributions one for a standard deviations 0.15 in blue and 0.35 in red respectively. </p><p>Notice how wide the distribution for sd=0.35 is around 0.5. It turns out that about 33 % of your data will be misclassified because there will be significant overlap between the two classes. </p><p><a name = "wide1d"> <img src="http://github.com/fons/blog-images/raw/master/20091101/wide1d.png">  </a>  </p>  </p><p><a href=""wide1d"">This graph</a> is generated using a standard deviation of 0.35 for both classes and with 50 data points in each class. As you can see there's significant overlap between the two classes. In fact, it would be hard to just visually pick out a good classification boundary. </p> 
+	</div>
+	<div id="post-timestamp-id" style="visibility:hidden">
+	  <p>3466078237 </p>
+	</div>
+      </div>
 
-</body>
+      <div id="footer">
+	<p>
+	  Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
+	</p>
+      </div>
+      
+    </div><!-- end of main area -->
 
-
+  </body>
 </html>
-
-
