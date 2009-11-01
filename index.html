@@ -70,12 +70,14 @@ body{
       #color:#000011;
       font-size : 12px;
       font:normal 100% Sans-Serif;
+      background-image:url('http://github.com/fons/blog-images/raw/master/background/bliky-background.png');
+      
       }
 
 p {
     margin:0px;
     padding:0x;
-    #background:#ffffff;
+    ####background:#ffffff;
     background:#eee9e9;
     #color:#000011;
     font-size : 12px;
@@ -160,16 +162,17 @@ Comment : Seperate format for the blog title
        
 ----------------------------------------------------------------*/
 #blog-title {
-              width:75%;
+              width:100%;
+              padding: 10px 0px 0px 100px;
+              #float:left;
               }
 
 
 #blog-title h1 {
                  color: #0000cc;
-                 font:bold 280% Sans-Serif;
-                 float:right;
-                 width:30%;
-                 padding:20px 0px 0px 0px;
+                 font:bold 580% Sans-Serif;
+                 #width:100%;
+                 #padding: 0px 0px 0px 0px;
                  #border: 0.15em solid #D6D6D6;
                 }
 
@@ -213,38 +216,43 @@ Comment : This is the sidebar to the left of the page
 #sideBar{
           padding:220px 0px 0px 0px;
           text-align:left;
-          background:#eee9e9;
+          #background:#eee9e9;
+          #background:black;
+          #color:#111111;
           font-size : 12px;
-          font:normal 100% Sans-Serif;
-
+          #font:normal 100% Sans-Serif;
+          font:bold 150% Sans-Serif;
           }
 
 #sideBar p {
              margin:0px 0px 0px 0px;
              text-align:left;
-             background:#eee9e9;
-             font-size : 12px;
-             font:normal 100% Sans-Serif;
+             #background:#eee9e9;
+             #font-size : 12px;
+             #font-size : 20px;
+             #font:normal 100% Sans-Serif;
              }
 
 #sideBar h2 {
-              color:#0000cc;
-              font-size:120%;
+              #color:#0000cc;
+              #font-size:120%;
+              #font-size : 20px;
              }
 
 #sideBar ul{
              margin:0px 0px 33px 0px;
              list-style-type:none;
-             font-size:100%;
+             #font-size:100%;
              }
 
 #sideBar li {
               list-style-type:none;
-              color:#111111
+              color:#111111;
               }
 
 #sideBar a {
-             color:#555555
+             #color:#555555
+             color:red;
              }
 
 #sideBar a:hover {
@@ -258,7 +266,7 @@ Comment : This is the sidebar to the left of the page
                }
 
 #contact a {
-             color:#555555
+             #color:#555555
              }
 
 #contact a:hover {
@@ -496,6 +504,7 @@ Comment     : These are the styles used when importing a repo
   </head>
 
 <body>
+
   <div id="blog-title">
     <a href="/"> <h1> Programmer Notes </h1> </a>
   </div>
