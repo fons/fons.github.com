@@ -1,0 +1,551 @@
+<!---
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title> Programmer Notes  </title>
+    <style type="text/css">
+      /*-------------------------------------------------------------------
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------
+Sheet   : All sheets
+Purpose : General Formatting 
+Comment : Default formatting, no tied to any template or div
+
+This is probably NOT the right way, since I created specific formatting under
+the 'general' settings, esp H1...
+
+-------------------------------------------------------------------------------*/
+
+body{
+      margin:0px;
+      padding:0x;
+      #background:#ffffff;
+      background:#eee9e9;
+      #background:#fffacd;
+      #color:#000011;
+      font-size : 12px;
+      font:normal 100% Sans-Serif;
+      background-image:url('http://github.com/fons/blog-images/raw/master/background/greenmountains.JPG');
+      
+      }
+
+p {
+    margin:0px;
+    padding:0x;
+    ####background:#ffffff;
+    background:#eee9e9;
+    #color:#000011;
+    font-size : 12px;
+    font:normal 100% Sans-Serif;
+
+
+    }
+
+a{
+   #padding:2px;
+   margin:0px 0px 0px 0px;
+   width:100%;
+   border:none;
+   color:#0000cc;
+   text-decoration:none;
+   }
+
+a:hover{
+         text-decoration:none;
+         }
+
+a:visited{
+           color:#0000cc;
+           }
+
+h1,h2,h3,h4,h5,h6{
+                   color:#595959;
+                   #color:black;
+                   #color:darkblue;
+                   font:bold 100% Sans-Serif;
+                   #padding:0px 0px 0px 0px;
+                   margin:5px 0px 5px 0px;
+                   #margin:0px 0px 5px 0px;
+                   width:100%;
+                   text-align:left;
+                   }
+h1 {
+     font-size:180%;
+     }
+
+
+h2 {
+     font-size:160%;
+     }
+
+h3 {
+     font-size:110%;
+     color:black;
+
+     }
+
+pre {  }
+
+code{
+      #border: 0.30em solid #D6D6D6;
+      border-left: 0.3em solid #D6D6D6;
+      display: block;
+      padding: 1em 1em 1em 1em;
+      color:#330066;
+      background:#EDEDED;
+      }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index page
+Purpose : Formats the main column
+Comment : Basically sets up a two column format
+       
+----------------------------------------------------------------*/
+
+#mainClm{
+          float:left;
+          padding:13px 50px 10px 5%;
+          width:68%;
+          }
+
+
+/*---------------------------------------------------------------
+Sheet   : All pages
+Purpose : Formats the blog title
+Comment : Seperate format for the blog title
+       
+----------------------------------------------------------------*/
+#blog-title {
+              width:100%;
+              padding: 10px 0px 0px 100px;
+              #float:left;
+              }
+
+
+#blog-title h1 {
+                 color: #0000cc;
+                 font:bold 580% Sans-Serif;
+                 #width:100%;
+                 #padding: 0px 0px 0px 0px;
+                 #border: 0.15em solid #D6D6D6;
+                }
+
+
+/*---------------------------------------------------------------
+Sheet   : Import Page
+Purpose : formats the import page
+Comment : 
+       
+----------------------------------------------------------------*/
+
+#import-header h1 {
+                    color: #0000cc;
+                    font:bold Sans-Serif;
+                    width:100%;
+                    padding:15px 0px 0px 0px;
+                    font-size: 240%;
+                    #border-bottom:solid 4px #0000cc;
+                    }
+
+#import-edit h1, h2, h3 h4, h5 {
+                                 padding:0px 0px 0px 0px;
+                                 color: #0000cc;
+                                 font:bold Verdana,Sans-Serif;
+                                 width:100%;
+                                 #border-bottom:solid 2px #0000cc;
+                                 }
+
+#import-edit h2 {
+                  font-size: 160%;
+                  }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index Page / index.tmpl
+Purpose : Formats the side bar
+Comment : This is the sidebar to the left of the page
+       
+----------------------------------------------------------------*/
+
+#sideBar{
+          padding:220px 0px 0px 0px;
+          text-align:left;
+          #background:#eee9e9;
+          #background:black;
+          #color:#111111;
+          font-size : 12px;
+          #font:normal 100% Sans-Serif;
+          font:bold 150% Sans-Serif;
+          }
+
+#sideBar p {
+             margin:0px 0px 0px 0px;
+             text-align:left;
+             #background:#eee9e9;
+             #font-size : 12px;
+             #font-size : 20px;
+             #font:normal 100% Sans-Serif;
+             }
+
+#sideBar h2 {
+              #color:#0000cc;
+              #font-size:120%;
+              #font-size : 20px;
+             }
+
+#sideBar ul{
+             margin:0px 0px 33px 0px;
+             list-style-type:none;
+             #font-size:100%;
+             }
+
+#sideBar li {
+              list-style-type:none;
+              color:#111111;
+              }
+
+#sideBar a {
+             #color:#555555
+             color:red;
+             }
+
+#sideBar a:hover {
+                   border-bottom: solid 2px red;
+                   }
+
+#sideBar ul a{
+               #color:#555555;
+               color:black;##FF8000;
+               list-style-type:underline;
+               }
+
+#contact a {
+             #color:#555555
+             }
+
+#contact a:hover {
+                   text-decoration:none;
+                   }
+
+#contact a:visited{
+                    color:#0000cc;
+                    }
+
+
+/*-------------------------------------------------------------------------
+Sheet   : Index and post sheets
+Purpose : Format the postings
+Comment : each post has a post and post-intro division
+This is probably NOT the right way, since I created specific formatting under
+the 'general' settings.
+
+--------------------------------------------------------------------------*/
+/* h2 is also used for the blog post title...
+   h6 is special; it's used to format the 'continue reading ..' link    
+*/
+
+#post { 
+        margin:  1em 1em 1em 1em;
+        padding: 1em 1em 1em 1em;
+        border: 0.1em solid #FF8000;
+        background:#F5F5F5;
+        }
+
+#post p { 
+          background:#F5F5F5;
+        }
+
+
+/* h2 is also used for the blog post title...*/
+#post h2 {
+           border-bottom:solid 1px #000000;
+           color: #0000cc;
+           font:bold 160% Sans-Serif;
+           }
+
+
+/*this is a special format to bring h2 in line with the other formats..*/
+
+#post-intro h2 {
+                 #color:#595959;
+                 color:black;
+                 border-bottom:dotted 0px #cccccc;
+                 font-size:140%;
+                 }
+
+#post-body h2 {
+                color:#595959;
+                #color:black;
+                border-bottom:dotted 0px #cccccc;
+                font-size:140%;
+                }
+
+/* h6 is special; it's used to format the 'continue reading ..' link */
+#post h6 {
+          margin:4px 0px 0px 0px;
+          color:#0000cc;
+          #font-family : 'Sans Serif';
+          font-size   : 14px;
+          font-weight : bold;
+          }
+
+
+/*---------------------------------------------------------------
+Sheet   : Index and post sheets
+Purpose : Format the visible time stamp
+Comment : Each blog post has a time stamp in a specific div. 
+
+----------------------------------------------------------------*/
+#post-timestamp p {  
+                    margin:0px 0px 18px 0px;
+                    border-bottom-width : 4px;
+                    color : #cc0000;
+                    #font-family : , 'Sans Serif',;
+                    font-size : 12px;
+                    height : 4px;
+
+                    }
+
+/*---------------------------------------------------------------
+Sheet   : Index sheet
+Purpose : Format the footer
+Comment : Basically sets up a footer pointing to the bliky location
+          on github, with a barely visible link ref.
+
+----------------------------------------------------------------*/
+#footer p { 
+            #font-family : , 'Sans Serif',;           
+            font-size:.75em;
+            margin-top: 3em;
+            text-align: center;
+            text-indent: 0;
+           }
+#footer a { color:#222222; }
+
+#footer a:hover {
+                  border-bottom: solid 2px red;
+                  }
+
+
+/* ---------------------------------------------------------------------
+Sheet       : post-edit.tmpl
+Purpose     : edit a blog post
+Comment     : These are the styles used when editing 
+a blog post
+
+-----------------------------------------------------------------------*/
+#edit-page{
+            float:left;
+            padding:13px 50px 10px 5%;
+            width:80%;
+            }
+
+
+#edit-header {                
+               margin:0px 0px 0px 0px;
+               font-size:240%;
+               }
+
+#edit-header h1 { 
+                  margin:0px 0px 0px 0px;
+                  color:salmon; 
+                  text-align: center;
+                  }
+
+#intro-buttons {  
+                 margin:8px 0px 8px 0px;
+                 #background:#caff70;
+                 background:#f5deb3;
+                 border:solid 1px #cd0000;
+}
+
+#intro-buttons input {  
+                      margin:2px 0px 2px 0px;
+                      text-align:left;
+                      #width:48%;
+                      font-family : 'Sans Serif';
+                      font-size : 20px;
+                      #background:#F5F5F5;
+                      #background:#caff70;
+                       background:#d3d3d3;
+                      }                       
+
+#intro-edit input {  
+                    margin:20px 0px 20px 0px;
+                    text-align:left;
+                    width:100%;
+                    font-family : 'Sans Serif';
+                    font-size : 18px;
+                    #background:#F5F5F5;
+                    background:#f5deb3;
+                    }                       
+
+#intro-edit textarea {  
+                       margin:0px 0px 0px 0px;
+                       text-align:left;
+                       width:100%;
+                       font-family : 'Sans Serif';
+                       font-size : 18px;
+                       #background:#F5F5F5;
+                       background:#f5deb3;
+                       }                       
+
+#intro-edit h2 {
+                 border-bottom:solid 1px #000000;
+                 color: #0000cc;
+                 font:bold 110% Verdana,Sans-Serif;
+                 }
+
+
+/*--------------end of post-edit.tmpl style -------------------------*/
+/* ---------------------------------------------------------------------
+Sheet       : import.tmpl
+Purpose     : import a repo
+Comment     : These are the styles used when importing a repo
+               
+
+-----------------------------------------------------------------------*/
+#import-page{
+            float:left;
+            padding:13px 50px 10px 5%;
+            width:80%;
+            }
+
+
+#import-header {                
+               margin:0px 0px 0px 0px;
+               font-size:240%;
+               }
+
+#import-header h1 { 
+                  margin:0px 0px 0px 0px;
+                  color:salmon; 
+                  text-align: center;
+                  }
+
+
+/*--------------end of import.tmpl style -------------------------*/
+
+/* ---------------------------------------------------------------------
+Sheet       : import.tmpl
+Purpose     : import a repo
+Comment     : These are the styles used when importing a repo
+-----------------------------------------------------------------------*/
+
+#options-header {                
+                  margin:0px 0px 0px 0px;
+                  font-size:240%;
+                  }
+
+#options-header h1 { 
+                     margin:0px 0px 0px 0px;
+                     color:salmon; 
+                     text-align: center;
+                     }
+
+#options-page{
+               float:left;
+               padding:10px 0px 0px 50px;
+               width:80%;
+               font-size: 100%;
+               }
+
+
+/*----------------- end of options style ----------------------------*/
+
+
+    </style>
+  </head>  
+
+  <body>
+    <div id="blog-title">
+      <a href="/"> <h1> Programmer Notes </h1> </a> 
+    </div>
+    
+    <div id="mainClm">
+      <div id="post">
+	<div id="post-type" style="visibility:hidden">
+	  <p>"post"</p>
+	</div>
+	<div id="post-timestamp" >
+	  <p>Fri, 06 Nov 2009 06:32:19 EST </p>
+	</div>
+	<div id="post-header">
+	  <h2> Embedding Equations in a Blog Post  </h2>
+	</div>
+	<div id="post-intro">
+	  <p>I'm using a <a href="http://github.com/fons/cl-bliky">home-grown blogging engine</a> which converts pages formatted in <a href="http://daringfireball.net/projects/markdown/">markdown</a> to static html pages served from my <a href="http://github.com/fons/fons.github.com">github account.</a> If I want to include mathematical equations in my blog post my options are to use inline html code or to use one of the online <a href="http://www.latex-project.org/">Latex</a> <a href="http://www.google.com/search?rlz=1C1GGLS_en-USUS313US311&aq=f&sourceid=chrome&ie=UTF-8&q=online+latex+equation+editor">equation editors.</a> <br> <br> My requirements are simple: I want to be able to use the usual cast of mathematical symbols inlined in my main text as well format large equation blocks.  In this post I'll compare and contrast inline html with online editors provided by <a href="http://www.sitmo.com/latex/">SITMO</a>, <a href="http://www.codecogs.com/components/equationeditor/equationeditor.php">CodeCogs</a> and <a href="http://www.texify.com/">Textify</a>. <br> <br> To save you the trouble of having to wade through miles of text, I'll start of with my </p><h2>Conclusions</h2><p>Use HTML for inlining symbols and equations. Although those will never look as good in html as in Latex, the overall format of your text will suffer less.<br> <br> For equation blocks you have the choice between two online editors : <a href="http://www.sitmo.com/latex/">SITMO</a>, <a href="http://www.codecogs.com/components/equationeditor/equationeditor.php">CodeCogs</a>. When it comes to embedding latex code into your html both editors are comparable. When you're looking for more variety with regard to fonts or markup languages CodeCogs is your only alternative.<br> <br> If you want to use the url link to embed a large code block you probably would want to use a url shortner. <a href=""http://tiny.url"">Tiny url</a> is a good option here.As an alternative both editors can generate a png image for you to embed.<br> <br><a href=""http://www.texify.com/links.php"">Textify</a> has a nice clean interface, but I can't embed the links it generates. My only alternative would appear to be to run my own instance of this service which is obviously not something I need or want to do. Furthermore, although it cleverly provides a shortened url, it uses <a href=""http://bit.ly"">bit.ly</a> which unfortunately doesn't handle complex latex url's well.. <br> <br> Read on to find out how I reached these conclusions . </p>
+	</div>
+	<div id="post-body">
+	  <h2>HTML</h2><p>HTML supports <a href="http://www.chami.com/tips/internet/050798i.html">special characters</a> as well as <a href="http://cat.xula.edu/tutorials/html/subandsup">subscripts and superscripts.</a> . Let's give it a shot, starting with embedded equations. </p><h4>Embedding</h4><p>Here's an example of the use of HTML to embed equations and symbols. I'll be using the same example through out.<br> <br> <p> ... a classification error &#949;<sub>i</sub>  is the average of all instances of the test data where h<sub> t</sub> (x<sub> i</sub> ) &#8800; y<sub> i</sub> . This yields the ratio <sup> n</sup>  &#8260; <sub>  N </sub>  ..... where we integrate &#8747; <sub> 0</sub> <sup>&#960;</sup>... </p>  </p><h4>Block Equation</h4><p>This is the latex of the block equation I'm going to try to render in html : </p><pre><code>    D_{t+1} = \frac{D_{t}}{Z_{t}} \times  
+                            \begin{cases}  
+                                   &amp; e^{-\alpha_{t} }   \text{ if }  y_{i} = h_{t}(x_{i}) \\  
+                                   &amp; e^{\alpha_{t} }   \text{ if }  y_{i} \neq  h_{t}(x_{i})  
+                            \end{cases}  
+                                        = \frac{D_{t}}{Z_{t}} \times e^{(\alpha_{t} y_{i} h_{t}(x_{i}))}  
+</code></pre><p><br><br> It's the equation used in the <a href="http://en.wikipedia.org/wiki/AdaBoost">AdaBoost</a> algorithm. <br> Here's what the equation looks like when I try to render it directly in HTML : <br><br />
+<p>      D<sub> t+1</sub>  = <sup> D<sub> t</sub> </sup>  &#8260; <sub>  Z<sub> t</sub>  </sub>  × {<sup>  e <sup>  (&#945; <sub> t</sub> )</sup>   if y<sub> i</sub>  = h<sub> i</sub> (x<sub> i</sub> )</sup>  <sub>  e <sup>  (-&#945; <sub> t</sub> )</sup>   if y<sub> i</sub>  &#8800; h<sub> i</sub> (x<sub> i</sub> )  </sub>  = <sup> D<sub> t</sub> </sup>  &#8260; <sub>  Z<sub> t</sub>  </sub>  × e<sup> ( &#945; <sub> t</sub> y<sub> i</sub>  h<sub> t</sub> (x<sub> i</sub>  ))</sup>  </p></p> <br> <br>  <h4>Conclusion</h4><p>For quick inline equations html is certainly good enough. For block equations the html rendered version does not nearly look as good as the Latex one. In the original text the html tags start to overwhelm the content and it becomes hard to see the mathematical trees in the html forest. This makes correcting or updating complicated code blocks difficult. </p><h2><a href="http://www.sitmo.com/latex/">SITMO</a></h2><p>According to it's web site is a 'quant' company located in Delft, The Netherlands. The company provides an easy to use latex editor which it  also makes available as a Google gadget. </p><p>You have to option bteween downloading an image or of embedding links to the rendered latex directly into your html. </p><h4>Embedding</h4><p>Typically you can embed the link provided by <a href="http://www.sitmo.com/latex/">SITMO</a> straight into your html, like so : </p><pre><code>    &lt;img src=" http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&amp;eq=\int_{0}^{\pi}%20"&gt; </code></pre><p>This is what I've done below in order to inline special symbols and simple equations : <br> <br>  <p>    ... a classification error <img src="http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq=\epsilon_{i}">  is the average of all instances of the test data where <img src="http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq=h_{t}%20\neq%20y_{i}"> . This yields a ratio <img src="http://www.sitmo.com/gg/latex/latex2png.2.php?z=80&eq=\frac{n}{N}">  .... where we integrate <img src="http://www.sitmo.com/gg/latex/latex2png.2.php?z=100&eq=\int_{0}^{\pi}%20"> ... </p>  </p><h4>Block Equation</h4><p>First I tried to generate a link just as I did for the inline symbols and equations. Here's the url generated by the editor : <br>  <p>      <code>  http://www.sitmo.com/gg/latex/latex2png.2.phpz=100&amp;eq=%20D_ %20%3D%20\frac  0}  0}%20\times%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20\begin %20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%20e^ %20 0}%20%20%20\text %20%20y_ %20%3D%20h_ (x_ )%20\%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%20e^ %20 0}%20%20%20\text %20%20y_ %20\neq%20%20h_ (x_ )%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20\end %20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3D%20\frac  0}  0}%20\times%20e^ %20y_ %20h_ (x_ )) 0}%0A </code> </p> <br />
+</p><p>This obviously needs some serious url-shorting. First up is New York favorite <a href=""http://bit.ly"">bit.ly</a> which shortens the url to : http://bit.ly/x6uke. <br> <br>  <p>  <img src="http://bit.ly/x6uke">  </p>  Obviously we've lost some accuracy here. <br> <br>  Next up is the link generated by venerable <a href=""http://tinyurl.com"">tinyurl</a> which shortens the url to a manageable http://tinyurl.com/yjx54h6 : <br> <br>   <p>  <img src="http://tinyurl.com/yjx54h6">  </p>  <br> <br>  No complaints here. <br> <br>  The <a href="http://www.sitmo.com/latex/">SITMO editor</a> can also be used to generate a png image, which you then can embed yourself. Here's the result : <br> <br>  <p>  <img src="http://github.com/fons/blog-images/raw/master/20091003/sitmo-adaboost-equation.png">  </p>  <br> <br>  </p><h4>Conclusion</h4><p>Take a look at the embedded symbols and equations for this section. If you're a stickler for consistent layout using image links to inline equations creates a few challenges. You need to handle the integration with your background color as well as the alignment within the main text. I found the use of embedded links more cumbersome than using inlined html because these embedded links don't integrate well with the overall layout without tweaking. On the other hand the rendered latex is looks better than the embedded html, and using both html (for inline equations) and latex (for blocks) in your post may create it's own formatting discontinuities. <br> <br>  </p><p>The block equation is rendered beautifully by the Lates editor.  The challenge is dealing with the ungodly long url if you want to embed the link generated by the SITMO editor. Clearly, not all bit shortners are able to handle this. The alternative is to embed an image in your document. </p><h2><a href=""http://www.codecogs.com/components/equationeditor/equationeditor.php"">CodeCogs</a></h2><p>This editor is provided by <a href="http://www.codecogs.com/">CodeCogs engineering</a>. Please consult the <a href="http://www.codecogs.com/components/equationeditor/equation_install.php">install page</a>  for more information. This editor seems to be quite popular on the web. CodeCogs provides an equation editor which generates a url on their website you can embed or a gif image you can host yourself. CodeCogs provides a variety of formats like html snippets, a url and code to embed into wiki pages, among other things. <br>  Here's an example of an html snippit : <p> <code>  <a href="http://www.codecogs.com/eqnedit.php?latex=\epsilon_{i}" target="_blank"> <img src="http://latex.codecogs.com/gif.latex?\epsilon_{i}" title="\epsilon_{i}" /> </a>  </code> </p>  </p><h4>Embedding</h4><p>Embedding the url provided by  <a href=""http://www.codecogs.com/components/equationeditor/equationeditor.php"">CodeCogs</a> into your html is straightforward : </p><pre><code>    &lt;img src="http://latex.codecogs.com/gif.latex?\epsilon_{i}"&gt; </code></pre><p>This generates a default image size of 110 dpi. When you compare this to the SITMO url you'll notice that it doesn't have a size tag. CodeCogs does allow you to vary the size through a drop box . This adds a dpi tag to the url : </p><pre><code>    &lt;img src="http://latex.codecogs.com/gif.latex?\300dpi&space;\epsilon_{i}"&gt;  
+</code></pre><p><br><br>  Here's how the embedded equations are rendered, using image url's : <br> <br>  <p>    ... a classification error <img src="http://latex.codecogs.com/gif.latex?\epsilon_{i}">  is the average of all instances of the test data where <img src="http://latex.codecogs.com/gif.latex?h_{t}&space;\neq&space;y_{i}"> . This yields a ratio <img src="http://latex.codecogs.com/gif.latex?\frac{n}{N}"   >  .... where we integrate <img src="http://latex.codecogs.com/gif.latex?\int_{0}^{\pi}"> ... </p>  <br> <br>  </p><h4>Block Equation</h4><p>I would have liked to have been able to test the HTML snippet generated by the CodeCogs editor. However, as I mentioned in the intor, my <a href=""http://github.com/fons/cl-bliky"">blog engine</a> runs pages through a <a href=""http://common-lisp.net/project/cl-markdown/"">mark down transformer</a>  and chokes on the html generated by CodeCogs. <br> <br>  As an alternative I've run the url through two bit shortners. Here's  the rendering using  the url generated by <a href=""http://bit.ly"">bitly</a> 'http://bit.ly/aKH31' : <br> <br>  <p>  <img src="http://bit.ly/aKH31">  </p>  <br> <br>  Again, something obviously got lost in translation. <br> <br>  Here's the the rendering from the link generated by <a href=""http://tinyurl.com"">tinyurl</a> : 'http://tinyurl.com/yhv9xqx' <br> <br>  <p>  <img src="http://tinyurl.com/yhv9xqx">  </p>  <br> <br>  </p><p>CodeCogs can also be used to generate an image file. You can choose between several image formats, like png, gif, pdf and others and several fonts. By the way, this applies to the url as well. The image below is generated in comic sans serif at 150 dpi : <br> <br>   <p>  <img src="http://github.com/fons/blog-images/raw/master/20091003/codecogs-adaboost-equation.png">  </p>  <br> <br>  </p><h4>Conclusions</h4><p>I found the <a href="http://www.codecogs.com/components/equationeditor/equationeditor.php">CodeCogs editor</a> easy to use. It allows equations to be saved in a wide variety of image formats, sizes and fonts and provides code to embed them in a variety of markup formats. <br> <br>  </p><p>My observations about inlining symbols when discussing the SITM editor apply here as well. <br> <br>  I was unable to test the html snippet generated for the block equation, due to limitations (bugs !) in my blog engine. Nevertheless, running the url provided by the editor through a bit shortner provides a good alternative. In addition, you can save an image of the equation ins a variety of formats. </p><h2><a href=""http://www.texify.com/links.php"">Textify</a></h2><p>Textify is a product designed by <a href="http://www.forkosh.com/">John Forkosh Associates, Inc.</a> Textify does not provide a Latex editor so it  assumes at least some Latex proficiency on the user's part. In fact, it's web page can best be described as no-frills, which I happen to think of as a complement. </p><p>Ok, so let's get to it. </p><h4>Embedding</h4><p>Textify provides results that can be used  in web pages, email or forums. Whereas the previous two services provide a web based api, Textify  generates an html snippet around a gif, which can be embedded in your web page : </p><pre><code>     &lt;img alt="\epsilon_{i}" src=http://www.texify.com/img/%5CLARGE%5C%21%5Cepsilon_%7Bi%7D.gif align=center border=0&gt; </code></pre><p>There are two alternative sizes for the image provided on the page. You don't have the ability to customize the size or font the image. <br>  Let's see how it works out : <br> <br>  <p>    ... a classification error <img alt="\epsilon_{i}" src=http://www.texify.com/img/%5CLARGE%5C%21%5Cepsilon_%7Bi%7D.gif align=center border=0">  is the average of all instances of the test data where .......... </p>  <br> <br>  Ok, ooopsee.. As an alternative, I tried to use the other image files that were generated : <br> <br>  <p>    ... a classification error <img src="http://www.texify.com/img/%5Cnormalsize%5C%21%5Cepsilon_%7Bi%7D.gif">  is the average of all instances of the test data where <img >  This yields a ratio <img > ... where we integrate <img >  ... </p>  <br> <br>  Clearly not very useful for my purposes, but it does allow you to use links in emails or google docs. </p><h4>Block Equation</h4><p>Textify automatically generates shortened url for use in twitter. Unfortunately, it's using <a href=""http://bit.ly"">bit.ly</a> which proves problematic : </p><p>The shortened url used here is 'http://bit.ly/1Jcm0e' and it exhibits the same pathologies I mentioned above for SITMO and CodeCogs. </p><h4>Conclusion</h4><p>I like the clean look of Textify. Unfortunatly, I can't use it as use of the server is restricted. In addition, providing shortened urls for equations is clearly a smart thing, but bit.ly seems doesn't seem to handle the latex formatting urls properly. <br>  <br>  </p> 
+	</div>
+	<div id="post-timestamp-id" style="visibility:hidden">
+	  <p>3466495939 </p>
+	</div>
+      </div>
+
+      <div id="footer">
+	<p>
+	  Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
+	</p>
+      </div>
+      
+    </div><!-- end of main area -->
+
+  </body>
+</html>
