@@ -1,4 +1,4 @@
-      /*-------------------------------------------------------------------
+/*-------------------------------------------------------------------
 ;;
 ;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
 ;;
@@ -42,7 +42,6 @@ body{
       font-size : 12px;
       font:normal 100% Sans-Serif;
       background-image:url('http://github.com/fons/blog-images/raw/master/background/greenmountains.JPG');
-      
       }
 
 p {
@@ -76,7 +75,7 @@ a:visited{
 
 h1,h2,h3,h4,h5,h6{
                    color:#595959;
-                   #color:black;
+                   color:black;
                    #color:darkblue;
                    font:bold 100% Sans-Serif;
                    #padding:0px 0px 0px 0px;
@@ -92,6 +91,7 @@ h1 {
 
 h2 {
      font-size:160%;
+     color:black;
      }
 
 h3 {
@@ -166,7 +166,8 @@ Comment :
 
 #import-edit h1, h2, h3 h4, h5 {
                                  padding:0px 0px 0px 0px;
-                                 color: #0000cc;
+                                 #color: #0000cc;
+				 color:black;
                                  font:bold Verdana,Sans-Serif;
                                  width:100%;
                                  #border-bottom:solid 2px #0000cc;
@@ -276,7 +277,8 @@ the 'general' settings.
 /* h2 is also used for the blog post title...*/
 #post h2 {
            border-bottom:solid 1px #000000;
-           color: #0000cc;
+           #color: #0000cc;
+	   color:black;
            font:bold 160% Sans-Serif;
            }
 
@@ -291,8 +293,8 @@ the 'general' settings.
                  }
 
 #post-body h2 {
-                color:#595959;
-                #color:black;
+                #color:#595959;
+                color:black;
                 border-bottom:dotted 0px #cccccc;
                 font-size:140%;
                 }
@@ -469,5 +471,3 @@ Comment     : These are the styles used when importing a repo
 
 
 /*----------------- end of options style ----------------------------*/
-
-
