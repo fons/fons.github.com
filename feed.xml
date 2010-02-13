@@ -30,7 +30,28 @@
     <title> Mohegan SkunkWorks </title>
     <link>  http://fons.github.com/ </link>
     <description> This web log is concerned mostly with my interest in programming languages, algorithms, machine learning, search or other software endeavors. &lt;BR&gt;&lt;BR&gt; </description>
-    <pubDate> Mon, 08 Feb 2010 07:42:12 EST </pubDate>
+    <pubDate> Sat, 13 Feb 2010 10:36:14 EST </pubDate>
+    
+    <item>
+      <title> submitting my blog to technorati.com </title>
+      <link> http://fons.github.com/submitting-my-blog-to-technoraticom.html </link>
+      <description> &lt;p&gt;The purpose of this post is to claim my blog on &lt;a href="www.technorati.com"&gt;technorati&lt;/a&gt;. For that to work I need to include the claim code they provided to me in this little email     This is an automatically-generated email. &lt;/p&gt;&lt;pre&gt;&lt;code&gt;Thank you for submitting your blog claim on Technorati. Technorati will need to verify that you  
+are an author of the site http://www.mohegan-skunkworks.com/ by looking for a unique code.  
+We have just  assigned the claim token 2624RGHKBMNQ to this claim.  
+Please visit http://technorati.com/account/ for more details, including how to use the claim token.  
+ 
+Thank you.  
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/quote&gt; &lt;br&gt; &lt;br&gt;  Let's see if this works. &lt;/p&gt; </description> 
+      <content:encoded><![CDATA[<p>The purpose of this post is to claim my blog on <a href="www.technorati.com">technorati</a>. For that to work I need to include the claim code they provided to me in this little email     This is an automatically-generated email. </p><pre><code>Thank you for submitting your blog claim on Technorati. Technorati will need to verify that you  
+are an author of the site http://www.mohegan-skunkworks.com/ by looking for a unique code.  
+We have just  assigned the claim token 2624RGHKBMNQ to this claim.  
+Please visit http://technorati.com/account/ for more details, including how to use the claim token.  
+ 
+Thank you.  
+</code></pre><p></quote> <br> <br>  Let's see if this works. </p> ]]></content:encoded>
+      <guid> http://fons.github.com/submitting-my-blog-to-technoraticom.html </guid>      
+      <pubDate> Sat, 13 Feb 2010 10:29:17 EST </pubDate>
+    </item>
     
     <item>
       <title> cl-mongo </title>
