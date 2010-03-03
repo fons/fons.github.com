@@ -42,6 +42,25 @@
   
   <div id="post">
     <div id="post-timestamp" >
+      <p>Sun, 28 Feb 2010 19:18:52 EST </p> 
+    </div>
+    <h2> 
+      
+    <a href="/connections-in-cl-mongo.html"> Connections in CL-MONGO </a>
+    
+    </h2>
+    <div id="post-intro">
+      <p>I revamped the way connections to a mongo database are handled in cl-mongo. In the new implementation each connection is referenced by a unique name. Each connection is stored in a connection registry. Database calls in cl-mongo default to using the :default connection. The connection parameters used by the default connection for host, port and db are accessible through the <em>mongo-default-..</em> special variables. <br> <br><code>defgeneric mongo (&amp;key host port db name)</code> gets the connection referred to by the :name keyword. The default for :name is :default. If no connection with that name exists, a new connection will be created.<br> <br>  <code>defun mongo-show ()</code> will show all connections currently in the registry. <br>  <br><code>(defgeneric mongo-swap (left right)</code> will swap two connections. This is useful if you want to use a different <em>default</em> connection, or want to change the parameters on an existing named connection. <br> <br><code>defgeneric mongo-close ( name )</code> is used to close a connection. The special keyword :all can be used to close all connections in the registry. <br> <br>  </p> 
+    </div>
+    
+    <a href="/connections-in-cl-mongo.html"> <h6> Continue reading "Connections in CL-MONGO" </h6> </a>
+    
+
+    
+  </div>
+  
+  <div id="post">
+    <div id="post-timestamp" >
       <p>Wed, 17 Feb 2010 19:04:03 EST </p> 
     </div>
     <h2> 
