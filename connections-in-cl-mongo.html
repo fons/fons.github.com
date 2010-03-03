@@ -1,0 +1,69 @@
+<!---
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title> Mohegan SkunkWorks  </title>
+    <link rel="stylesheet" href="/style.css" type="text/css"/>
+  </head>  
+
+  <body>
+    <div id="blog-title">
+      <a href="/"> <h1> Mohegan SkunkWorks </h1> </a> 
+    </div>
+    
+    <div id="mainClm">
+      <div id="post">
+	<div id="post-type" style="visibility:hidden">
+	  <p>"post"</p>
+	</div>
+	<div id="post-timestamp" >
+	  <p>Sun, 28 Feb 2010 19:18:52 EST </p>
+	</div>
+	<div id="post-header">
+	  <h2> Connections in CL-MONGO  </h2>
+	</div>
+	<div id="post-intro">
+	  <p>I revamped the way connections to a mongo database are handled in cl-mongo. In the new implementation each connection is referenced by a unique name. Each connection is stored in a connection registry. Database calls in cl-mongo default to using the :default connection. The connection parameters used by the default connection for host, port and db are accessible through the <em>mongo-default-..</em> special variables. <br> <br><code>defgeneric mongo (&amp;key host port db name)</code> gets the connection referred to by the :name keyword. The default for :name is :default. If no connection with that name exists, a new connection will be created.<br> <br>  <code>defun mongo-show ()</code> will show all connections currently in the registry. <br>  <br><code>(defgeneric mongo-swap (left right)</code> will swap two connections. This is useful if you want to use a different <em>default</em> connection, or want to change the parameters on an existing named connection. <br> <br><code>defgeneric mongo-close ( name )</code> is used to close a connection. The special keyword :all can be used to close all connections in the registry. <br> <br>  </p>
+	</div>
+	<div id="post-body">
+	  <h2>Opening connections</h2><p><br><br> The generic function <em>mongo</em> is used to create a connection. <em>mongo</em> takes four keywords as an argument. <em>:name</em>  is the <em>name</em> of the connection and the other three parameterkeywords <em>:host :port</em>  and <em>:db</em> are used to establish a connection to a mongodb instance.Each of the four keywords has a default value which will be used if none in provided by the caller. <br> <br> The first thing <em>mongo</em> does is see whether a connection with <em>name</em> exists in the <em>connection registry</em>. If not, it will create one with the parameters provided through the <em>:host :port</em>  and <em>:db</em> keywords. The <em>connection registry</em> is a hash table with the name as key and the mongo connection object as the value.<br> <br> The default for <em>:name</em> is the keyword <em>:default</em>. The default connection parameters can be set through the dynamic variables *mongo-default-host*, *mongo-default-port* and *mongo-default-db*. They are currently set to "localhost", the default mongo port and "admin" respectively.So the first time <code>(mongo)</code> is executed a connection using default values for the connection parameters is created. <br> <br> Unless a mongo connection is provided through the :mongo keyword,database operations, like <em>db.use</em> or <em>db.find</em> all execute (mongo) to get a connection.So a call to these functions creates default connection as a side-effect.<br> <br> There is no restriction on the <em>type</em> of the :name parameter. Typically I would expect a symbol or a unique id to be used. Strings can be used as well. Each connection is assigned a unique id. This id, in distinction to the name, cannot be changed. <br> <br> It's important to realize that if a connection name exists in the registry the associated connection object is returned and other keywords are ignored.So if a connection named <em>:alt</em> exists in the  *mongo-registry* the :port keyword in <code>(mongo :name :alt :port 12388 )</code> are ignored. In addition, the network parameters of the connection object returned by *(mongo :name <name>  )*  are read-only. The reason they're read-only is that changing these parameters doesn't really change the actual connection. I also wanted a <em>mongo</em> call to be fast. Using the <em>(mongo..)</em> method to manage connections would impact the speed of the look-up. <em>(mongo-swap..)</em>  is the method to use when you want to change connection parameters. </p><h2>Swapping connections</h2><p>Using mongo over the LISP REPL is different from say a java-script client. A java-script client is typically tied to  a specific mongo connection. Connections to multiple servers can be established using the REPL by calling <em>(mongo..)</em> with different connection parameters. However, there 's only one <em>:default</em> connection. The <em>:default</em> connection is privileged in that it is used "by default" in all other mongo database calls. You could pass in an alternative connection using the <em>:mongo</em> keyword but that obviously a bit cumbersome. The alternative is to swap connections and tie a different connection to the <em>:default</em> keyword.<br> <br><code>(mongo-swap left right)</code> provides this functionality. <em>(mongo-swap left right)</em> swaps the names of the connections and returns them in the order they were passed in. So if you want to make you're <em>:alt</em> connection the default connection, you call <code>(mongo-swap :default :alt)</code> and the <em>:alt</em> is now the referred to by the keyword <em>:default</em> and the connection previously referred to by keyword <em>:default</em> is now referred to by the keyword <em>:alt</em>.<br> <br>  An other use of <em>(mongo-swap..)</em> is to change the parameters of particular connection. Suppose you want to have the connection bound to :alt refer to a different host. You can do this :      (mongo_close (mongo-swap :alt (mongo :name :tmp :host <newhost> ))) </p><p>This will create mongo connection named :temp which is swapped with the current :alt connection and the old :alt connection object (now bound to :tmp) is closed. </p><h2>Inspecting connections</h2><p>There are two ways to take a look at the <em>connection registry</em> : </p><pre><code>  (mongo-close)  
+  (show :connections) </code></pre><p>The second command is basically wrapped around the first one. <em>show</em> is a general <em>shell</em> command which takes a variety of keywords and returns database data like the server status. </p><h2>Closing connections</h2><p>Use <code>(mongo-close &lt;name&gt; )</code> to close a connection named <name> . If you pass in the keyword <em>:all</em> all connections will be closed. <em>(mongo-close..)</em> will also remove the connection from the registry. </p> 
+	</div>
+	<div id="post-timestamp-id" style="visibility:hidden">
+	  <p>3476391532 </p>
+	</div>
+      </div>
+
+      <div id="footer">
+	<p>
+	  Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
+	</p>
+      </div>
+      
+    </div><!-- end of main area -->
+
+  </body>
+</html>
