@@ -30,7 +30,79 @@
     <title> Mohegan SkunkWorks </title>
     <link>  http://fons.github.com/ </link>
     <description> This web log is concerned mostly with my interest in programming languages, algorithms, machine learning, search or other software endeavors. &lt;BR&gt;&lt;BR&gt; </description>
-    <pubDate> Tue, 02 Mar 2010 21:49:50 EST </pubDate>
+    <pubDate> Fri, 12 Mar 2010 16:03:10 EST </pubDate>
+    
+    <item>
+      <title> Adding clojure to an existing slime setup in emacs </title>
+      <link> http://fons.github.com/adding-clojure-to-an-existing-slime-setup-in-emacs.html </link>
+      <description> &lt;p&gt;The current &lt;a href="http://github.com/technomancy/swank-clojure"&gt;recommended setup of emacs and slime with clojure&lt;/a&gt;  is to have &lt;a href="http://tromey.com/elpa/"&gt;elpa&lt;/a&gt; handle all the dependencies. As an alternative, you can start a swank server using  either the &lt;a href="http://github.com/technomancy/leiningen/tree/master/lein-swank/"&gt;swank plug-in&lt;/a&gt; for the &lt;a href="http://github.com/technomancy/leiningen"&gt;leiningen&lt;/a&gt; build tool, or the &lt;a href="http://github.com/talios/clojure-maven-plugin"&gt;swank plug-in&lt;/a&gt; for the &lt;a href="http://maven.apache.org/"&gt;maven&lt;/a&gt; build tool. &lt;br&gt; &lt;br&gt; All of this advice is good, but I've been using slime with sbcl and emacs for years and I don't want to start from scratch just to add clojure. In addition, rather than hand things off to a tool like elpa, I'd like to install things myself, so I get to understand how the various pieces work together.&lt;br&gt; &lt;br&gt; I'm going to show how you too can use use the &lt;a href="http://common-lisp.net/project/slime/"&gt;current cvs head for slime&lt;/a&gt;, and the current git repos for &lt;a href="http://github.com/richhickey/clojure"&gt;clojure&lt;/a&gt;, &lt;a href="http://richhickey.github.com/clojure-contrib/"&gt;clojure-contrib&lt;/a&gt; and &lt;a href="git://github.com/technomancy/swank-clojure.git"&gt;swank clojure&lt;/a&gt; to run clojure with slime and lisp. I"ll provide a few helpful links to get more information on slime and swank. As it turns out, there 's currently a bit of incompatibility between clojure and the slime package, but it's minor and easy to work around. &lt;/p&gt; </description> 
+      <content:encoded><![CDATA[<p>The current <a href="http://github.com/technomancy/swank-clojure">recommended setup of emacs and slime with clojure</a>  is to have <a href="http://tromey.com/elpa/">elpa</a> handle all the dependencies. As an alternative, you can start a swank server using  either the <a href="http://github.com/technomancy/leiningen/tree/master/lein-swank/">swank plug-in</a> for the <a href="http://github.com/technomancy/leiningen">leiningen</a> build tool, or the <a href="http://github.com/talios/clojure-maven-plugin">swank plug-in</a> for the <a href="http://maven.apache.org/">maven</a> build tool. <br> <br> All of this advice is good, but I've been using slime with sbcl and emacs for years and I don't want to start from scratch just to add clojure. In addition, rather than hand things off to a tool like elpa, I'd like to install things myself, so I get to understand how the various pieces work together.<br> <br> I'm going to show how you too can use use the <a href="http://common-lisp.net/project/slime/">current cvs head for slime</a>, and the current git repos for <a href="http://github.com/richhickey/clojure">clojure</a>, <a href="http://richhickey.github.com/clojure-contrib/">clojure-contrib</a> and <a href="git://github.com/technomancy/swank-clojure.git">swank clojure</a> to run clojure with slime and lisp. I"ll provide a few helpful links to get more information on slime and swank. As it turns out, there 's currently a bit of incompatibility between clojure and the slime package, but it's minor and easy to work around. </p><h2>A few words on slime 's architecture</h2><p><a href="http://bc.tech.coop/blog/081209.html">Bill Clementson's blog entry on slime</a> brings together quite a few resources on slime. It has this illuminating illustration of <a href="http://common-lisp.net/project/slime/">slime's</a> architecture taken from Tobias Rittweiler's <a href="http://common-lisp.net/~trittweiler/talks/slime-talk-2008.pdf">slime talk</a>. <img src="http://bc.tech.coop/blog/images/slime-swank.jpg" alt="Slime/Swank Architecture" align="right">  </p><p>As you can see slime's a client-server architecture. Each lisp needs to implement the swank protocol in order to talk to the emacs client.<a href="git://github.com/technomancy/swank-clojure.git">Swank clojure</a>  provides a swank implementation for clojure. Typically you start a 'swank' session of your lisp through emacs. But you can also choose to start up a lisp, load it's swank module, start a swank server and connect to it from emacs. That's the method used by the leiningen and maven plugins mentioned earlier. This picture underscores that there are various pieces that work together through a shared protocol. </p><h2>Emacs and Slime</h2><p>I installed <a href="http://common-lisp.net/project/slime/">slime from it's cvs repository</a> in ~/Tools/slime.Slime's _./contrib_ sub-directory contains addons to enhance slime's basic functionality.  In particular _slime-fancy.el_  groups a large set of these enhancements together so you don't have to initialize each and everyone of them. I"ll get back to this later on.By the way, _./contrib_ also contains swank implementations for ruby, mit-scheme and kawa. Unfortunately none of these work satisfactorily.<br><br> The <a href="http://common-lisp.net/project/slime/doc/html/">slime manual</a> has a section on how to <a href="http://common-lisp.net/project/slime/doc/html/Multiple-Lisps.html#Multiple-Lisps">setup slime for use with multiple lisps</a>. This involves adding entries like this  <br />
+</p><pre><code>       (name (progam progam-args..) &amp;key coding-system init init-function env)  
+</code></pre><p>to <em>slime-lisp-implementations</em>. <em>name</em> is the symbol used to identify the program. <em>(program program-args ...)</em> is used to start up the lisp in question. The function specified by the keyword :init is used to instruct the lisp to start its swank server. </p><p>An entry in the emacs initialization file to enable multiple lisps with slime might look like this: </p><pre><code>     (add-to-list 'load-path "/home/fons/Tools/slime/")  
+     (add-to-list 'load-path "/home/fons/Tools/slime/contrib")  
+ 
+     (require 'slime)  
+     (slime-setup '(slime-fancy slime-asdf))  
+ 
+     (setq slime-multiprocessing t)  
+     (set-language-environment "UTF-8")  
+     (setq slime-net-coding-system 'utf-8-unix)  
+ 
+     (setq slime-lisp-implementations  
+       '((clisp   ("/usr/bin/clisp" "-K full"))  
+         (sbcl    ("/usr/bin/sbcl"))  
+         (abcl    ("~/Tools/bin/abcl"))  
+         (ccl     ("~/Tools/bin/ccl"))))  
+ 
+     (setf slime-default-lisp 'sbcl)  
+     (global-set-key [f6] 'slime)  
+ 
+</code></pre><p>First slime's directories are added to emacs' <em>load-path</em>. After loading slime and adding a bunch of useful add-ons by loading slime-fancy, a few lisps are added to <em>slime-implementations</em>. Some of them run from standard linux locations. Others are started with a shell script. <em>slime-default-lisp</em> i set to sbcl so that's the default list that's going to used when I just do <code>M-x slime</code> (or hit f6 since I've bound this command to this key). </p><p>The other lisps are started by <a href="http://common-lisp.net/project/slime/doc/html/Multiple-Lisps.html#Multiple-Lisps">invoking slime with a negative prefix argument</a>, <code>M-- M-x slime</code> and selecting the name of the lisp in the <em>slime-defaults-list</em>. </p><p>If you 've never really worked with slime it might be good idea to set up at least a few lisps just to test out your setup and get you in the right mood for the additional hacking which needs to be done.<br />
+</p><h2>swank-clojure</h2><p>I cloned the <a href="git://github.com/technomancy/swank-clojure.git">swank clojure</a> git repository and build it. I put all the clojure related specif components in a directory called "~/Tools/swank-clojure-enablers". The swank-clojure-autoload file is obviously not part of the git repository and needs to be generated. After adding this </p><pre><code>(defun swank-clojure-autoloads nil  
+(interactive)  
+(let ((generated-autoload-file "~/Tools/swank-clojure-enablers/swank-clojure-autoload.el"))  
+(update-directory-autoloads "~/Tools/swank-clojure-enablers"))) </code></pre><p>to my init file <code>M-x swank-clojure-autoloads</code> can be used to generate swank-clojure's <a href="http://www.gnu.org/software/emacs/elisp/html_node/Autoload.html">autoload</a> file. As you can see in the source file for swank-clojure.el <a href="http://www.gnu.org/s/emacs/manual/html_node/elisp/Defining-Advice.html#Defining-Advice">defadvice</a> is used to add clojure to <em>slime-lisp-implementations</em> : </p><pre><code>(defadvice slime-read-interactive-args (before add-clojure)  
+;; Unfortunately we need to construct our Clojure-launching command  
+;; at slime-launch time to reflect changes in the classpath. Slime  
+;; has no mechanism to support this, so we must resort to advice.  
+(require 'assoc)  
+(aput 'slime-lisp-implementations 'clojure  
+(list (swank-clojure-cmd) :init 'swank-clojure-init)))  
+ 
+</code></pre><p>What's basically happening here is that the keyword 'clojure is added to <em>slime-lisp-implementations</em>. The function <em>swank-clojure-cmd</em> starts up clojure and the function <em>swank-clojure-init</em> instructs clojure to start up a swank server. </p><p>All the heavy lifting as far as customizing your clojure environment is done in the <em>swank-clojure-init</em> function. It basically sets up the class path and <em>swank-clojure.el</em> provides hooks to customize the start up phase. </p><h2>Setting the class-path through swank-clojure-classpath.</h2><p>The first time clojure is started it checks to see if the jar files are installed so that clojure can be run with swank. If it doesn't 'see' the jars installed it will download a precompiled version of <em>clojure.jar</em>, <em>clojure-contrib.jar</em> and <em>clojure-swank.jar</em> to <em>~/.swank-clojure</em>. <br> <br>  My preference is to use the latest and greatest versions of the various libraries.  I also don't like to have jar files put in locations where I can't really see them. I'd rather know explicitly what my dependencies are. Luckily the class-path can be customized through the <em>swank-clojure-classpath</em> variable. After I put some links in <em>~/Tools/swankclojure-enablers/</em> to the required jar files, I added this to my emacs initialization file : </p><pre><code>   (setq swank-clojure-classpath (directory-files "~/Tools/swank-clojure-enablers" t ".jar$"))  
+</code></pre><p>This highlights an interesting difference with the other lisps.  I use asdf to load libraries into an already running lisp image. I don't need to set asdf's paths before doing starting the lisp repl. in fact I can change the asdf search path after the repl has started. </p><p>With clojure you're obviously a bit constraint in that you can't change the class path or load a library into the jvm at run time. <br> <br>  <em>swank-clojure</em> provides <em>swank-clojure-project</em> as an alternative way to load your class dependencies at startup. It will kill your clojure repl, set the class path for your project and restart the clojure swank server. </p><h2>Dealing with the hanging repl</h2><p>If you start up clojure at this stage and enter something like <code>(+ 1 2)</code> at the cursor  you"ll notice that the repl "hangs". </p><p>Swank-clojure cannot handle some recent changes introduced to one of to slime addons. The details can be found in the<br />
+<a href="http://groups.google.com/group/swank-clojure/browse_thread/thread/6736c851f23d81d8#">in the swank-clojure group</a>  and <a href="http://thread.gmane.org/gmane.lisp.slime.devel/9178">slime mailing list</a> The bottom line seems to be that the clojure reader doesn't handle the same collection of characters as other lisp readers. </p><p>Luckily this is limited to the <em>autodoc</em> component in <em>.../slime/contrib</em>. <em>autodoc</em> provides fancy markup in the echo area for the arguments of lisp functions. </p><p>If you can live without that, you can unload the autodoc component after slime-fancy is loaded. Alternatively you can just use the slime-repl package when you initialize slime. </p><h2>To summarize</h2><p>This than is more or less my setup : </p><pre><code> (add-to-list 'load-path "/home/fons/Tools/swank-clojure-enablers")  
+ (add-to-list 'load-path "/home/fons/Tools/slime/")  
+ (add-to-list 'load-path "/home/fons/Tools/slime/contrib")  
+ 
+ (require 'swank-clojure-autoloads)  
+ (require 'slime)  
+ (slime-setup '(slime-fancy slime-asdf))  
+ 
+ (unload-feature 'slime-autodoc t)  
+ 
+ (setq slime-multiprocessing t)  
+ (set-language-environment "UTF-8")  
+ (setq slime-net-coding-system 'utf-8-unix)  
+ 
+ (setq slime-lisp-implementations  
+ 	    '((clisp   ("/usr/bin/clisp" "-K full"))  
+	      (sbcl    ("/usr/bin/sbcl"))  
+          (abcl    ("~/Tools/bin/abcl"))  
+          (ccl     ("~/Tools/bin/ccl"))))  
+ 
+ (setq swank-clojure-classpath (directory-files "~/Tools/swank-clojure-enablers" t ".jar$"))  
+ (setf slime-default-lisp 'sbcl)  
+ (global-set-key [f6] 'slime)  
+ 
+ (defun swank-clojure-autoloads nil  
+ (interactive)  
+ (let ((generated-autoload-file "~/Tools/swank-clojure-enablers/swank-clojure-autoloads.el"))  
+ (update-directory-autoloads "~/Tools/swank-clojure-enablers")))  
+</code></pre><p>Notice that I unload <em>autodoc</em> after slime is loaded. </p> ]]></content:encoded>
+      <guid> http://fons.github.com/adding-clojure-to-an-existing-slime-setup-in-emacs.html </guid>      
+      <pubDate> Fri, 12 Mar 2010 15:03:57 EST </pubDate>
+    </item>
     
     <item>
       <title> Connections in CL-MONGO </title>
