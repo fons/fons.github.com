@@ -30,7 +30,39 @@
     <title> Mohegan SkunkWorks </title>
     <link>  http://fons.github.com/ </link>
     <description> This web log is concerned mostly with my interest in programming languages, algorithms, machine learning, search or other software endeavors. &lt;BR&gt;&lt;BR&gt; </description>
-    <pubDate> Sat, 13 Mar 2010 18:20:53 EST </pubDate>
+    <pubDate> Fri, 18 Jun 2010 15:32:14 EST </pubDate>
+    
+    <item>
+      <title> mongonyc presentation. </title>
+      <link> http://fons.github.com/mongonyc-presentation.html </link>
+      <description> On may 21st this year the folks at &lt;a href="http://www.10gen.com/"&gt;10gen&lt;/a&gt; hosted 
+&lt;a href="http://www.10gen.com/event_mongony_10may21"&gt;mongonyc&lt;/a&gt;.
+This conference the first mongodb conference 
+here in New York. I give a brief &lt;a href="http://blip.tv/file/3680363"&gt;lightning talk&lt;/a&gt;
+on  &lt;a href="http://www.github.com/fons/cl-mongo"&gt;cl-mongo&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://github.com/fons/blog-images/raw/master/20100521/badge-mongonyc-large.png" alt="mongonyc presetber badge" align="right"&gt;
+The contents of the presentation can be found 
+&lt;a href="http://github.com/fons/presentations/tree/master/20100521/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It was great to see folks from various start-ups here in the City turn up for this. 
+I was especially interested in how mongodb was used. </description> 
+      <content:encoded><![CDATA[On may 21st this year the folks at <a href="http://www.10gen.com/">10gen</a> hosted 
+<a href="http://www.10gen.com/event_mongony_10may21">mongonyc</a>.
+This conference the first mongodb conference 
+here in New York. I give a brief <a href="http://blip.tv/file/3680363">lightning talk</a>
+on  <a href="http://www.github.com/fons/cl-mongo">cl-mongo</a> </p>
+
+<p><img src="http://github.com/fons/blog-images/raw/master/20100521/badge-mongonyc-large.png" alt="mongonyc presetber badge" align="right">
+The contents of the presentation can be found 
+<a href="http://github.com/fons/presentations/tree/master/20100521/">here</a>.</p>
+
+<p>It was great to see folks from various start-ups here in the City turn up for this. 
+I was especially interested in how mongodb was used.There's obviously it's use at <a href="http://blip.tv/file/3704098">foursquare</a>, but there was also a short talk on a
+<a href="http://blip.tv/file/3680611">clever way</a> to use mongodb to monitor distributed log files at a hedge fund.</p> ]]></content:encoded>
+      <guid> http://fons.github.com/mongonyc-presentation.html </guid>      
+      <pubDate> Fri, 18 Jun 2010 15:31:29 EST </pubDate>
+    </item>
     
     <item>
       <title> cl-mongo now on multiple lisps. </title>
