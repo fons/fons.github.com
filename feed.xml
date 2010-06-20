@@ -30,7 +30,28 @@
     <title> Mohegan SkunkWorks </title>
     <link>  http://fons.github.com/ </link>
     <description> This web log is concerned mostly with my interest in programming languages, algorithms, machine learning, search or other software endeavors. &lt;BR&gt;&lt;BR&gt; </description>
-    <pubDate> Fri, 18 Jun 2010 15:32:14 EST </pubDate>
+    <pubDate> Sun, 20 Jun 2010 10:35:41 EST </pubDate>
+    
+    <item>
+      <title> literate programming intro to cl-mongo </title>
+      <link> http://fons.github.com/literate-programming-intro-to-cl-mongo.html </link>
+      <description> &lt;p&gt;After the jump you'll find the source code of the
+&lt;a href="http://www.github.com/fons/cl-mongo"&gt;cl-mongo&lt;/a&gt; 
+&lt;a href="http://blip.tv/file/3680363"&gt;demo&lt;/a&gt; 
+I gave the &lt;a href="http://www.10gen.com/event_mongony_10may21"&gt;mongonyc&lt;/a&gt; event.
+The code is in 
+&lt;a href="http://en.wikipedia.org/wiki/Literate_programming"&gt;literate programming&lt;/a&gt;
+style and available as &lt;a href="http://gist.github.com/445859"&gt;gist&lt;/a&gt;.&lt;/p&gt; </description> 
+      <content:encoded><![CDATA[<p>After the jump you'll find the source code of the
+<a href="http://www.github.com/fons/cl-mongo">cl-mongo</a> 
+<a href="http://blip.tv/file/3680363">demo</a> 
+I gave the <a href="http://www.10gen.com/event_mongony_10may21">mongonyc</a> event.
+The code is in 
+<a href="http://en.wikipedia.org/wiki/Literate_programming">literate programming</a>
+style and available as <a href="http://gist.github.com/445859">gist</a>.</p><script src="http://gist.github.com/445859.js?file=mongonyc-example.cl"></script> ]]></content:encoded>
+      <guid> http://fons.github.com/literate-programming-intro-to-cl-mongo.html </guid>      
+      <pubDate> Sun, 20 Jun 2010 10:35:02 EST </pubDate>
+    </item>
     
     <item>
       <title> mongonyc presentation. </title>
