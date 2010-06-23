@@ -1,0 +1,118 @@
+<!---
+;;
+;;  This softeware is Copyright (c) 2009 A.F. Haffmans 
+;;
+;;    This file is part of cl-bliky.
+;;
+;;    cl-bliky is free software: you can redistribute it and/or modify
+;;    it under the terms of the GNU General Public License as published by
+;;   the Free Software Foundation, either version 3 of the License, or
+;;    (at your option) any later version.
+;;
+;;    cl-bliky is distributed in the hope that it will be useful,
+;;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;    GNU General Public License for more details.
+;;
+;;    You should have received a copy of the GNU General Public License
+;;    along with cl-bliky.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;
+
+--->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title> Mohegan SkunkWorks  </title>
+    <link rel="stylesheet" href="/style.css" type="text/css"/>
+  </head>  
+
+  <body>
+    <div id="blog-title">
+      <a href="/"> <h1> Mohegan SkunkWorks </h1> </a> 
+    </div>
+    
+    <div id="mainClm">
+      <div id="post">
+	<div id="post-type" style="visibility:hidden">
+	  <p>"post"</p>
+	</div>
+	<div id="post-timestamp" >
+	  <p>Wed, 23 Jun 2010 16:20:59 EST </p>
+	</div>
+	<div id="post-header">
+	  <h2> key-value pairs in cl-mongo  </h2>
+	</div>
+	<div id="post-intro">
+	  In a key-value database like <a href="">mongodb</a> the fundamental data element is the key value pair. 
+Key-value pairs in languages like javascript or python as have a seperate representation like :</p>
+
+<pre><code> 
+{ key : value }
+</code></pre>
+
+<p>In lisp a natural enough equivalent is the association list or alternatively the dotted list.
+Since the javascript expression also creates a key-value object, I wanted to mimick the same semantics in lisp.
+In order to stay a close as possible to the java script syntax, and to also create a disticnt type 
+I could switch on when dispatching generic function calls, I created the two types.</p>
+	</div>
+	<div id="post-body">
+	  <p>The first type is the a pair structure :</p>
+
+<pre><code>(defstruct (pair
+         (:conc-name pair-)
+         (:constructor pair (key value)))
+ key value)
+</code></pre>
+
+<p>In addition I created a pair container :</p>
+
+<pre><code> (defclass kv-container () 
+      ((container :initform (make-array 2 :fill-pointer 0 :adjustable t) :accessor container)))
+</code></pre>
+
+<p>The interface is the kv generic function defined below :</p>
+
+<pre><code>(defgeneric kv (a &rest rest) 
+     (:documentation " This a helper function for key-value pairs and sets of key-value pairs.  
+       In a key-value pair like (kv key value) the key has to be a string and the
+       value something which is serializable. 
+       key-value pairs can be combined using kv as well : (kv (kv key1 val1) (kv key2 val2)).
+       This combination of key-value pairs is equivalent to a document without a unique id.
+        The server will assign a unique is if a list of key-value pairs is saved."))
+</code></pre>
+
+<p>In addition, the following macro provides an even shorter name :</p>
+
+<pre><code>(defmacro $ (&rest args)
+      `(kv ,@args))
+</code></pre>
+
+<p>The generic function <em>kv</em> or the <em>$</em> macro provides the interface to create sets of key-value pairs. 
+For example, to find all items with a particular key-value pais , I'd use :</p>
+
+<pre><code>(db.find "foo" (kv "key" "value") :limit 0)
+</code></pre>
+
+<p>Looking for an element value with a value for "key" larger than 30 I'd use :</p>
+
+<pre><code>(pp (db.find "foo" (kv "key" (kv "$gt" 3))))
+</code></pre> 
+	</div>
+	<div id="post-timestamp-id" style="visibility:hidden">
+	  <p>3486313259 </p>
+	</div>
+      </div>
+
+      <div id="footer">
+	<p>
+	  Powered by <a href="http://www.github.com/fons/cl-bliky"> cl-bliky </a>
+	</p>
+      </div>
+      
+    </div><!-- end of main area -->
+
+  </body>
+</html>
