@@ -42,6 +42,34 @@
   
   <div id="post">
     <div id="post-timestamp" >
+      <p>Sat, 26 Jun 2010 20:00:53 EST </p> 
+    </div>
+    <h2> 
+      
+    <a href="/finding-things-in-a-mongo-database-.html"> finding things in a mongo database  </a>
+    
+    </h2>
+    <div id="post-intro">
+      <p>The generic method <em>dbfind</em> provides the basic query interface in cl-mongo. It's defined as:</p>
+
+<pre><code>(defgeneric db.find (collection  kv &key) )
+</code></pre>
+
+<p><em>db.find</em> returns documents in the collection which satisfy the query pattern 
+specified by the bson document kv. If you use the keyword <em>:all</em> db.find will return all documents. If you're looking for all documents with specific (key value) pair you'd specify that those as the query pattern :</p>
+
+<pre><code> (db.find "foo" (kv (kv "k" 3) (kv "l" 4)))
+</code></pre> 
+    </div>
+    
+    <a href="/finding-things-in-a-mongo-database-.html"> <h6> Continue reading "finding things in a mongo database " </h6> </a>
+    
+
+    
+  </div>
+  
+  <div id="post">
+    <div id="post-timestamp" >
       <p>Wed, 23 Jun 2010 16:20:59 EST </p> 
     </div>
     <h2> 

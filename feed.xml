@@ -30,7 +30,64 @@
     <title> Mohegan SkunkWorks </title>
     <link>  http://fons.github.com/ </link>
     <description> This web log is concerned mostly with my interest in programming languages, algorithms, machine learning, search or other software endeavors. &lt;BR&gt;&lt;BR&gt; </description>
-    <pubDate> Wed, 23 Jun 2010 16:22:01 EST </pubDate>
+    <pubDate> Sat, 26 Jun 2010 20:01:59 EST </pubDate>
+    
+    <item>
+      <title> finding things in a mongo database  </title>
+      <link> http://fons.github.com/finding-things-in-a-mongo-database-.html </link>
+      <description> &lt;p&gt;The generic method &lt;em&gt;dbfind&lt;/em&gt; provides the basic query interface in cl-mongo. It's defined as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(defgeneric db.find (collection  kv &key) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;db.find&lt;/em&gt; returns documents in the collection which satisfy the query pattern 
+specified by the bson document kv. If you use the keyword &lt;em&gt;:all&lt;/em&gt; db.find will return all documents. If you're looking for all documents with specific (key value) pair you'd specify that those as the query pattern :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; (db.find "foo" (kv (kv "k" 3) (kv "l" 4)))
+&lt;/code&gt;&lt;/pre&gt; </description> 
+      <content:encoded><![CDATA[<p>The generic method <em>dbfind</em> provides the basic query interface in cl-mongo. It's defined as:</p>
+
+<pre><code>(defgeneric db.find (collection  kv &key) )
+</code></pre>
+
+<p><em>db.find</em> returns documents in the collection which satisfy the query pattern 
+specified by the bson document kv. If you use the keyword <em>:all</em> db.find will return all documents. If you're looking for all documents with specific (key value) pair you'd specify that those as the query pattern :</p>
+
+<pre><code> (db.find "foo" (kv (kv "k" 3) (kv "l" 4)))
+</code></pre><p><em>db.find</em> returns a header and a list of documents. A single call to db.find returns at most a 100 
+documents or whatever mongodb has set as the limit to return in a single call. To get more documents 
+you'd need to query the database with the iterator object returned by <em>db.find</em>. 
+The convenience function <em>iter</em> does exactly that. So, in order to return <em>all</em> documents 
+in collection "foo" you'd call :</p>
+
+<pre><code>  (pp (iter (db.find "foo" :all)))
+</code></pre>
+
+<p><em>pp</em> is a pretty printer provided by <em>cl_mongo</em>. Alternatively, you can use the <em>docs</em> function to
+convert the results of the query in a list of documents for further processing. Both <em>pp</em> and <em>docs</em> 
+will properly clean up the iterator object. </p>
+
+<p><em>db.find</em> accepts a number of keywords. The keyword <em>:limit</em> defines the maximum number 
+of documents returned, with 1 as it's default. However when the query pattern is <em>:all</em> it will in fact 
+be 0, and hence <em>db.find</em> will return the maximum number of documents allowable by mongodb.
+In all other cases, since the default value of <em>:limit</em> is 1, db.find 
+is the equivalent of <em>findOne</em> in the mongo documentation.</p>
+
+<p>Unsurprisingly, you can specify the number of documents to skip in this query with  <em>:skip</em>.
+It's default is 0.</p>
+
+<p>The <em>:selector</em> keyword allows you to select which keys to return. For example, 
+if you just want to return the <em>"_id"</em> field for the objects in foo, you'd specify :</p>
+
+<pre><code>  (pp (iter (db.find "foo" :all :selector "_id" )))
+</code></pre>
+
+<p>The keyword <em>:mongo</em>  allows you to specify a connection other than the default connection.</p>
+
+<p>The keyword <em>:options</em> is used to specify query options and will be covered elsewhere.</p> ]]></content:encoded>
+      <guid> http://fons.github.com/finding-things-in-a-mongo-database-.html </guid>      
+      <pubDate> Sat, 26 Jun 2010 20:00:53 EST </pubDate>
+    </item>
     
     <item>
       <title> key-value pairs in cl-mongo </title>
